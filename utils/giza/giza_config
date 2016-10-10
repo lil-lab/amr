@@ -1,0 +1,8 @@
+S: src
+T: trg
+C: bitxt
+
+
+-CoocurrenceFile snt
+-o giza_outputs/giza_out
+-model1dumpfreq 1

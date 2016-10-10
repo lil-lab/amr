@@ -1,0 +1,1 @@
+rsync -avz --progress --exclude "utils/giza" --exclude "experiments/*/logs*" --exclude "utils/jamr" --exclude "resources/data/*.cache" --exclude "*.log" -e 'ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no' dist lib experiments utils resources  $1:~/amr

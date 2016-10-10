@@ -1,0 +1,43 @@
+The Israelis said they had film of the launching and breakup.
+JSON{"date":"2014-09-29T11:07:21.091","tok":"The Israelis said they had film of the launching and breakup .","file":"PROXY_AFP_ENG_20050603_0056_25.txt","alignments":"2-3|0 4-5|0.1 5-6|0.1.0 9-10|0.1.0.0 8-9|0.1.0.0.0 10-11|0.1.0.0.1 1-2|0.0+0.0.0+0.0.0.0+0.0.0.0.0","amr":"(s \/ say-01 :ARG0 (p \/ person :mod (c \/ country :name (n \/ name :op1 \"Israel\"))) :ARG1 (h \/ have-03 :ARG0 p :ARG1 (f \/ film :topic (a \/ and :op1 (l \/ launch-01) :op2 (b \/ break-08)))))","snt-type":"body","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20050603_0056.25","alignedExp":"2-3##(a:<id,<<e,t>,e>> !1 (lambda $0:e (say-01:<e,t> $0)))####4-5##(a:<id,<<e,t>,e>> !1 (lambda $0:e (have-03:<e,t> $0)))####5-6##(a:<id,<<e,t>,e>> !1 (lambda $0:e (film:<e,t> $0)))####9-10##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<e,t> $0)))####8-9##(a:<id,<<e,t>,e>> !1 (lambda $0:e (launch-01:<e,t> $0)))####10-11##(a:<id,<<e,t>,e>> !1 (lambda $0:e (break-08:<e,t> $0)))####1-2##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(person:<e,t> $0)\n\t(c_mod:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(country:<e,t> $1)\n\t\t\t(c_name:<e,<e,t>> $1 \n\t\t\t\t(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>\n\t\t\t\t\t(name:<e,t> $2)\n\t\t\t\t\t(c_op:<e,<txt,t>> $2 Israel:txt))))))))))))","ptbtok":"The Israelis said they had film of the launching and breakup .","preferred":"","save-date":"Sun May 26, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(say-01:<e,t> $0)
+	(c_ARG0:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(person:<e,t> $1)
+			(c_mod:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(country:<e,t> $2)
+					(c_name:<e,<e,t>> $2 
+						(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+							(name:<e,t> $3)
+							(c_op:<e,<txt,t>> $3 Israel:txt)))))))))))))
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+			(have-03:<e,t> $4)
+			(c_ARG0:<e,<e,t>> $4 
+				(ref:<id,e> !2))
+			(c_ARG1:<e,<e,t>> $4 
+				(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+					(film:<e,t> $5)
+					(c_topic:<e,<e,t>> $5 
+						(a:<id,<<e,t>,e>> !7 (lambda $6:e (and:<t*,t>
+							(and:<e,t> $6)
+							(c_op1:<e,<e,t>> $6 
+								(a:<id,<<e,t>,e>> !8 (lambda $7:e (launch-01:<e,t> $7))))
+							(c_op2:<e,<e,t>> $6 
+								(a:<id,<<e,t>,e>> !9 (lambda $8:e (break-08:<e,t> $8)))))))))))))))))))
+The :- NP[x]/N[x] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+Israelis :- N[pl] : (lambda $0:e (and:<t*,t> (person:<e,t> $0) (c_mod:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $2:e (and:<t*,t> (country:<e,t> $2) (c_name:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id (lambda $3:e (and:<t*,t> (name:<e,t> $3) (c_op:<e,<txt,t>> $3 Israel:txt)))))))))))
+said :- S[dcl]\NP/S[dcl] : (lambda $0:<e,t> (lambda $1:e (lambda $2:e (and:<t*,t> (say-01:<e,t> $2) (c_ARG0:<e,<e,t>> $2 $1) (c_ARG1:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $0))))))
+they :- NP[pl] : (ref:<id,e> na:id)
+had :- S[dcl]\NP/NP : (lambda $0:e (lambda $1:e (lambda $2:e (and:<t*,t> (have-03:<e,t> $2) (c_ARG0:<e,<e,t>> $2 $1) (c_ARG1:<e,<e,t>> $2 $0)))))
+// Mass noun, doesn't specify 'sg' or 'pl'
+film :- N[nb] : (lambda $0:e (film:<e,t> $0))
+of :- N[x]\N[x]/NP : (lambda $0:e (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_topic:<e,<e,t>> $1 $0)))))
+the :- NP[x]/N[x] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+launching :- N[sg] : (lambda $0:e (launch-01:<e,t> $0))
+and :- C : conj:e
+breakup :- N[sg] : (lambda $0:e (break-08:<e,t> $0))
+. :- PUNCT
+

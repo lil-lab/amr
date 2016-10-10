@@ -1,0 +1,4 @@
+PER	person:<e,t>	president:<e,t>
+ORG	organization:<e,t>	company:<e,t>	government-organization:<e,t>	criminal-organization:<e,t>
+LOC	country:<e,t>	city:<e,t>	world-region:<e,t>	continent:<e,t>	county:<e,t>
+MISC	thing:<e,t>	treaty:<e,t>	publication:<e,t>	newspaper:<e,t>	product:<e,t>	war:<e,t>

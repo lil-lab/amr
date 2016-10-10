@@ -1,0 +1,44 @@
+Al-Zayat stated that the recording was Zawahiri's voice, style and manner.
+JSON{"date":"2014-09-29T11:07:16.752","tok":"Al-Zayat stated that the recording was Zawahiri 's voice , style and manner .","file":"PROXY_AFP_ENG_20030522_0447_11.txt","alignments":"1-2|0 11-12|0.1 6-7|0.1.4+0.1.4.0+0.1.4.0.0 4-5|0.1.3 12-13|0.1.2 10-11|0.1.1 8-9|0.1.0","amr":"(s \/ state-01 :ARG0 (p2 \/ person :name (n3 \/ name :op1 \"al-Zayat\")) :ARG1 (a \/ and :op1 (v2 \/ voice) :op2 (s2 \/ style) :op3 (m \/ manner) :ARG1-of (r \/ record-01) :poss (p \/ person :name (n2 \/ name :op1 \"Zawahiri\"))))","snt-type":"body","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20030522_0447.11","alignedExp":"1-2##(a:<id,<<e,t>,e>> !1 (lambda $0:e (state-01:<e,t> $0)))####11-12##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<e,t> $0)))####6-7##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(person:<e,t> $0)\n\t(c_name:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(name:<e,t> $1)\n\t\t\t(c_op:<e,<txt,t>> $1 Zawahiri:txt))))))))####4-5##(a:<id,<<e,t>,e>> !1 (lambda $0:e (record-01:<e,t> $0)))####12-13##(a:<id,<<e,t>,e>> !1 (lambda $0:e (manner:<e,t> $0)))####10-11##(a:<id,<<e,t>,e>> !1 (lambda $0:e (style:<e,t> $0)))####8-9##(a:<id,<<e,t>,e>> !1 (lambda $0:e (voice:<e,t> $0)))","ptbtok":"Al-Zayat stated that the recording was Zawahiri 's voice , style and manner .","preferred":"","save-date":"Tue Sep 10, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(state-01:<e,t> $0)
+	(c_ARG0:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(person:<e,t> $1)
+			(c_name:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(name:<e,t> $2)
+					(c_op:<e,<txt,t>> $2 al-Zayat:txt)))))))))
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+			(and:<e,t> $3)
+			(c_op1:<e,<e,t>> $3 
+				(a:<id,<<e,t>,e>> !5 (lambda $4:e (voice:<e,t> $4))))
+			(c_op2:<e,<e,t>> $3 
+				(a:<id,<<e,t>,e>> !6 (lambda $5:e (style:<e,t> $5))))
+			(c_op3:<e,<e,t>> $3 
+				(a:<id,<<e,t>,e>> !7 (lambda $6:e (manner:<e,t> $6))))
+			(c_ARG1-of:<e,<e,t>> $3 
+				(a:<id,<<e,t>,e>> !8 (lambda $7:e (record-01:<e,t> $7))))
+			(c_poss:<e,<e,t>> $3 
+				(a:<id,<<e,t>,e>> !9 (lambda $8:e (and:<t*,t>
+					(person:<e,t> $8)
+					(c_name:<e,<e,t>> $8 
+						(a:<id,<<e,t>,e>> !10 (lambda $9:e (and:<t*,t>
+							(name:<e,t> $9)
+							(c_op:<e,<txt,t>> $9 Zawahiri:txt))))))))))))))))
+Al-Zayat :- NP[sg] : (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (person:<e,t> $1) (c_name:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (name:<e,t> $0) (c_op:<e,<txt,t>> $0 al-Zayat:txt))))))))
+stated :- S[dcl]\NP/S[em] : (lambda $0:<e,t> (lambda $1:e (lambda $2:e (and:<t*,t> (state-01:<e,t> $2) (c_ARG0:<e,<e,t>> $2 $1) (c_ARG1:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $0))))))
+that :- S[em]/S[dcl] : (lambda $0:<e,t> $0)
+the :- NP[x]/N[x] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+recording :- N[sg] : record-01:<e,t>
+was :- S[dcl]\(NP[x]/N[x])\N[sg]/N[nb] : (lambda $0:<e,t> (lambda $1:<e,t> (lambda $2:<<e,t>,e> (lambda $3:e (and:<t*,t> ($0 $3) (c_ARG1-of:<e,<e,t>> $3 ($2 $1)))))))
+Zawahiri :- NP[sg] : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (person:<e,t> $0) (c_name:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $2:e (and:<t*,t> (name:<e,t> $2) (c_op:<e,<txt,t>> $2 Zawahiri:txt))))))))
+'s :- N[x]/N[x]\NP[sg] : (lambda $0:e (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_poss:<e,<e,t>> $1 $0)))))
+voice :- N[nb] : voice:<e,t>
+, :- PUNCT
+style :- N[nb] : style:<e,t>
+and :- C : conj:e
+manner :- N[nb] : manner:<e,t>
+. :- PUNCT
+

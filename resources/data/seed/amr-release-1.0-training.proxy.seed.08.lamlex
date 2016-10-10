@@ -1,0 +1,54 @@
+Myanmar has asked the Association of Southeast Asian Nations and the international community to assist in these efforts.
+JSON{"date":"2014-09-29T11:07:11.566","tok":"Myanmar has asked the Association of Southeast Asian Nations and the international community to assist in these efforts .","file":"PROXY_AFP_ENG_20020517_0339_5.txt","alignments":"2-3|0 9-10|0.2 12-13|0.2.1 11-12|0.2.1.0 4-9|0.2.0+0.2.0.0+0.2.0.0.0+0.2.0.0.1+0.2.0.0.2+0.2.0.0.3+0.2.0.0.4 5-6|0.2.0.0.1 6-7|0.2.0.0.2 7-8|0.2.0.0.3 8-9|0.2.0.0.4 14-15|0.1 17-18|0.1.0 0-1|0.0.0.0","amr":"(a \/ ask-02 :ARG0 (c2 \/ country :name (n3 \/ name :op1 \"Myanmar\")) :ARG1 (a3 \/ assist-01 :ARG0 a2 :ARG1 c2 :ARG2 (e \/ effort :mod (t \/ this))) :ARG2 (a2 \/ and :op1 (o2 \/ organization :name (n4 \/ name :op1 \"Association\" :op2 \"of\" :op3 \"Southeast\" :op4 \"Asian\" :op5 \"Nations\")) :op2 (c3 \/ community :mod (i \/ international))))","snt-type":"summary","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20020517_0339.5","alignedExp":"2-3##(a:<id,<<e,t>,e>> !1 (lambda $0:e (ask-02:<e,t> $0)))####9-10##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<e,t> $0)))####12-13##(a:<id,<<e,t>,e>> !1 (lambda $0:e (community:<e,t> $0)))####11-12##(a:<id,<<e,t>,e>> !1 (lambda $0:e (international:<e,t> $0)))####14-15##(a:<id,<<e,t>,e>> !1 (lambda $0:e (assist-01:<e,t> $0)))####17-18##(a:<id,<<e,t>,e>> !1 (lambda $0:e (effort:<e,t> $0)))####0-1##Myanmar:txt####4-9##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(organization:<e,t> $0)\n\t(c_name:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(name:<e,t> $1)\n\t\t\t(c_op:<e,<txt,t>> $1 Association++of++Southeast++Asian++Nations:txt))))))))","ptbtok":"Myanmar has asked the Association of Southeast Asian Nations and the international community to assist in these efforts .","preferred":"","save-date":"Wed Jun 19, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(ask-02:<e,t> $0)
+	(c_ARG0:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(country:<e,t> $1)
+			(c_name:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(name:<e,t> $2)
+					(c_op:<e,<txt,t>> $2 Myanmar:txt)))))))))
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+			(assist-01:<e,t> $3)
+			(c_ARG0:<e,<e,t>> $3 
+				(ref:<id,e> !5))
+			(c_ARG1:<e,<e,t>> $3 
+				(ref:<id,e> !2))
+			(c_ARG2:<e,<e,t>> $3 
+				(a:<id,<<e,t>,e>> !6 (lambda $4:e (and:<t*,t>
+					(effort:<e,t> $4)
+					(c_mod:<e,<e,t>> $4 
+						(a:<id,<<e,t>,e>> !7 (lambda $5:e (this:<e,t> $5))))))))))))
+	(c_ARG2:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !5 (lambda $6:e (and:<t*,t>
+			(and:<e,t> $6)
+			(c_op1:<e,<e,t>> $6 
+				(a:<id,<<e,t>,e>> !8 (lambda $7:e (and:<t*,t>
+					(organization:<e,t> $7)
+					(c_name:<e,<e,t>> $7 
+						(a:<id,<<e,t>,e>> !9 (lambda $8:e (and:<t*,t>
+							(name:<e,t> $8)
+							(c_op:<e,<txt,t>> $8 Association++of++Southeast++Asian++Nations:txt)))))))))
+			(c_op2:<e,<e,t>> $6 
+				(a:<id,<<e,t>,e>> !10 (lambda $9:e (and:<t*,t>
+					(community:<e,t> $9)
+					(c_mod:<e,<e,t>> $9 
+						(a:<id,<<e,t>,e>> !11 (lambda $10:e (international:<e,t> $10)))))))))))))))
+Myanmar :- NP[sg] : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (country:<e,t> $0) (c_name:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (name:<e,t> $1) (c_op:<e,<txt,t>> $1 Myanmar:txt))))))))
+has :- S[dcl]\NP[sg]/(S[pt]\NP[sg]) : (lambda $0:<e,<e,t>> $0)
+asked :- S[pt]\NP/NP : (lambda $0:e (lambda $1:e (lambda $2:e (and:<t*,t> (ask-02:<e,t> $2) (c_ARG0:<e,<e,t>> $2 $1) (c_ARG2:<e,<e,t>> $2 $0)))))
+the :- NP[x]/N[x] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+Association of Southeast Asian Nations :- N[sg] : (lambda $0:e (and:<t*,t> (organization:<e,t> $0) (c_name:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (name:<e,t> $1) (c_op:<e,<txt,t>> $1 Association++of++Southeast++Asian++Nations:txt)))))))
+and :- C : conj:e
+the :- NP[x]/N[x] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+international :- N[x]/N[x] : (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_mod:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $0:e (international:<e,t> $0)))))))
+community :- N[sg] : (lambda $0:e (community:<e,t> $0))
+to :- S[x]\S[x]/S[b] : (lambda $0:<e,t> (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_ARG1:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id $0))))))
+assist :- S[b] : (lambda $0:e (and:<t*,t> (assist-01:<e,t> $0) (c_ARG0:<e,<e,t>> $0 (ref:<id,e> na:id)) (c_ARG1:<e,<e,t>> $0 (ref:<id,e> na:id))))
+in :- S[x]\S[x]/NP : (lambda $0:e (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_ARG2:<e,<e,t>> $1 $0)))))
+these :- NP[pl]/N[pl] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> ($0 $1) (c_mod:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $4:e (this:<e,t> $4))))))))
+efforts :- N[pl] : (lambda $0:e (effort:<e,t> $0))
+. :- PUNCT
+

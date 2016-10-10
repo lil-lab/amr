@@ -1,0 +1,63 @@
+Juhlin stated that Cambodia's past reputation as 1 of the few Southeast Asian countries without a drug problem is no longer accurate as drug abuse in the country is rapidly increasing.
+JSON{"date":"2014-09-29T11:07:12.432","tok":"Juhlin stated that Cambodia 's past reputation as 1 of the few Southeast Asian countries without a drug problem is no longer accurate as drug abuse in the country is rapidly increasing .","file":"PROXY_AFP_ENG_20020626_0144_35.txt","alignments":"20-21|0.1.1 1-2|0 22-23|0.1 31-32|0.1.2.0 25-26|0.1.2.0.0 17-18|0.1.2.0.0.0 6-7|0.1.0 5-6|0.1.0.1 14-15|0.1.0.0 8-9|0.1.0.0.2 9-10|0.1.0.0.1 28-29|0.1.0.0.1.0 18-19|0.1.0.0.1.0.2 17-18|0.1.0.0.1.0.2.0 11-12|0.1.0.0.1.0.1 12-14|0.1.0.0.1.0.0+0.1.0.0.1.0.0.0+0.1.0.0.1.0.0.0.0+0.1.0.0.1.0.0.0.1 3-4|0.1.0.0.0.0 0-1|0.0.0.0 30-31|0.1.2.0.1 13-14|0.1.0.0.1.0.0.0.1","amr":"(s \/ state-01 :ARG0 (p \/ person :name (n \/ name :op1 \"Juhlin\")) :ARG1 (a \/ accurate :domain (r \/ reputation :poss (c \/ country :name (n2 \/ name :op1 \"Cambodia\") :ARG2-of (i \/ include-91 :ARG1 (c2 \/ country :mod (w \/ world-region :name (n3 \/ name :op1 \"Southeast\" :op2 \"Asia\")) :quant (f \/ few) :prep-without (p3 \/ problem :mod (d \/ drug)))) :quant 1) :mod (p2 \/ past)) :polarity - :ARG1-of (c3 \/ cause-01 :ARG0 (i2 \/ increase-01 :ARG1 (a2 \/ abuse-01 :ARG1 (d2 \/ drug)) :manner (r2 \/ rapid)))))","snt-type":"body","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20020626_0144.35","alignedExp":"20-21##-:e####22-23##(a:<id,<<e,t>,e>> !1 (lambda $0:e (accurate:<e,t> $0)))####6-7##(a:<id,<<e,t>,e>> !1 (lambda $0:e (reputation:<e,t> $0)))####14-15##(a:<id,<<e,t>,e>> !1 (lambda $0:e (country:<e,t> $0)))####8-9##1:i####28-29##(a:<id,<<e,t>,e>> !1 (lambda $0:e (country:<e,t> $0)))####18-19##(a:<id,<<e,t>,e>> !1 (lambda $0:e (problem:<e,t> $0)))####0-1##Juhlin:txt####30-31##(a:<id,<<e,t>,e>> !1 (lambda $0:e (rapid:<e,t> $0)))####12-14##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(world-region:<e,t> $0)\n\t(c_name:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(name:<e,t> $1)\n\t\t\t(c_op:<e,<txt,t>> $1 Southeast++Asia:txt))))))))####1-2##(a:<id,<<e,t>,e>> !1 (lambda $0:e (state-01:<e,t> $0)))####31-32##(a:<id,<<e,t>,e>> !1 (lambda $0:e (increase-01:<e,t> $0)))####25-26##(a:<id,<<e,t>,e>> !1 (lambda $0:e (abuse-01:<e,t> $0)))####17-18##(a:<id,<<e,t>,e>> !1 (lambda $0:e (drug:<e,t> $0)))####5-6##(a:<id,<<e,t>,e>> !1 (lambda $0:e (past:<e,t> $0)))####9-10##(a:<id,<<e,t>,e>> !1 (lambda $0:e (include-91:<e,t> $0)))####11-12##(a:<id,<<e,t>,e>> !1 (lambda $0:e (few:<e,t> $0)))####3-4##Cambodia:txt","ptbtok":"Juhlin stated that Cambodia 's past reputation as 1 of the few Southeast Asian countries without a drug problem is no longer accurate as drug abuse in the country is rapidly increasing .","preferred":"","save-date":"Sat May 25, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(state-01:<e,t> $0)
+	(c_ARG0:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(person:<e,t> $1)
+			(c_name:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(name:<e,t> $2)
+					(c_op:<e,<txt,t>> $2 Juhlin:txt)))))))))
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+			(accurate:<e,t> $3)
+			(c_domain:<e,<e,t>> $3 
+				(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+					(reputation:<e,t> $4)
+					(c_poss:<e,<e,t>> $4 
+						(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+							(country:<e,t> $5)
+							(c_name:<e,<e,t>> $5 
+								(a:<id,<<e,t>,e>> !7 (lambda $6:e (and:<t*,t>
+									(name:<e,t> $6)
+									(c_op:<e,<txt,t>> $6 Cambodia:txt)))))
+							(c_ARG2-of:<e,<e,t>> $5 
+								(a:<id,<<e,t>,e>> !8 (lambda $7:e (and:<t*,t>
+									(include-91:<e,t> $7)
+									(c_ARG1:<e,<e,t>> $7 
+										(a:<id,<<e,t>,e>> !9 (lambda $8:e (and:<t*,t>
+											(country:<e,t> $8)
+											(c_mod:<e,<e,t>> $8 
+												(a:<id,<<e,t>,e>> !10 (lambda $9:e (and:<t*,t>
+													(world-region:<e,t> $9)
+													(c_name:<e,<e,t>> $9 
+														(a:<id,<<e,t>,e>> !11 (lambda $10:e (and:<t*,t>
+															(name:<e,t> $10)
+															(c_op:<e,<txt,t>> $10 Southeast++Asia:txt)))))))))
+											(c_quant:<e,<e,t>> $8 
+												(a:<id,<<e,t>,e>> !12 (lambda $11:e (few:<e,t> $11))))
+											(c_prep-without:<e,<e,t>> $8 
+												(a:<id,<<e,t>,e>> !13 (lambda $12:e (and:<t*,t>
+													(problem:<e,t> $12)
+													(c_mod:<e,<e,t>> $12 
+														(a:<id,<<e,t>,e>> !14 (lambda $13:e (drug:<e,t> $13))))))))))))))))
+							(c_quant:<e,<i,t>> $5 1:i)))))
+					(c_mod:<e,<e,t>> $4 
+						(a:<id,<<e,t>,e>> !15 (lambda $14:e (past:<e,t> $14))))))))
+			(c_polarity:<e,<e,t>> $3 -:e)
+			(c_ARG1-of:<e,<e,t>> $3 
+				(a:<id,<<e,t>,e>> !16 (lambda $15:e (and:<t*,t>
+					(cause-01:<e,t> $15)
+					(c_ARG0:<e,<e,t>> $15 
+						(a:<id,<<e,t>,e>> !17 (lambda $16:e (and:<t*,t>
+							(increase-01:<e,t> $16)
+							(c_ARG1:<e,<e,t>> $16 
+								(a:<id,<<e,t>,e>> !18 (lambda $17:e (and:<t*,t>
+									(abuse-01:<e,t> $17)
+									(c_ARG1:<e,<e,t>> $17 
+										(a:<id,<<e,t>,e>> !19 (lambda $18:e (drug:<e,t> $18))))))))
+							(c_manner:<e,<e,t>> $16 
+								(a:<id,<<e,t>,e>> !20 (lambda $19:e (rapid:<e,t> $19)))))))))))))))))))
+// FAIL: "Cambodia" is arg2-of "the few southeast...", while "reputation" introduces a higher frame
+

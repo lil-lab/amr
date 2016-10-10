@@ -1,0 +1,60 @@
+Singapore also applies the death sentence to other crimes including murder, treason, kidnapping and firearms offences.
+JSON{"date":"2014-09-29T11:07:22.232","tok":"Singapore also applies the death sentence to other crimes including murder , treason , kidnapping and firearms offences .","file":"PROXY_AFP_ENG_20070116_0147_11.txt","alignments":"2-3|0 1-2|0.3 8-9|0.2 9-10|0.2.1 15-16|0.2.1.0 17-18|0.2.1.0.3 16-17|0.2.1.0.3.0 14-15|0.2.1.0.2 10-11|0.2.1.0.0 7-8|0.2.0 5-6|0.1 4-5|0.1.0 0-1|0.0+0.0.0+0.0.0.0","amr":"(a \/ apply-02 :ARG0 (c \/ country :name (n \/ name :op1 \"Singapore\")) :ARG1 (s \/ sentence-01 :ARG2 (d \/ die-01)) :ARG2 (c2 \/ crime :mod (o \/ other) :ARG2-of (i \/ include-01 :ARG1 (a4 \/ and :op1 (m \/ murder-01) :op2 (b \/ betray-01) :op3 (k \/ kidnap-01) :op4 (o3 \/ offence :instrument (f \/ firearm))))) :mod (a2 \/ also))","snt-type":"body","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20070116_0147.11","alignedExp":"2-3##(a:<id,<<e,t>,e>> !1 (lambda $0:e (apply-02:<e,t> $0)))####8-9##(a:<id,<<e,t>,e>> !1 (lambda $0:e (crime:<e,t> $0)))####16-17##(a:<id,<<e,t>,e>> !1 (lambda $0:e (firearm:<e,t> $0)))####14-15##(a:<id,<<e,t>,e>> !1 (lambda $0:e (kidnap-01:<e,t> $0)))####10-11##(a:<id,<<e,t>,e>> !1 (lambda $0:e (murder-01:<e,t> $0)))####4-5##(a:<id,<<e,t>,e>> !1 (lambda $0:e (die-01:<e,t> $0)))####0-1##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(country:<e,t> $0)\n\t(c_name:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(name:<e,t> $1)\n\t\t\t(c_op:<e,<txt,t>> $1 Singapore:txt))))))))####1-2##(a:<id,<<e,t>,e>> !1 (lambda $0:e (also:<e,t> $0)))####9-10##(a:<id,<<e,t>,e>> !1 (lambda $0:e (include-01:<e,t> $0)))####15-16##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<e,t> $0)))####17-18##(a:<id,<<e,t>,e>> !1 (lambda $0:e (offence:<e,t> $0)))####7-8##(a:<id,<<e,t>,e>> !1 (lambda $0:e (other:<e,t> $0)))####5-6##(a:<id,<<e,t>,e>> !1 (lambda $0:e (sentence-01:<e,t> $0)))","ptbtok":"Singapore also applies the death sentence to other crimes including murder , treason , kidnapping and firearms offences .","preferred":"","save-date":"Mon Jul 15, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(apply-02:<e,t> $0)
+	(c_ARG0:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(country:<e,t> $1)
+			(c_name:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(name:<e,t> $2)
+					(c_op:<e,<txt,t>> $2 Singapore:txt)))))))))
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+			(sentence-01:<e,t> $3)
+			(c_ARG2:<e,<e,t>> $3 
+				(a:<id,<<e,t>,e>> !5 (lambda $4:e (die-01:<e,t> $4))))))))
+	(c_ARG2:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+			(crime:<e,t> $5)
+			(c_mod:<e,<e,t>> $5 
+				(a:<id,<<e,t>,e>> !7 (lambda $6:e (other:<e,t> $6))))
+			(c_ARG2-of:<e,<e,t>> $5 
+				(a:<id,<<e,t>,e>> !8 (lambda $7:e (and:<t*,t>
+					(include-01:<e,t> $7)
+					(c_ARG1:<e,<e,t>> $7 
+						(a:<id,<<e,t>,e>> !9 (lambda $8:e (and:<t*,t>
+							(and:<e,t> $8)
+							(c_op1:<e,<e,t>> $8 
+								(a:<id,<<e,t>,e>> !10 (lambda $9:e (murder-01:<e,t> $9))))
+							(c_op2:<e,<e,t>> $8 
+								(a:<id,<<e,t>,e>> !11 (lambda $10:e (betray-01:<e,t> $10))))
+							(c_op3:<e,<e,t>> $8 
+								(a:<id,<<e,t>,e>> !12 (lambda $11:e (kidnap-01:<e,t> $11))))
+							(c_op4:<e,<e,t>> $8 
+								(a:<id,<<e,t>,e>> !13 (lambda $12:e (and:<t*,t>
+									(offence:<e,t> $12)
+									(c_instrument:<e,<e,t>> $12 
+										(a:<id,<<e,t>,e>> !14 (lambda $13:e (firearm:<e,t> $13))))))))))))))))))))
+	(c_mod:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !15 (lambda $14:e (also:<e,t> $14)))))))
+Singapore :- NP[sg] : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (country:<e,t> $0) (c_name:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (name:<e,t> $1) (c_op:<e,<txt,t>> $1 Singapore:txt))))))))
+also :- S[x]/S[x] : (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_mod:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id also:<e,t>)))))
+applies :- S[dcl]\NP[sg]/NP : (lambda $0:e (lambda $1:e (lambda $2:e (and:<t*,t> (apply-02:<e,t> $2) (c_ARG0:<e,<e,t>> $2 $1) (c_ARG1:<e,<e,t>> $2 $0)))))
+the :- NP[x]/N[x] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+death :- N[nb] : die-01:<e,t>
+sentence :- N[sg] : sentence-01:<e,t>
+to :- S[x]\S[x]/NP : (lambda $0:e (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_ARG2:<e,<e,t>> $2 $0)))))
+other :- N[x]/N[x] : (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_mod:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id other:<e,t>)))))
+crimes :- N[pl] : crime:<e,t>
+including :- N[x]\N[x]/NP : (lambda $0:e (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_ARG2-of:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id (lambda $3:e (and:<t*,t> (include-01:<e,t> $3) (c_ARG1:<e,<e,t>> $3 $0)))))))))
+murder :- N[nb] : murder-01:<e,t>
+, :- PUNCT
+treason :- N[nb] : betray-01:<e,t>
+, :- PUNCT
+kidnapping :- N[nb] : kidnap-01:<e,t>
+and :- C : conj:e
+firearms :- N[nb] : firearm:<e,t>
+offences :- N[pl] : offence:<e,t>
+. :- PUNCT
+

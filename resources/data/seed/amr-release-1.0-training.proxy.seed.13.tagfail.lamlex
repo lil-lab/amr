@@ -1,0 +1,32 @@
+Most of Bank of America's 13000 ATMs were inoperable.
+JSON{"date":"2014-09-29T11:07:15.050","tok":"Most of Bank of America 's 13000 ATMs were inoperable .","file":"PROXY_AFP_ENG_20030126_0212_15.txt","alignments":"7-8|0.1.0 1-5|0.1.0.2+0.1.0.2.0+0.1.0.2.0.0+0.1.0.2.0.1+0.1.0.2.0.2 1-2|0.1.0.2.0.1 4-5|0.1.0.2.0.2 0-1|0.1.0.1 6-7|0.1.0.0 9-10|0.1","amr":"(p \/ possible :polarity - :domain (o2 \/ operate-01 :ARG1 (a \/ atm :quant 13000 :mod (m \/ most) :poss (c \/ company :name (n \/ name :op1 \"Bank\" :op2 \"of\" :op3 \"America\")))))","snt-type":"body","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20030126_0212.15","alignedExp":"7-8##(a:<id,<<e,t>,e>> !1 (lambda $0:e (atm:<e,t> $0)))####0-1##(a:<id,<<e,t>,e>> !1 (lambda $0:e (most:<e,t> $0)))####6-7##13000:i####9-10##(a:<id,<<e,t>,e>> !1 (lambda $0:e (operate-01:<e,t> $0)))####1-5##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(company:<e,t> $0)\n\t(c_name:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(name:<e,t> $1)\n\t\t\t(c_op:<e,<txt,t>> $1 Bank++of++America:txt))))))))","ptbtok":"Most of Bank of America 's 13000 ATMs were inoperable .","preferred":"","save-date":"Fri Jan 24, 2014"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(possible:<e,t> $0)
+	(c_polarity:<e,<e,t>> $0 -:e)
+	(c_domain:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(operate-01:<e,t> $1)
+			(c_ARG1:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(atm:<e,t> $2)
+					(c_quant:<e,<i,t>> $2 13000:i)
+					(c_mod:<e,<e,t>> $2 
+						(a:<id,<<e,t>,e>> !4 (lambda $3:e (most:<e,t> $3))))
+					(c_poss:<e,<e,t>> $2 
+						(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+							(company:<e,t> $4)
+							(c_name:<e,<e,t>> $4 
+								(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+									(name:<e,t> $5)
+									(c_op:<e,<txt,t>> $5 Bank++of++America:txt))))))))))))))))))))
+// FAIL: no reasonble super-tag for 'most' and 'of'
+Most :- N[x]/N[x] : (lambda $1:<e,t> (lambda $0:e (and:<t*,t> ($1 $0) (c_mod:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id most:<e,t>)))))
+of :- N[x]/N[x]\(N[x]/N[x]) : (lambda $0:<<e,t>,<e,t>> $0)
+Bank of America :- NP[sg] : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (company:<e,t> $0) (c_name:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (name:<e,t> $1) (c_op:<e,<txt,t>> $1 Bank++of++America:txt))))))))
+'s :- N[x]/N[x]\NP : (lambda $0:e (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_poss:<e,<e,t>> $1 $0)))))
+// 13000 :- I : 13000:i
+ATMs :- N[pl] : atm:<e,t>
+were :- S[dcl]\NP[pl]/(S[pss]\NP[pl]) : (lambda $0:<e,<e,t>> $0)
+inoperable :- S[pss]\NP : (lambda $0:e (lambda $1:e (and:<t*,t> (possible:<e,t> $1) (c_polarity:<e,<e,t>> $1 -:e) (c_domain:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $2:e (and:<t*,t> (operate-01:<e,t> $2) (c_ARG1:<e,<e,t>> $2 $0))))))))
+. :- PUNCT
+

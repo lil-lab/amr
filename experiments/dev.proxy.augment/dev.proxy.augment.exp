@@ -1,0 +1,12 @@
+outputDir=logs
+globalLog=logs/global.log
+include=../params.inc
+
+# Resources
+include=dev.proxy.augment.inc
+
+# Jobs
+type=log id=log.model.pre model=model logger=modelLogger
+type=process id=process processor=processor model=model dep=log.model dep=log.model.pre
+type=log id=log.model.post model=model logger=modelLogger dep=process
+type=save id=save model=model file=%{outputDir}/augmented-model.sp dep=process

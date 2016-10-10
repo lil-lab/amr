@@ -1,0 +1,589 @@
+package edu.cmu.lti.nlp.amr
+
+import java.awt.FlowLayout
+import java.awt.Color
+import java.awt.Font
+import javax.swing.JFrame
+import javax.swing.JList
+import javax.swing.JOptionPane
+import javax.swing.JScrollPane
+import javax.swing.event.ListSelectionListener
+import javax.swing.event.ListSelectionEvent
+import javax.swing.ListSelectionModel
+import javax.swing.DefaultListCellRenderer
+
+import java.util.Date
+import java.text.SimpleDateFormat
+
+import scala.swing._
+import scala.swing.event._
+
+import java.io.File
+import java.io.FileOutputStream
+import java.io.PrintWriter
+import java.io.PrintStream
+import java.io.BufferedOutputStream
+import java.io.OutputStreamWriter
+import java.lang.Math.abs
+import java.lang.Math.log
+import java.lang.Math.exp
+import java.lang.Math.random
+import java.lang.Math.floor
+import java.lang.Math.min
+import java.lang.Math.max
+import scala.io.Source
+import scala.util.matching.Regex
+import scala.collection.mutable.Map
+import scala.collection.mutable.Set
+import scala.collection.mutable.ArrayBuffer
+
+import Corpus._
+
+object AlignerTool extends SimpleSwingApplication {
+    val usage = """Usage: scala -classpath . edu.cmu.lti.nlp.amr.AlignerTool filename"""
+    val version = "v.03"
+    type OptionMap = Map[Symbol, Any]
+
+    val colors = Array(Color.RED, Color.GREEN, Color.MAGENTA, Color.ORANGE, Color.PINK, Color.CYAN, Color.BLUE )
+
+    var corpus = LazyArray(Iterator[AMRTrainingData]())
+
+    def top = new MainFrame {
+        /*---------------------- Initialization --------------------*/
+        title = "AMR AlignerTool "+version
+        var recordNumber = 6
+        var annotationIndex = corpus(recordNumber).annotators.size - 1
+
+        var words = corpus(recordNumber).sentence
+        var graph = corpus(recordNumber).graph
+        graph.loadSpans(corpus(recordNumber).spans(annotationIndex), words)
+        val idRegex = """\[[0-9.]*\] ?""".r
+        var amr = graph.root.prettyString(detail = 2, pretty = true).split("\n").map(x => idRegex.replaceFirstIn(x,""))
+        val IDExtractor = """.*\[([^\]]+)\].*""".r
+        var ids = graph.root.prettyString(detail = 2, pretty = true).split("\n").map(x => {val IDExtractor(id) = x; id})
+        var wordIndexToSpan = SpanLoader.toWordMap(graph.spans, words)
+        var spans = for {(span, i) <- graph.spans.zipWithIndex
+            } yield if(!span.coRef) {
+                "Span "+(i+1).toString+": "+span.start+"-"+span.end+"  "+span.words+" => "+span.amr
+            } else {
+                "*** Span "+(i+1).toString+": "+span.start+"-"+span.end+"  "+span.words+" => "+span.amr+" ***"
+            }
+        var spanToAMRIndex : ArrayBuffer[Set[Int]] = graph.spans.map(x => Set()++x.nodeIds.map(ids.indexOf(_)))
+        def spanToWordIndex(i: Int) : Seq[Int] = {
+            Range(graph.spans(i).start, graph.spans(i).end)
+        }
+
+        val wordList = new ListView(words)
+        val amrList = new ListView(amr)
+        val spanList = new ListView(spans)
+        spanList.selection.intervalMode = ListView.IntervalMode.Single
+        wordList.peer.setVisibleRowCount(35)
+        amrList.peer.setVisibleRowCount(35)
+
+        var annotations = 
+            (for {i <- Range(0,corpus(recordNumber).annotators.size)
+              } yield (corpus(recordNumber).annotators(i) + " on " + corpus(recordNumber).annotation_dates(i)).asInstanceOf[Object]).reverse
+        var annotationList = new ComboBox(annotations)
+        annotationList.maximumSize = annotationList.minimumSize
+
+        var madeChanges = false
+
+        var spanSelection = -1  // variable that keeps track of which span # is currently highlighted (across all views)
+        var spanEdit : Option[Int] = None       // variable that keeps track of which span # is currently being edited 
+
+        /*---------------------- Color Renderers -------------------*/
+        amrList.renderer = ListView.Renderer.wrap(new DefaultListCellRenderer() {
+            override def getListCellRendererComponent(list: JList, value: Object, index: Int, isSelected: Boolean, cellHasFocus: Boolean) : java.awt.Component = {
+                val spanIndexes = graph.getNodeById(ids(index)).spans
+//                if (!dynamicSelect || keypressed) {
+                    if(isSelected) {
+                        setBackground(list.getSelectionBackground)
+                        spanIndexes.size match {
+                            case 0 => setForeground(list.getSelectionForeground)
+                            case _ => graph.spans(spanIndexes(0)).coRef match {
+                                          case false => setForeground(colors(spanIndexes(0)%colors.size))
+                                          case true => setForeground(list.getSelectionForeground)
+                                      }
+                        }
+                    } else {
+                        setBackground(list.getBackground)
+                        spanIndexes.size match {
+                            case 0 => setForeground(list.getForeground)
+                                      setBackground(list.getBackground)
+                            case _ => graph.spans(spanIndexes(0)).coRef match {
+                                          case false => setForeground(colors(spanIndexes(0)%colors.size))
+                                                        setBackground(list.getBackground)
+                                          case true => setForeground(list.getForeground)
+                                                       setBackground(Color.RED)
+                                      }
+                        }
+                    } // cut
+                setText(amr(index))
+                setFont(list.getFont)
+                return this.asInstanceOf[java.awt.Component]
+            }
+        })
+        wordList.renderer = ListView.Renderer.wrap(new DefaultListCellRenderer() {
+            override def getListCellRendererComponent(list: JList, value: Object, index: Int, isSelected: Boolean, cellHasFocus: Boolean) : java.awt.Component = {
+                val spanIndex = wordIndexToSpan(index)
+                if (!dynamicSelect || keypressed) {
+                    if(isSelected) {
+                        setBackground(list.getSelectionBackground)
+                        spanIndex.size match {
+                            case 0 => setForeground(list.getSelectionForeground)
+                            case _ => graph.spans(spanIndex(0)).coRef match {
+                                        case false => setForeground(colors(spanIndex(0)%colors.size))
+                                        case true => setForeground(Color.GRAY)
+                                      }
+                        }
+                    } else {
+                        setBackground(list.getBackground)
+                        spanIndex.size match {
+                            case 0 => setForeground(list.getForeground)
+                            case 1 => graph.spans(spanIndex(0)).coRef match {
+                                        case false => setForeground(colors(spanIndex(0)%colors.size))
+                                        case true => setForeground(Color.GRAY)
+                                      }
+                            case _ => graph.spans(spanIndex(1)).coRef match {
+                                        case false => setForeground(list.getForeground)
+                                                      setBackground(Color.RED)
+                                        case true => setForeground(colors(spanIndex(0)%colors.size))
+                                                     setBackground(list.getBackground)
+                                      }
+                        }
+                    }
+                } else {
+                if (cellHasFocus) {
+                    setBackground(list.getSelectionBackground)
+                    if (spanIndex.size == 0) {
+                        setForeground(list.getSelectionForeground)
+                        if (!keypressed && spanSelection != -1) {
+                            spanSelection = -1
+                            amrList.repaint
+                            wordList.repaint
+                        }
+                     } else {
+                        val i = spanIndex(0)
+                        setForeground(colors(i%colors.size))
+                        if (!keypressed && spanSelection != i) {
+                            spanSelection = i
+                            amrList.repaint
+                            wordList.repaint
+                        }
+                    }
+                } else {
+                    if (spanIndex.size == 0) {
+                        setBackground(list.getBackground)
+                        setForeground(list.getForeground)
+                    } else {
+                        val i = spanIndex(0)
+                        if (spanSelection == i) {
+                            setBackground(list.getSelectionBackground)
+                            setForeground(colors(i%colors.size))
+                        } else{
+                            setForeground(colors(i%colors.size))
+                            if (spanIndex.size == 1) {
+                                setBackground(list.getBackground)
+                            } else {
+                                setBackground(Color.RED)
+                            }
+                        }
+                    }
+                }
+                }
+                setText(words(index))
+                setFont(list.getFont)
+                return this.asInstanceOf[java.awt.Component]
+            }
+        })
+
+        /*------------------------- Layout --------------------------*/
+        val nextButton = new Button { text = "Next" }
+        //val curLabel = new Label { text = recordNumber.toString }
+        val curField = new TextField { text = recordNumber.toString}
+        curField.maximumSize = new java.awt.Dimension(30,200)
+        //curField.peer.setSize(5,5)
+        val prevButton = new Button { text = "Prev" }
+        val mainPanel = new BoxPanel(Orientation.Vertical) {
+            contents += annotationList
+            contents += new BoxPanel(Orientation.Horizontal) {
+                contents += prevButton
+                contents += curField
+                contents += nextButton
+            }
+            contents += new BoxPanel(Orientation.Vertical) {
+                contents += spanList
+                contents += new BoxPanel(Orientation.Horizontal) {
+                    contents += new ScrollPane(wordList)
+                    contents += new ScrollPane(amrList)
+                }
+            }
+        }
+        contents = mainPanel
+
+        /*------------------------- Listeners --------------------------*/
+        listenTo(nextButton)
+        listenTo(prevButton)
+        listenTo(curField)
+        reactions += {
+            case ButtonClicked(this.nextButton) =>
+                if (madeChanges) {
+                    saveEdits
+                }
+                recordNumber += 1
+                updateView
+            case ButtonClicked(this.prevButton) =>
+                if (madeChanges) {
+                    saveEdits
+                }
+                recordNumber -= 1
+                updateView
+            case EditDone(this.curField) =>
+                if (madeChanges) {
+                    saveEdits
+                }
+                recordNumber = curField.text.toInt
+                updateView
+        }
+
+        listenTo(spanList.selection)
+        reactions += {
+            case SelectionChanged(this.spanList) if !spanList.selection.adjusting =>
+                val indices = spanList.selection.indices
+                if (indices.size > 0) {
+                    val i = indices.toList(0)  // indices will be of size one
+                    spanSelection = i
+                    listIgnore = Array(true, true)
+                    listSelection(0) = spanToAMRIndex(i)
+                    listSelection(1) = Set()++spanToWordIndex(i)
+                    amrList.selectIndices(spanToAMRIndex(i).toSeq :_* )
+                    wordList.selectIndices(spanToWordIndex(i) :_* )
+                }
+        }
+
+        var keypressed = false
+        listenTo(amrList.keys)
+        listenTo(wordList.keys)
+        listenTo(spanList.keys)
+        listenTo(annotationList.keys)
+        listenTo(mainPanel.keys)
+
+        spanList.requestFocus
+
+        def onKeyPressed() {
+            logger(1,"Key pressed")
+            keypressed = true
+            println("spanSelection = "+spanSelection.toString)
+            if (spanSelection >= 0) {
+                spanEdit = Some(spanSelection)
+            } else {
+                spanEdit = Some(graph.spans.size)
+            }
+            amrList.repaint
+            wordList.repaint
+        }
+
+        def onKeyReleased() {
+            logger(1,"Key released")
+            keypressed = false
+            madeChanges = true
+            if (spanEdit != None) {
+                val Some(spanIndex) = spanEdit
+                val start = wordList.selection.indices.min
+                val end = wordList.selection.indices.max + 1
+                val nodeIds = amrList.selection.indices.map(x => ids(x)).toList.sorted
+                println("Adjusting span = "+spanIndex)
+                if (spanIndex < graph.spans.size) { // we are editing an existing span
+                    graph.updateSpan(spanIndex, start, end, nodeIds, graph.spans(spanIndex).coRef, words)
+                } else {                            // we are adding a new span
+                    graph.addSpan(start, end, nodeIds, false , words)
+                    assert(spanIndex == graph.spans.size - 1, "Sanity check that we correctly added the span")
+                }
+            }
+            wordIndexToSpan = SpanLoader.toWordMap(graph.spans, words)
+            spans = for {(span, i) <- graph.spans.zipWithIndex
+                } yield if(!span.coRef) {
+                    "Span "+(i+1).toString+": "+span.start+"-"+span.end+"  "+span.words+" => "+span.amr
+                } else {
+                    "*** Span "+(i+1).toString+": "+span.start+"-"+span.end+"  "+span.words+" => "+span.amr+" ***"
+                }
+            spanToAMRIndex = graph.spans.map(x => Set()++x.nodeIds.map(ids.indexOf(_)))
+
+            spanSelection = spanEdit.getOrElse(-1)
+
+            spanEdit = None
+            spanList.listData = spans
+            annotationList.peer.setModel(new javax.swing.DefaultComboBoxModel(annotations.toArray))
+
+            amrList.repaint
+            wordList.repaint
+        }
+
+        reactions += {
+            case KeyPressed(_, Key.Shift, _, _) => onKeyPressed
+            case KeyReleased(_, Key.Shift, _, _) => onKeyReleased
+            case KeyPressed(_, Key.Control, _, _) => onKeyPressed
+            case KeyReleased(_, Key.Control, _, _) => onKeyReleased
+            case KeyReleased(_, Key.Space, _, _) => toggleCoRef
+            case KeyPressed(_, Key.S, _, _) => {println("Here."); madeChanges = true}
+        }
+
+        def toggleCoRef {
+            if (spanSelection >= 0) {
+                graph.updateSpan(spanSelection, !graph.spans(spanSelection).coRef, words)
+                madeChanges = true
+            }
+            spans = for {(span, i) <- graph.spans.zipWithIndex
+                } yield if(!span.coRef) {
+                    "Span "+(i+1).toString+": "+span.start+"-"+span.end+"  "+span.words+" => "+span.amr
+                } else {
+                    "*** Span "+(i+1).toString+": "+span.start+"-"+span.end+"  "+span.words+" => "+span.amr+" ***"
+                }
+            spanList.listData = spans
+
+            amrList.repaint
+            wordList.repaint
+            spanList.repaint
+        }
+
+        val lists = Array(amrList, wordList)
+        var listIgnore = Array(false, false)
+        var listSelection = Array(Set(-1), Set(-1))
+        for (i <- Range(0, 2)) {
+            val list = lists(i)
+            listenTo(lists(i).selection)
+            reactions += {
+            case SelectionChanged(`list`) if !lists(i).selection.adjusting =>
+                val indices = lists(i).selection.indices
+                logger(1,"Indices = "+indices.toString)
+                logger(1,"Selection = "+listSelection(i))
+                logger(1,"Ignore = "+listIgnore(i).toString)
+                if (!keypressed) {  // key press means we are editing the span, so don't change spans
+                    if (!listIgnore(i)) {   // ignore if this event came from a list.selectIndices (i.e. not mouse click)
+                        if (indices.size == 1) {
+                            //val nodeIndex : Int = indices.toList(0)
+                            var spanIndex : Option[Int] = None
+                            if (i == 0) { // amrList
+                                val nodeIndex : Int = indices.toList(0)
+                                spanIndex = graph.getNodeById(ids(nodeIndex)).someSpan
+                            } else {      // wordList
+                                val wordIndex : Int = indices.toList(0)
+                                val spanIndexArray = wordIndexToSpan(wordIndex)
+                                if (spanIndexArray.size > 0) {
+                                    spanIndex = Some(spanIndexArray(0)) // Take the first element
+                                }   // otherwise it leaves spanIndex as None
+                            }
+                            if (spanIndex != None) {
+                                val Some(j) = spanIndex
+                                logger(1,"Setting to "+spanToAMRIndex(j))
+                                spanSelection = j
+                                listIgnore = Array(true, true)
+                                listSelection(0) = spanToAMRIndex(j)
+                                amrList.selectIndices(spanToAMRIndex(j).toSeq :_* )
+                                listSelection(1) = Set()++spanToWordIndex(j)
+                                wordList.selectIndices(spanToWordIndex(j) :_* )
+                                logger(1,"Clearing spanList")
+                                spanList.selectIndices()
+                             } else {
+                                if (lists((i+1)%2).selection.indices != Set()) {
+                                    logger(1,"Clearing list = "+((i+1)%2).toString)
+                                    spanSelection = -1
+                                    listSelection((i+1)%2) = Set.empty[Int]
+                                    listIgnore((i+1)%2) = true
+                                    lists((i+1)%2).selectIndices()
+                                }
+                                logger(1,"Setting mine to "+indices)
+                                listSelection(i) = indices
+                                logger(1,"Clearing spanList")
+                                spanList.selectIndices()
+                            }
+                        }
+                    } else {
+                        if (listSelection(i) == indices) {
+                            listIgnore(i) = false
+                        }
+                    }
+                } else {
+                    // TODO: update the span
+                    //listSelection(i) = indices
+                }
+            }
+        }
+
+        spanList.selectIndices(0)
+
+        /*------------------------ Update View ---------------------*/
+        def updateView() {
+/*            words = corpus(recordNumber).sentence
+            graph = corpus(recordNumber).graph
+            amr = graph.root.prettyString(detail = 1, pretty = true).split("\n")
+            ids = graph.root.prettyString(detail = 2, pretty = true).split("\n").map(x => {val ID(id) = x; id})
+            wordIndexToSpan = Span.toWordMap(corpus(recordNumber).spans(0), words) */
+            madeChanges = false
+            annotationIndex = corpus(recordNumber).annotators.size - 1
+            annotations = 
+                (for {i <- Range(0,corpus(recordNumber).annotators.size)
+                  } yield corpus(recordNumber).annotators(i) + " on " + corpus(recordNumber).annotation_dates(i)).reverse
+
+            words = corpus(recordNumber).sentence
+            graph = corpus(recordNumber).graph
+            if (graph.spans.size == 0) {
+                graph.loadSpans(corpus(recordNumber).spans(annotationIndex), words)
+            }
+            amr = graph.root.prettyString(detail = 2, pretty = true).split("\n").map(x => idRegex.replaceFirstIn(x,""))
+            ids = graph.root.prettyString(detail = 2, pretty = true).split("\n").map(x => {val IDExtractor(id) = x; id})
+            wordIndexToSpan = SpanLoader.toWordMap(graph.spans, words)
+            spans = for {(span, i) <- graph.spans.zipWithIndex
+                } yield if(!span.coRef) {
+                    "Span "+(i+1).toString+": "+span.start+"-"+span.end+"  "+span.words+" => "+span.amr
+                } else {
+                    "*** Span "+(i+1).toString+": "+span.start+"-"+span.end+"  "+span.words+" => "+span.amr+" ***"
+                }
+            spanToAMRIndex = graph.spans.map(x => Set()++x.nodeIds.map(ids.indexOf(_))) 
+
+            curField.text = recordNumber.toString
+            wordList.listData = words
+            amrList.listData = amr
+            spanList.listData = spans
+            annotationList.peer.setModel(new javax.swing.DefaultComboBoxModel(annotations.toArray))
+
+            spanSelection = -1
+            listIgnore = Array(false, false)
+            listSelection = Array(Set(-1), Set(-1))
+ 
+            for ((span, i) <- graph.spans.zipWithIndex) {
+                println(spans)
+            }
+
+            spanList.selectIndices(0)
+            spanList.requestFocus
+        }
+
+        /*------------------------ Save Edits ---------------------*/
+        val sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS")
+        var edited : Set[Int] = Set()
+        def saveEdits() {
+            val r = corpus(recordNumber)
+            val AMRTrainingData(_,_,annotations,annotators,annotation_date,_,_) = r
+            if (!edited.contains(recordNumber)) {
+                edited += recordNumber
+                annotations += graph.spans.map(x => x.format).mkString(" ")
+                annotators += annotator
+                annotation_date += sdf.format(new Date)
+            } else {
+                val i = annotations.size - 1
+                annotations(i) = graph.spans.map(x => x.format).mkString(" ")
+                annotators(i) = annotator
+                annotation_date(i) = sdf.format(new Date)
+            }
+        }
+    }
+
+        /*------------------------ Main Program --------------------*/
+    def parseOptions(map : OptionMap, list: List[String]) : OptionMap = {
+        def isSwitch(s : String) = (s(0) == '-')
+        list match {
+            case Nil => map
+            case "--refresh" :: tail =>
+                      parseOptions(map ++ Map('refresh -> true), tail)
+            case "-v" :: value :: tail =>
+                      parseOptions(map ++ Map('verbosity -> value.toInt), tail)
+            case string :: opt2 :: tail if isSwitch(opt2) => 
+                      parseOptions(map ++ Map('infile -> string), list.tail)
+            case string :: Nil =>  parseOptions(map ++ Map('infile -> string), list.tail)
+            case option :: tail => println("Error: Unknown option "+option)
+                               sys.exit(1)
+      }
+    }
+
+    var dynamicSelect = false
+    var annotator = "Jeffrey Flanigan"
+
+    override def main(args: Array[String]) {
+
+        if (args.length == 0) { println(usage); sys.exit(1) }
+
+        val options = parseOptions(Map(),args.toList)
+        if (options.contains('verbosity)) {
+            verbosity = options('verbosity).asInstanceOf[Int]
+        }
+        if (!options.contains('infile)) {
+            System.err.println("Error: No AMR file specified")
+            sys.exit(1)
+        }
+        dynamicSelect = options.contains('refresh)
+
+        val filename = options('infile).asInstanceOf[String]
+
+        val file = Source.fromFile(filename)
+        corpus = LazyArray(
+            for {
+                block <- splitOnNewline(file.getLines)
+                if block.matches("(.|\n)*\n\\((.|\n)*")     // needs to contain some AMR
+            } yield AMRTrainingData(block)
+        )
+
+        super.main(args)    // Start GUI
+
+        Runtime.getRuntime().addShutdownHook(new Thread() {
+            override def run() {
+                print("saving... ")
+                verbosity = 0
+                corpus.loadEverything
+                file.close
+                val output = new PrintWriter(filename, "UTF-8")
+                try {
+                    for (block <- corpus) {
+                        output.println(block.extras)
+                        for (((alignment, annotator), date) <- block.spans.zip(block.annotators).zip(block.annotation_dates)) {
+                            output.println("# ::alignments "+alignment+" ::annotator "+annotator+" ::date "+date+" ::editor AlignerTool "+version)
+                        }
+                        output.println(block.amrStr)
+                        output.println()
+                    }
+                } finally {
+                    output.close
+                }
+                println("done")
+            }
+        })
+    }
+}
+
+
+/*                } else {
+                if (cellHasFocus) {
+                    setBackground(list.getSelectionBackground)
+                    if (spanIndex == None) {
+                        setForeground(list.getSelectionForeground)
+                        if (!keypressed && spanSelection != -1) {
+                            spanSelection = -1
+                            amrList.repaint
+                            wordList.repaint
+                        }
+                    } else {
+                        val Some(i) = spanIndex
+                        setForeground(colors(i%colors.size))
+                        if (!keypressed && spanSelection != i) {
+                            spanSelection = i
+                            amrList.repaint     // if changed, repaint
+                            wordList.repaint
+                        }
+                    }
+                } else {
+                    if (spanIndex == None) {
+                        setBackground(Color.RED)
+                        setForeground(list.getForeground)
+                    } else {
+                        val Some(i) = spanIndex
+                        if (spanSelection == i && spanToAMRIndex(i).contains(index)) {
+                            setBackground(list.getSelectionBackground)
+                            setForeground(colors(i%colors.size))
+                        } else {
+                            setBackground(list.getBackground)
+                            setForeground(colors(i%colors.size))
+                        }
+                    }
+                }
+                } */
+

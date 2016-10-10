@@ -1,0 +1,9 @@
+outputDir=logs.%{hostname}
+globalLog=logs.%{hostname}/global.log
+include=../params.inc
+numThreads=1
+
+type=tinydist.worker id=worker port=%{masterPort} addr=%{master} threads=%{numThreads} name=%{hostname}
+
+# Jobs
+type=tinydist.worker id=work worker=worker

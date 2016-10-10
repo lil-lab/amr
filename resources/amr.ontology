@@ -1,0 +1,10 @@
+person	family	animal	language	nationality	ethnic-group	regional-group	religious-group
+organization	company	government-organization	military	criminal-organization	political-party	school	university	research-institute	team	league
+location	city	city-district	county	local-region	state	province	country	country-region	world-region	continent	ocean	sea	lake	river	gulf	bay	strait	canal	peninsula	mountain	volcano	valley	canyon	island	desert	forest	moon	planet	star	constellation
+facility	airport	station	port	tunnel	bridge	road	railway-line	canal	building	theater	museum	palace	hotel	worship-place	market	sports-facility	park	zoo	amusement-park
+event	incident	natural-disaster	earthquake	war	conference	game	festival
+product	vehicle	ship	aircraft	aircraft-type	spaceship	car-make	work-of-art	picture	music	show	broadcast-program
+publication	book	newspaper	magazine	journal
+natural-object
+law	treaty	award	food-dish	disease
+thing

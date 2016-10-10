@@ -1,0 +1,24 @@
+The hangings took place in 2 Iranian cities.
+JSON{"date":"2014-09-29T11:07:26.683","tok":"The hangings took place in 2 Iranian cities .","file":"PROXY_AFP_ENG_20070721_0240_8.txt","alignments":"7-8|0.0 5-6|0.0.0 1-2|0 6-7|0.0.1+0.0.1.0+0.0.1.0.0","amr":"(h \/ hang-01 :location (c \/ city :quant 2 :location (c2 \/ country :name (n \/ name :op1 \"Iran\"))))","snt-type":"body","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20070721_0240.8","alignedExp":"7-8##(a:<id,<<e,t>,e>> !1 (lambda $0:e (city:<e,t> $0)))####5-6##2:i####1-2##(a:<id,<<e,t>,e>> !1 (lambda $0:e (hang-01:<e,t> $0)))####6-7##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(country:<e,t> $0)\n\t(c_name:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(name:<e,t> $1)\n\t\t\t(c_op:<e,<txt,t>> $1 Iran:txt))))))))","ptbtok":"The hangings took place in 2 Iranian cities .","preferred":"","save-date":"Wed Jul 3, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(hang-01:<e,t> $0)
+	(c_location:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(city:<e,t> $1)
+			(c_quant:<e,<i,t>> $1 2:i)
+			(c_location:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(country:<e,t> $2)
+					(c_name:<e,<e,t>> $2 
+						(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+							(name:<e,t> $3)
+							(c_op:<e,<txt,t>> $3 Iran:txt))))))))))))))))
+The :- S[x]/S[x] : (lambda $0:<e,t> $0)
+hangings :- N[pl] : hang-01:<e,t>
+took :- S[dcl]/S[b] : (lambda $0:<e,t> $0)
+place :- S[b]\N/(S[x]\S[x]) : (lambda $0:<<e,t>,<e,t>> (lambda $1:<e,t> ($0 $1)))
+in :- S[x]\S[x]/NP : (lambda $0:e (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_location:<e,<e,t>> $2 $0)))))
+Iranian :- N[x]/N[x] : (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_location:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $2:e (and:<t*,t> (country:<e,t> $2) (c_name:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id (lambda $3:e (and:<t*,t> (name:<e,t> $3) (c_op:<e,<txt,t>> $3 Iran:txt))))))))))))
+cities :- N[pl] : city:<e,t>
+. :- PUNCT
+

@@ -1,0 +1,50 @@
+It against potential missile threats from countries such as Iran and North Korea.
+JSON{"date":"2014-09-29T11:07:26.434","tok":"It against potential missile threats from countries such as Iran and North Korea .","file":"PROXY_AFP_ENG_20070716_0417_17.txt","alignments":"0-1|0.0 6-7|0.1.0 10-11|0.1.0.0 11-13|0.1.0.0.1+0.1.0.0.1.0+0.1.0.0.1.0.0+0.1.0.0.1.0.1 12-13|0.1.0.0.1.0.1 9-10|0.1.0.0.0.0.0 3-4|0.1.1 2-3|0.1.2 4-5|0.1","amr":"(o \/ oppose-01 :ARG0 (i \/ it) :ARG1 (t \/ threaten-01 :ARG0 (c \/ country :example (a \/ and :op1 (c2 \/ country :name (n \/ name :op1 \"Iran\")) :op2 (c3 \/ country :name (n2 \/ name :op1 \"North\" :op2 \"Korea\")))) :ARG1 (m \/ missile) :mod (p \/ potential)))","snt-type":"body","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20070716_0417.17","alignedExp":"0-1##(a:<id,<<e,t>,e>> !1 (lambda $0:e (it:<e,t> $0)))####6-7##(a:<id,<<e,t>,e>> !1 (lambda $0:e (country:<e,t> $0)))####10-11##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<e,t> $0)))####9-10##Iran:txt####3-4##(a:<id,<<e,t>,e>> !1 (lambda $0:e (missile:<e,t> $0)))####2-3##(a:<id,<<e,t>,e>> !1 (lambda $0:e (potential:<e,t> $0)))####4-5##(a:<id,<<e,t>,e>> !1 (lambda $0:e (threaten-01:<e,t> $0)))####11-13##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(country:<e,t> $0)\n\t(c_name:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(name:<e,t> $1)\n\t\t\t(c_op:<e,<txt,t>> $1 North++Korea:txt))))))))","ptbtok":"It against potential missile threats from countries such as Iran and North Korea .","preferred":"","save-date":"Thu Jun 20, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(oppose-01:<e,t> $0)
+	(c_ARG0:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (it:<e,t> $1))))
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+			(threaten-01:<e,t> $2)
+			(c_ARG0:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+					(country:<e,t> $3)
+					(c_example:<e,<e,t>> $3 
+						(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+							(and:<e,t> $4)
+							(c_op1:<e,<e,t>> $4 
+								(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+									(country:<e,t> $5)
+									(c_name:<e,<e,t>> $5 
+										(a:<id,<<e,t>,e>> !7 (lambda $6:e (and:<t*,t>
+											(name:<e,t> $6)
+											(c_op:<e,<txt,t>> $6 Iran:txt)))))))))
+							(c_op2:<e,<e,t>> $4 
+								(a:<id,<<e,t>,e>> !8 (lambda $7:e (and:<t*,t>
+									(country:<e,t> $7)
+									(c_name:<e,<e,t>> $7 
+										(a:<id,<<e,t>,e>> !9 (lambda $8:e (and:<t*,t>
+											(name:<e,t> $8)
+											(c_op:<e,<txt,t>> $8 North++Korea:txt)))))))))))))))))
+			(c_ARG1:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !10 (lambda $9:e (missile:<e,t> $9))))
+			(c_mod:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !11 (lambda $10:e (potential:<e,t> $10)))))))))))
+It :- NP[sg] : (a:<id,<<e,t>,e>> na:id (lambda $0:e (it:<e,t> $0)))
+// FAIL: ungrammatical sentence due to missing word -> super tagger fails
+// is :- S[dcl]\NP/S[adj] : (lambda $0:<e,t> (lambda $1:e (lambda $2:e (and:<t*,t> (c_ARG0:<e,<e,t>> $2 $1) ($0 $2)))))
+against :- S[adj]/NP : (lambda $0:e (lambda $2:e (and:<t*,t> (oppose-01:<e,t> $2) (c_ARG1:<e,<e,t>> $2 $0))))
+// Incorrect entry to make it parse
+// against :- S[dcl]\NP/NP : (lambda $0:e (lambda $1:e (lambda $2:e (and:<t*,t> (oppose-01:<e,t> $2) (c_ARG0:<e,<e,t>> $2 $1) (c_ARG1:<e,<e,t>> $2 $0)))))
+potential :- N[x]/N[x] : (lambda $1:<e,t> (lambda $0:e (and:<t*,t> ($1 $0) (c_mod:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id potential:<e,t>)))))
+missile :- N[sg] : (lambda $0:e (missile:<e,t> $0))
+threats :- N[pl] : (lambda $0:e (threaten-01:<e,t> $0))
+from :- N[x]\N[x]/NP : (lambda $0:e (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_ARG0:<e,<e,t>> $1 $0)))))
+countries :- N[pl] : (lambda $0:e (country:<e,t> $0))
+such as :- N[x]\N[x]/NP : (lambda $0:e (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_example:<e,<e,t>> $1 $0)))))
+Iran :- NP[sg] : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (country:<e,t> $0) (c_name:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (name:<e,t> $1) (c_op:<e,<txt,t>> $1 Iran:txt))))))))
+and :- C : conj:e
+North Korea :- NP[sg] : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (country:<e,t> $0) (c_name:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (name:<e,t> $1) (c_op:<e,<txt,t>> $1 North++Korea:txt))))))))
+. :- PUNCT
+

@@ -1,0 +1,38 @@
+Some trans-Atlantic Internet and phone service was disrupted.
+JSON{"date":"2014-09-29T11:07:15.053","tok":"Some trans - Atlantic Internet and phone service was disrupted .","file":"PROXY_AFP_ENG_20030126_0212_16.txt","alignments":"7-8|0 3-4|0.0 5-6|0.0.1 0-1|0.0.1.1 2-3|0.0.1.0 4-5|0.0.0.0","amr":"(d \/ disrupt-01 :ARG1 (a \/ and :op1 (s \/ service :mod (p \/ phone) :quant (s2 \/ some) :mod (t \/ trans-atlantic)) :op2 (s3 \/ service :mod (i \/ internet) :quant (s4 \/ some) :mod (t2 \/ trans-atlantic))))","snt-type":"body","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20030126_0212.16","alignedExp":"7-8##(a:<id,<<e,t>,e>> !1 (lambda $0:e (disrupt-01:<e,t> $0)))####3-4##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<e,t> $0)))####5-6##(a:<id,<<e,t>,e>> !1 (lambda $0:e (service:<e,t> $0)))####0-1##(a:<id,<<e,t>,e>> !1 (lambda $0:e (some:<e,t> $0)))####2-3##(a:<id,<<e,t>,e>> !1 (lambda $0:e (internet:<e,t> $0)))####4-5##(a:<id,<<e,t>,e>> !1 (lambda $0:e (phone:<e,t> $0)))","ptbtok":"Some trans-Atlantic Internet and phone service was disrupted .","preferred":"","save-date":"Thu Jun 27, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(disrupt-01:<e,t> $0)
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(and:<e,t> $1)
+			(c_op1:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(service:<e,t> $2)
+					(c_mod:<e,<e,t>> $2 
+						(a:<id,<<e,t>,e>> !4 (lambda $3:e (phone:<e,t> $3))))
+					(c_quant:<e,<e,t>> $2 
+						(a:<id,<<e,t>,e>> !5 (lambda $4:e (some:<e,t> $4))))
+					(c_mod:<e,<e,t>> $2 
+						(a:<id,<<e,t>,e>> !6 (lambda $5:e (trans-atlantic:<e,t> $5))))))))
+			(c_op2:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !7 (lambda $6:e (and:<t*,t>
+					(service:<e,t> $6)
+					(c_mod:<e,<e,t>> $6 
+						(a:<id,<<e,t>,e>> !8 (lambda $7:e (internet:<e,t> $7))))
+					(c_quant:<e,<e,t>> $6 
+						(a:<id,<<e,t>,e>> !9 (lambda $8:e (some:<e,t> $8))))
+					(c_mod:<e,<e,t>> $6 
+						(a:<id,<<e,t>,e>> !10 (lambda $9:e (trans-atlantic:<e,t> $9)))))))))))))))
+// FAIL
+// The coordination is odd: it's a single service that provides internet and phone, not two services.
+// We don't support this kind of coordination. It requires some special handling due to the coordination is being modeled in AMR.
+Some :- N[x]/N[x] : (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_quant:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id some:<e,t>))))) 
+trans-Atlantic :- N[x]/N[x] : (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_mod:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id trans-atlantic:<e,t>)))))
+Internet :- N[sg] : internet:<e,t>
+and :- C : conj:e
+phone :- N[sg] : phone:<e,t>
+service :- N[nb] : service:<e,t>
+was :- S[dcl]\NP/(S[pss]\NP) : (lambda $0:<e,<e,t>> $0)
+disrupted :- S[pss]\NP : (lambda $0:e (lambda $1:e (and:<t*,t> (disrupt-01:<e,t> $1) (c_ARG1:<e,<e,t>> $1 $0))))
+. :- PUNCT
+

@@ -1,0 +1,370 @@
+Lee stated that the COA has spent the past several years setting up relevant mechanisms and drafting a set of promotional measures to enhance development of China s knowledge based agriculture and applications of agricultural technology 
+file=PROXY_CNA_ENG_20080128_0016_7.txt	save-date=Wed Sep 18, 2013	annotator=SDL-AMR-09	preferred=true	snt-type=body	date=2013-07-28T09:23:35	id=PROXY_CNA_ENG_20080128_0016.7
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(state-01:<e,t> $0)
+	(c_ARG0:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(person:<e,t> $1)
+			(c_name:<e,<txt,t>> $1 Lee:txt)))))
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+			(spend-02:<e,t> $2)
+			(c_ARG0:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+					(government-organization:<e,t> $3)
+					(c_name:<e,<txt,t>> $3 COA:txt)))))
+			(c_ARG1:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+					(several:<e,t> $4)
+					(c_op1:<e,<e,t>> $4 
+						(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+							(temporal-quantity:<e,t> $5)
+							(c_quant:<e,<i,t>> $5 1:i)
+							(c_unit:<e,<e,t>> $5 
+								(a:<id,<<e,t>,e>> !7 (lambda $6:e (and:<t*,t>
+									(year:<e,t> $6)
+									(c_mod:<e,<e,t>> $6 
+										(a:<id,<<e,t>,e>> !8 (lambda $7:e (past:<e,t> $7))))))))))))))))
+			(c_ARG2:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !9 (lambda $8:e (and:<t*,t>
+					(and:<e,t> $8)
+					(c_op1:<e,<e,t>> $8 
+						(a:<id,<<e,t>,e>> !10 (lambda $9:e (and:<t*,t>
+							(set-03:<e,t> $9)
+							(c_ARG0:<e,<e,t>> $9 
+								(ref:<id,e> !4))
+							(c_ARG1:<e,<e,t>> $9 
+								(a:<id,<<e,t>,e>> !11 (lambda $10:e (and:<t*,t>
+									(mechanism:<e,t> $10)
+									(c_mod:<e,<e,t>> $10 
+										(a:<id,<<e,t>,e>> !12 (lambda $11:e (relevance:<e,t> $11))))))))))))
+					(c_op2:<e,<e,t>> $8 
+						(a:<id,<<e,t>,e>> !13 (lambda $12:e (and:<t*,t>
+							(draft-01:<e,t> $12)
+							(c_ARG0:<e,<e,t>> $12 
+								(ref:<id,e> !4))
+							(c_ARG1:<e,<e,t>> $12 
+								(a:<id,<<e,t>,e>> !14 (lambda $13:e (and:<t*,t>
+									(measure:<e,t> $13)
+									(c_part-of:<e,<e,t>> $13 
+										(a:<id,<<e,t>,e>> !15 (lambda $14:e (set:<e,t> $14))))
+									(c_mod:<e,<e,t>> $13 
+										(a:<id,<<e,t>,e>> !16 (lambda $15:e (promotion:<e,t> $15))))))))))))))))
+			(c_purpose:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !17 (lambda $16:e (and:<t*,t>
+					(enhance-01:<e,t> $16)
+					(c_ARG1:<e,<e,t>> $16 
+						(a:<id,<<e,t>,e>> !18 (lambda $17:e (and:<t*,t>
+							(and:<e,t> $17)
+							(c_op1:<e,<e,t>> $17 
+								(a:<id,<<e,t>,e>> !19 (lambda $18:e (and:<t*,t>
+									(develop-02:<e,t> $18)
+									(c_ARG1:<e,<e,t>> $18 
+										(a:<id,<<e,t>,e>> !20 (lambda $19:e (and:<t*,t>
+											(agriculture:<e,t> $19)
+											(c_ARG1-of:<e,<e,t>> $19 
+												(a:<id,<<e,t>,e>> !21 (lambda $20:e (and:<t*,t>
+													(base-02:<e,t> $20)
+													(c_ARG2:<e,<e,t>> $20 
+														(a:<id,<<e,t>,e>> !22 (lambda $21:e (and:<t*,t>
+															(thing:<e,t> $21)
+															(c_ARG1-of:<e,<e,t>> $21 
+																(a:<id,<<e,t>,e>> !23 (lambda $22:e (know-01:<e,t> $22))))))))))))
+											(c_poss:<e,<e,t>> $19 
+												(a:<id,<<e,t>,e>> !24 (lambda $23:e (and:<t*,t>
+													(country:<e,t> $23)
+													(c_name:<e,<txt,t>> $23 China:txt)))))))))))))
+							(c_op2:<e,<e,t>> $17 
+								(a:<id,<<e,t>,e>> !25 (lambda $24:e (and:<t*,t>
+									(apply-02:<e,t> $24)
+									(c_ARG1:<e,<e,t>> $24 
+										(a:<id,<<e,t>,e>> !26 (lambda $25:e (and:<t*,t>
+											(technology:<e,t> $25)
+											(c_mod:<e,<e,t>> $25 
+												(a:<id,<<e,t>,e>> !27 (lambda $26:e (agriculture:<e,t> $26)))))))))))))))))))))))))))
+// Issue: The weird construction of "past several years"
+Lee :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (person:<e,t> $0) (c_name:<e,<txt,t>> $0 Lee:txt))))
+stated :- S\NP/NP : (lambda $0:e (lambda $1:e (lambda $2:e (and:<t*,t> (state-01:<e,t> $2) (c_ARG0:<e,<e,t>> $2 $1) (c_ARG1:<e,<e,t>> $2 $0)))))
+that :- NP/S : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+the :- NP/N : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+COA :- N : (lambda $0:e (and:<t*,t> (government-organization:<e,t> $0) (c_name:<e,<txt,t>> $0 COA:txt)))
+has :- S\NP/(S\NP) : (lambda $0:<e,<e,t>> $0)
+spent :- S\NP/NP : (lambda $0:e (lambda $1:e (lambda $2:e (and:<t*,t> (spend-02:<e,t> $2) (c_ARG0:<e,<e,t>> $2 $1) (c_ARG1:<e,<e,t>> $2 $0)))))
+the :- NP/N : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+past :- ADJ : (lambda $0:e (past:<e,t> $0))
+several :- N\(N/N)/N : (lambda $0:<e,t> (lambda $1:<<e,t>,<e,t>> (lambda $2:e (and:<t*,t> (several:<e,t> $2) (c_op1:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id (lambda $5:e (and:<t*,t> (temporal-quantity:<e,t> $5) (c_quant:<e,<i,t>> $5 1:i) (c_unit:<e,<e,t>> $5 (a:<id,<<e,t>,e>> na:id ($1 $0)))))))))))
+years :- N : (lambda $0:e (year:<e,t> $0))
+setting :- S/NP : (lambda $0:e (lambda $1:e (and:<t*,t> (set-03:<e,t> $1) (c_ARG0:<e,<e,t>> $1 (ref:<id,e> na:id)) (c_ARG1:<e,<e,t>> $1 $0))))
+up :- AP : (lambda $0:e true:t)
+relevant :- ADJ : (lambda $0:e (relevance:<e,t> $0))
+mechanisms :- N : (lambda $0:e (mechanism:<e,t> $0))
+and :- S\S/S : (lambda $0:<e,t> (lambda $1:<e,t> (lambda $2:e (and:<t*,t> (and:<e,t> $2) (c_op1:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $1)) (c_op2:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $0))))))
+drafting :- S/NP : (lambda $0:e (lambda $1:e (and:<t*,t> (draft-01:<e,t> $1) (c_ARG0:<e,<e,t>> $1 (ref:<id,e> na:id)) (c_ARG1:<e,<e,t>> $1 $0))))
+a :- NP/N : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+set :- N : (lambda $0:e (set:<e,t> $0))
+of :- ADJ\N : (lambda $0:<e,t> (lambda $1:e (c_part-of:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id $0))))
+promotional :- ADJ : (lambda $0:e (promotion:<e,t> $0))
+measures :- N : (lambda $0:e (measure:<e,t> $0))
+to :- AP/S : (lambda $0:<e,t> (lambda $1:e (c_purpose:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id $0))))
+enhance :- S/NP : (lambda $0:e (lambda $1:e (and:<t*,t> (enhance-01:<e,t> $1) (c_ARG1:<e,<e,t>> $1 $0))))
+development :- N : (lambda $0:e (develop-02:<e,t> $0))
+of :- PP/NP : (lambda $0:e (lambda $1:e (c_ARG1:<e,<e,t>> $1 $0)))
+China :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (country:<e,t> $0) (c_name:<e,<txt,t>> $0 China:txt))))
+s :- ADJ\NP : (lambda $0:e (lambda $1:e (c_poss:<e,<e,t>> $1 $0)))
+knowledge :- N : (lambda $0:e (and:<t*,t> (thing:<e,t> $0) (c_ARG1-of:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $2:e (know-01:<e,t> $2))))))
+based :- S\NP : (lambda $0:e (lambda $1:e (and:<t*,t> (base-02:<e,t> $1) (c_ARG2:<e,<e,t>> $1 $0))))
+agriculture :- N : (lambda $0:e (agriculture:<e,t> $0))
+and :- N\N/N : (lambda $0:<e,t> (lambda $1:<e,t> (lambda $2:e (and:<t*,t> (and:<e,t> $2) (c_op1:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $1)) (c_op2:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $0))))))
+applications :- N : (lambda $0:e (apply-02:<e,t> $0))
+of :- PP/NP : (lambda $0:e (lambda $1:e (c_ARG1:<e,<e,t>> $1 $0)))
+agricultural :- ADJ : (lambda $0:e (agriculture:<e,t> $0))
+technology :- N : (lambda $0:e (technology:<e,t> $0))
+
+Lee stated that the COA has spent the past several years setting up relevant mechanisms and drafting a set of promotional measures to enhance development of China s knowledge based agriculture and applications of agricultural technology 
+file=PROXY_CNA_ENG_20080128_0016_7.txt	save-date=Mon Aug 5, 2013	annotator=SDL-AMR-15	snt-type=body	date=2013-07-28T09:23:35	id=PROXY_CNA_ENG_20080128_0016.7
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(state-01:<e,t> $0)
+	(c_ARG0:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(person:<e,t> $1)
+			(c_name:<e,<txt,t>> $1 Lee:txt)))))
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+			(spend-02:<e,t> $2)
+			(c_ARG0:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+					(government-organization:<e,t> $3)
+					(c_name:<e,<txt,t>> $3 COA:txt)))))
+			(c_ARG1:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+					(temporal-quantity:<e,t> $4)
+					(c_quant:<e,<e,t>> $4 
+						(a:<id,<<e,t>,e>> !6 (lambda $5:e (several:<e,t> $5))))
+					(c_unit:<e,<e,t>> $4 
+						(a:<id,<<e,t>,e>> !7 (lambda $6:e (and:<t*,t>
+							(year:<e,t> $6)
+							(c_mod:<e,<e,t>> $6 
+								(a:<id,<<e,t>,e>> !8 (lambda $7:e (past:<e,t> $7))))))))))))
+			(c_ARG2:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !9 (lambda $8:e (and:<t*,t>
+					(and:<e,t> $8)
+					(c_op1:<e,<e,t>> $8 
+						(a:<id,<<e,t>,e>> !10 (lambda $9:e (and:<t*,t>
+							(set-03:<e,t> $9)
+							(c_ARG0:<e,<e,t>> $9 
+								(ref:<id,e> !4))
+							(c_ARG1:<e,<e,t>> $9 
+								(a:<id,<<e,t>,e>> !11 (lambda $10:e (and:<t*,t>
+									(mechanism:<e,t> $10)
+									(c_mod:<e,<e,t>> $10 
+										(a:<id,<<e,t>,e>> !12 (lambda $11:e (relevance:<e,t> $11))))))))))))
+					(c_op2:<e,<e,t>> $8 
+						(a:<id,<<e,t>,e>> !13 (lambda $12:e (and:<t*,t>
+							(draft-01:<e,t> $12)
+							(c_ARG0:<e,<e,t>> $12 
+								(ref:<id,e> !4))
+							(c_ARG1:<e,<e,t>> $12 
+								(a:<id,<<e,t>,e>> !14 (lambda $13:e (and:<t*,t>
+									(measure:<e,t> $13)
+									(c_part-of:<e,<e,t>> $13 
+										(a:<id,<<e,t>,e>> !15 (lambda $14:e (set:<e,t> $14))))
+									(c_mod:<e,<e,t>> $13 
+										(a:<id,<<e,t>,e>> !16 (lambda $15:e (promotion:<e,t> $15))))))))))))))))
+			(c_purpose:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !17 (lambda $16:e (and:<t*,t>
+					(enhance-01:<e,t> $16)
+					(c_ARG1:<e,<e,t>> $16 
+						(a:<id,<<e,t>,e>> !18 (lambda $17:e (and:<t*,t>
+							(and:<e,t> $17)
+							(c_op1:<e,<e,t>> $17 
+								(a:<id,<<e,t>,e>> !19 (lambda $18:e (and:<t*,t>
+									(develop-02:<e,t> $18)
+									(c_ARG1:<e,<e,t>> $18 
+										(a:<id,<<e,t>,e>> !20 (lambda $19:e (and:<t*,t>
+											(agriculture:<e,t> $19)
+											(c_ARG1-of:<e,<e,t>> $19 
+												(a:<id,<<e,t>,e>> !21 (lambda $20:e (and:<t*,t>
+													(base-02:<e,t> $20)
+													(c_ARG2:<e,<e,t>> $20 
+														(a:<id,<<e,t>,e>> !22 (lambda $21:e (and:<t*,t>
+															(thing:<e,t> $21)
+															(c_ARG1-of:<e,<e,t>> $21 
+																(a:<id,<<e,t>,e>> !23 (lambda $22:e (know-01:<e,t> $22))))))))))))
+											(c_poss:<e,<e,t>> $19 
+												(a:<id,<<e,t>,e>> !24 (lambda $23:e (and:<t*,t>
+													(country:<e,t> $23)
+													(c_name:<e,<txt,t>> $23 China:txt)))))))))))))
+							(c_op2:<e,<e,t>> $17 
+								(a:<id,<<e,t>,e>> !25 (lambda $24:e (and:<t*,t>
+									(apply-02:<e,t> $24)
+									(c_ARG1:<e,<e,t>> $24 
+										(a:<id,<<e,t>,e>> !26 (lambda $25:e (and:<t*,t>
+											(technology:<e,t> $25)
+											(c_mod:<e,<e,t>> $25 
+												(a:<id,<<e,t>,e>> !27 (lambda $26:e (agriculture:<e,t> $26)))))))))))))))))))))))))))
+// Issue: The weird construction of "past several years"
+Lee :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (person:<e,t> $0) (c_name:<e,<txt,t>> $0 Lee:txt))))
+stated :- S\NP/NP : (lambda $0:e (lambda $1:e (lambda $2:e (and:<t*,t> (state-01:<e,t> $2) (c_ARG0:<e,<e,t>> $2 $1) (c_ARG1:<e,<e,t>> $2 $0)))))
+that :- NP/S : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+the :- NP/N : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+COA :- N : (lambda $0:e (and:<t*,t> (government-organization:<e,t> $0) (c_name:<e,<txt,t>> $0 COA:txt)))
+has :- S\NP/(S\NP) : (lambda $0:<e,<e,t>> $0)
+spent :- S\NP/NP : (lambda $0:e (lambda $1:e (lambda $2:e (and:<t*,t> (spend-02:<e,t> $2) (c_ARG0:<e,<e,t>> $2 $1) (c_ARG1:<e,<e,t>> $2 $0)))))
+the :- NP/N : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+past :- ADJ : (lambda $0:e (past:<e,t> $0))
+several :- ADJ : (lambda $0:e (several:<e,t> $0))
+years :- N\ADJ : (lambda $1:<e,t> (lambda $2:e (and:<t*,t> (temporal-quantity:<e,t> $2) (c_unit:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id (lambda $6:e (and:<t*,t> (year:<e,t> $6) (c_mod:<e,<e,t>> $6 (a:<id,<<e,t>,e>> na:id $1)))))))))
+setting :- S/NP : (lambda $0:e (lambda $1:e (and:<t*,t> (set-03:<e,t> $1) (c_ARG0:<e,<e,t>> $1 (ref:<id,e> na:id)) (c_ARG1:<e,<e,t>> $1 $0))))
+up :- AP : (lambda $0:e true:t)
+relevant :- ADJ : (lambda $0:e (relevance:<e,t> $0))
+mechanisms :- N : (lambda $0:e (mechanism:<e,t> $0))
+and :- S\S/S : (lambda $0:<e,t> (lambda $1:<e,t> (lambda $2:e (and:<t*,t> (and:<e,t> $2) (c_op1:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $1)) (c_op2:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $0))))))
+drafting :- S/NP : (lambda $0:e (lambda $1:e (and:<t*,t> (draft-01:<e,t> $1) (c_ARG0:<e,<e,t>> $1 (ref:<id,e> na:id)) (c_ARG1:<e,<e,t>> $1 $0))))
+a :- NP/N : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+set :- N : (lambda $0:e (set:<e,t> $0))
+of :- ADJ\N : (lambda $0:<e,t> (lambda $1:e (c_part-of:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id $0))))
+promotional :- ADJ : (lambda $0:e (promotion:<e,t> $0))
+measures :- N : (lambda $0:e (measure:<e,t> $0))
+to :- AP/S : (lambda $0:<e,t> (lambda $1:e (c_purpose:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id $0))))
+enhance :- S/NP : (lambda $0:e (lambda $1:e (and:<t*,t> (enhance-01:<e,t> $1) (c_ARG1:<e,<e,t>> $1 $0))))
+development :- N : (lambda $0:e (develop-02:<e,t> $0))
+of :- PP/NP : (lambda $0:e (lambda $1:e (c_ARG1:<e,<e,t>> $1 $0)))
+China :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (country:<e,t> $0) (c_name:<e,<txt,t>> $0 China:txt))))
+s :- ADJ\NP : (lambda $0:e (lambda $1:e (c_poss:<e,<e,t>> $1 $0)))
+knowledge :- N : (lambda $0:e (and:<t*,t> (thing:<e,t> $0) (c_ARG1-of:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $2:e (know-01:<e,t> $2))))))
+based :- S\NP : (lambda $0:e (lambda $1:e (and:<t*,t> (base-02:<e,t> $1) (c_ARG2:<e,<e,t>> $1 $0))))
+agriculture :- N : (lambda $0:e (agriculture:<e,t> $0))
+and :- N\N/N : (lambda $0:<e,t> (lambda $1:<e,t> (lambda $2:e (and:<t*,t> (and:<e,t> $2) (c_op1:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $1)) (c_op2:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $0))))))
+applications :- N : (lambda $0:e (apply-02:<e,t> $0))
+of :- PP/NP : (lambda $0:e (lambda $1:e (c_ARG1:<e,<e,t>> $1 $0)))
+agricultural :- ADJ : (lambda $0:e (agriculture:<e,t> $0))
+technology :- N : (lambda $0:e (technology:<e,t> $0))
+
+Lee stated that the COA has spent the past several years setting up relevant mechanisms and drafting a set of promotional measures to enhance development of China s knowledge based agriculture and applications of agricultural technology 
+file=PROXY_CNA_ENG_20080128_0016_7.txt	save-date=Thu Aug 8, 2013	annotator=SDL-AMR-14	snt-type=body	date=2013-07-30T12:03:55	id=PROXY_CNA_ENG_20080128_0016.7
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(state-01:<e,t> $0)
+	(c_ARG0:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(person:<e,t> $1)
+			(c_name:<e,<txt,t>> $1 Lee:txt)))))
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+			(spend-02:<e,t> $2)
+			(c_ARG0:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+					(organization:<e,t> $3)
+					(c_name:<e,<txt,t>> $3 COA:txt)))))
+			(c_ARG1:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+					(several:<e,t> $4)
+					(c_op1:<e,<e,t>> $4 
+						(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+							(temporal-quantity:<e,t> $5)
+							(c_quant:<e,<i,t>> $5 1:i)
+							(c_unit:<e,<e,t>> $5 
+								(a:<id,<<e,t>,e>> !7 (lambda $6:e (year:<e,t> $6))))
+							(c_time:<e,<e,t>> $5 
+								(a:<id,<<e,t>,e>> !8 (lambda $7:e (past:<e,t> $7))))))))))))
+			(c_ARG2:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !9 (lambda $8:e (and:<t*,t>
+					(and:<e,t> $8)
+					(c_op1:<e,<e,t>> $8 
+						(a:<id,<<e,t>,e>> !10 (lambda $9:e (and:<t*,t>
+							(set-03:<e,t> $9)
+							(c_ARG0:<e,<e,t>> $9 
+								(ref:<id,e> !4))
+							(c_ARG1:<e,<e,t>> $9 
+								(a:<id,<<e,t>,e>> !11 (lambda $10:e (and:<t*,t>
+									(mechanism:<e,t> $10)
+									(c_mod:<e,<e,t>> $10 
+										(a:<id,<<e,t>,e>> !12 (lambda $11:e (relevance:<e,t> $11))))))))))))
+					(c_op2:<e,<e,t>> $8 
+						(a:<id,<<e,t>,e>> !13 (lambda $12:e (and:<t*,t>
+							(draft-01:<e,t> $12)
+							(c_ARG0:<e,<e,t>> $12 
+								(ref:<id,e> !4))
+							(c_ARG1:<e,<e,t>> $12 
+								(a:<id,<<e,t>,e>> !14 (lambda $13:e (and:<t*,t>
+									(set:<e,t> $13)
+									(c_consist-of:<e,<e,t>> $13 
+										(a:<id,<<e,t>,e>> !15 (lambda $14:e (and:<t*,t>
+											(measure:<e,t> $14)
+											(c_instrument-of:<e,<e,t>> $14 
+												(a:<id,<<e,t>,e>> !16 (lambda $15:e (promote-01:<e,t> $15))))))))))))))))
+					(c_purpose:<e,<e,t>> $8 
+						(a:<id,<<e,t>,e>> !17 (lambda $16:e (and:<t*,t>
+							(enhance-01:<e,t> $16)
+							(c_ARG0:<e,<e,t>> $16 
+								(ref:<id,e> !4))
+							(c_ARG1:<e,<e,t>> $16 
+								(a:<id,<<e,t>,e>> !18 (lambda $17:e (and:<t*,t>
+									(and:<e,t> $17)
+									(c_op1:<e,<e,t>> $17 
+										(a:<id,<<e,t>,e>> !19 (lambda $18:e (and:<t*,t>
+											(develop-02:<e,t> $18)
+											(c_ARG0:<e,<e,t>> $18 
+												(ref:<id,e> !4))
+											(c_ARG1:<e,<e,t>> $18 
+												(a:<id,<<e,t>,e>> !20 (lambda $19:e (and:<t*,t>
+													(agriculture:<e,t> $19)
+													(c_ARG1-of:<e,<e,t>> $19 
+														(a:<id,<<e,t>,e>> !21 (lambda $20:e (and:<t*,t>
+															(base-02:<e,t> $20)
+															(c_ARG2:<e,<e,t>> $20 
+																(a:<id,<<e,t>,e>> !22 (lambda $21:e (knowledge:<e,t> $21))))))))
+													(c_poss:<e,<e,t>> $19 
+														(a:<id,<<e,t>,e>> !23 (lambda $22:e (and:<t*,t>
+															(country:<e,t> $22)
+															(c_name:<e,<txt,t>> $22 China:txt)))))))))))))
+									(c_op2:<e,<e,t>> $17 
+										(a:<id,<<e,t>,e>> !24 (lambda $23:e (and:<t*,t>
+											(apply-02:<e,t> $23)
+											(c_ARG0:<e,<e,t>> $23 
+												(ref:<id,e> !23))
+											(c_ARG1:<e,<e,t>> $23 
+												(a:<id,<<e,t>,e>> !25 (lambda $24:e (and:<t*,t>
+													(technology:<e,t> $24)
+													(c_mod:<e,<e,t>> $24 
+														(a:<id,<<e,t>,e>> !26 (lambda $25:e (agriculture:<e,t> $25))))))))
+											(c_poss:<e,<e,t>> $23 
+												(ref:<id,e> !23)))))))))))))))))))))))))
+// Issue: The weird construction of "past several years"
+// Issue: "applications of agricultural technology" has an explicit possesive
+Lee :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (person:<e,t> $0) (c_name:<e,<txt,t>> $0 Lee:txt))))
+stated :- S\NP/NP : (lambda $0:e (lambda $1:e (lambda $2:e (and:<t*,t> (state-01:<e,t> $2) (c_ARG0:<e,<e,t>> $2 $1) (c_ARG1:<e,<e,t>> $2 $0)))))
+that :- NP/S : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+the :- NP/N : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+COA :- N : (lambda $0:e (and:<t*,t> (organization:<e,t> $0) (c_name:<e,<txt,t>> $0 COA:txt)))
+has :- S\NP/(S\NP) : (lambda $0:<e,<e,t>> $0)
+spent :- S\NP/NP : (lambda $0:e (lambda $1:e (lambda $2:e (and:<t*,t> (spend-02:<e,t> $2) (c_ARG0:<e,<e,t>> $2 $1) (c_ARG1:<e,<e,t>> $2 $0)))))
+the :- NP/N : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+past :- ADJ : (lambda $0:e (past:<e,t> $0))
+several :- N\ADJ/N : (lambda $0:<e,t> (lambda $1:<e,t> (lambda $2:e (and:<t*,t> (several:<e,t> $2) (c_op1:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id (lambda $5:e (and:<t*,t> (temporal-quantity:<e,t> $5) (c_quant:<e,<i,t>> $5 1:i) (c_unit:<e,<e,t>> $5 (a:<id,<<e,t>,e>> na:id $0)) (c_time:<e,<e,t>> $5 (a:<id,<<e,t>,e>> na:id $1))))))))))
+years :- N : (lambda $0:e (year:<e,t> $0))
+setting :- S/NP : (lambda $0:e (lambda $1:e (and:<t*,t> (set-03:<e,t> $1) (c_ARG0:<e,<e,t>> $1 (ref:<id,e> na:id)) (c_ARG1:<e,<e,t>> $1 $0))))
+up :- AP : (lambda $0:e true:t)
+relevant :- ADJ : (lambda $0:e (relevance:<e,t> $0))
+mechanisms :- N : (lambda $0:e (mechanism:<e,t> $0))
+and :- S\S/S : (lambda $0:<e,t> (lambda $1:<e,t> (lambda $2:e (and:<t*,t> (and:<e,t> $2) (c_op1:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $1)) (c_op2:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $0))))))
+drafting :- S/NP : (lambda $0:e (lambda $1:e (and:<t*,t> (draft-01:<e,t> $1) (c_ARG0:<e,<e,t>> $1 (ref:<id,e> na:id)) (c_ARG1:<e,<e,t>> $1 $0))))
+a :- NP/N : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+set :- N : (lambda $0:e (set:<e,t> $0))
+of :- PP\N : (lambda $0:<e,t> (lambda $1:e (c_consist-of:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id $0))))
+promotional :- ADJ : (lambda $0:e (promote-01:<e,t> $0))
+measures :- N : (lambda $0:e (measure:<e,t> $0))
+to :- AP/S : (lambda $0:<e,t> (lambda $1:e (c_purpose:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id $0))))
+enhance :- S/NP : (lambda $0:e (lambda $1:e (and:<t*,t> (enhance-01:<e,t> $1) (c_ARG0:<e,<e,t>> $1 (ref:<id,e> na:id)) (c_ARG1:<e,<e,t>> $1 $0))))
+development :- N : (lambda $0:e (and:<t*,t> (develop-02:<e,t> $0) (c_ARG0:<e,<e,t>> $0 (ref:<id,e> na:id))))
+of :- PP/NP : (lambda $0:e (lambda $1:e (c_ARG1:<e,<e,t>> $1 $0)))
+China :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (country:<e,t> $0) (c_name:<e,<txt,t>> $0 China:txt))))
+s :- ADJ\NP : (lambda $0:e (lambda $1:e (c_poss:<e,<e,t>> $1 $0)))
+knowledge :- N : (lambda $0:e (knowledge:<e,t> $0))
+based :- S\NP : (lambda $0:e (lambda $1:e (and:<t*,t> (base-02:<e,t> $1) (c_ARG2:<e,<e,t>> $1 $0))))
+agriculture :- N : (lambda $0:e (agriculture:<e,t> $0))
+and :- N\N/N : (lambda $0:<e,t> (lambda $1:<e,t> (lambda $2:e (and:<t*,t> (and:<e,t> $2) (c_op1:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $1)) (c_op2:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $0))))))
+applications :- N : (lambda $0:e (and:<t*,t> (apply-02:<e,t> $0) (c_ARG0:<e,<e,t>> $0 (ref:<id,e> na:id)) (c_poss:<e,<e,t>> $0 (ref:<id,e> na:id))))
+of :- PP/NP : (lambda $0:e (lambda $1:e (c_ARG1:<e,<e,t>> $1 $0)))
+agricultural :- ADJ : (lambda $0:e (agriculture:<e,t> $0))
+technology :- N : (lambda $0:e (technology:<e,t> $0))
+

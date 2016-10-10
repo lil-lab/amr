@@ -1,0 +1,41 @@
+The violence that has occurred since the earthquake has been attributed to an umbrella group of separatists called the United Jihad Council
+id=PROXY_AFP_ENG_20051018_0064.12	snt-type=body	file=PROXY_AFP_ENG_20051018_0064_12.txt	annotator=SDL-AMR-09	date=2013-06-02T13:44:08	save-date=Wed Jun 5, 2013	preferred=true
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(attribute-01:<e,t> $0)
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(violence:<e,t> $1)
+			(c_time:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(since:<e,t> $2)
+					(c_op1:<e,<e,t>> $2 
+						(a:<id,<<e,t>,e>> !4 (lambda $3:e (earthquake:<e,t> $3))))))))))))
+	(c_ARG2:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+			(group:<e,t> $4)
+			(c_name:<e,<txt,t>> $4 United++Jihad++Council:txt)
+			(c_mod:<e,<e,t>> $4 
+				(a:<id,<<e,t>,e>> !6 (lambda $5:e (umbrella:<e,t> $5))))
+			(c_consist-of:<e,<e,t>> $4 
+				(a:<id,<<e,t>,e>> !7 (lambda $6:e (separatist:<e,t> $6)))))))))))
+The :- NP/N : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+violence :- N : (lambda $0:e (violence:<e,t> $0))
+that :- PP/S : (lambda $0:<e,t> $0)
+has :- S/S : (lambda $0:<e,t> $0)
+occurred :- S : (lambda $0:e true:t)
+since :- AP/NP : (lambda $0:e (lambda $1:e (c_time:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $2:e (and:<t*,t> (since:<e,t> $2) (c_op1:<e,<e,t>> $2 $0)))))))
+the :- NP/N : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+earthquake :- N : (lambda $0:e (earthquake:<e,t> $0))
+has :- S\NP/(S\NP) : (lambda $0:<e,<e,t>> $0)
+been :- S\NP/(S/NP) : (lambda $0:<e,<e,t>> $0)
+attributed :- S/NP : (lambda $0:e (lambda $1:e (and:<t*,t> (attribute-01:<e,t> $1) (c_ARG1:<e,<e,t>> $1 $0))))
+to :- AP/NP : (lambda $0:e (lambda $1:e (c_ARG2:<e,<e,t>> $1 $0)))
+an :- NP/N : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+umbrella :- N : (lambda $0:e (umbrella:<e,t> $0))
+group :- N : (lambda $0:e (group:<e,t> $0))
+of :- PP/NP : (lambda $0:e (lambda $1:e (c_consist-of:<e,<e,t>> $1 $0)))
+separatists :- N : separatist:<e,t>
+called :- PP/NP : (lambda $0:txt (lambda $1:e (c_name:<e,<txt,t>> $1 $0)))
+the :- NP/NP : (lambda $0:txt $0)
+United Jihad Council :- NP : United++Jihad++Council:txt
+

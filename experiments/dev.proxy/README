@@ -1,0 +1,12 @@
+Development proxy experiment. Including training a model from scratch and testing it.
+
+Stages:
+	init model (seed lexicon + weights)
+	log model
+	training (data set: amr-release-1.0-training-proxy.txt)
+	log model
+	testing (data set: amr-release-1.0-dev-proxy.txt)
+
+Experiments:
+	dev.proxy.exp -- single machine experiment.
+	dev.proxy.dist.exp -- distributed experiment.

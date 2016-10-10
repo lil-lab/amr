@@ -1,0 +1,144 @@
+Scientists Castro and former US President Jimmy Carter who visited Cuba directly after Bolton s statement dismissed Bolton s statement as unfair
+id=PROXY_APW_ENG_20020708_0642.31	snt-type=body	file=PROXY_APW_ENG_20020708_0642_31.txt	annotator=UCO-AMR-06	date=2013-07-11T21:40:48	save-date=Mon Jul 15, 2013
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(dismiss-02:<e,t> $0)
+	(c_ARG0:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(and:<e,t> $1)
+			(c_op1:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (scientist:<e,t> $2))))
+			(c_op2:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+					(person:<e,t> $3)
+					(c_name:<e,<txt,t>> $3 Castro:txt)))))
+			(c_op3:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+					(president:<e,t> $4)
+					(c_name:<e,<txt,t>> $4 Jimmy++Carter:txt)
+					(c_mod:<e,<e,t>> $4 
+						(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+							(country:<e,t> $5)
+							(c_name:<e,<txt,t>> $5 United++States:txt)))))
+					(c_ARG0-of:<e,<e,t>> $4 
+						(a:<id,<<e,t>,e>> !7 (lambda $6:e (and:<t*,t>
+							(visit-01:<e,t> $6)
+							(c_ARG1:<e,<e,t>> $6 
+								(a:<id,<<e,t>,e>> !8 (lambda $7:e (and:<t*,t>
+									(country:<e,t> $7)
+									(c_name:<e,<txt,t>> $7 Cuba:txt)))))
+							(c_time:<e,<e,t>> $6 
+								(a:<id,<<e,t>,e>> !9 (lambda $8:e (and:<t*,t>
+									(after:<e,t> $8)
+									(c_op1:<e,<e,t>> $8 
+										(ref:<id,e> !10))
+									(c_mod:<e,<e,t>> $8 
+										(a:<id,<<e,t>,e>> !11 (lambda $9:e (direct:<e,t> $9))))))))))))
+					(c_mod:<e,<e,t>> $4 
+						(a:<id,<<e,t>,e>> !12 (lambda $10:e (former:<e,t> $10))))))))))))
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !10 (lambda $11:e (and:<t*,t>
+			(state-01:<e,t> $11)
+			(c_ARG0:<e,<e,t>> $11 
+				(a:<id,<<e,t>,e>> !13 (lambda $12:e (and:<t*,t>
+					(person:<e,t> $12)
+					(c_name:<e,<txt,t>> $12 Bolton:txt)))))))))
+	(c_ARG2:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !14 (lambda $13:e (unfair:<e,t> $13)))))))
+Scientists :- N : (lambda $0:e (scientist:<e,t> $0))
+Castro :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (person:<e,t> $0) (c_name:<e,<txt,t>> $0 Castro:txt))))
+and :- C : conj:e
+former :- ADJ : (lambda $0:e (c_mod:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (former:<e,t> $1)))))
+US :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (country:<e,t> $0) (c_name:<e,<txt,t>> $0 United++States:txt))))
+President :- ADJ : (lambda $0:e (president:<e,t> $0))
+Jimmy Carter :- N : (lambda $0:e (c_name:<e,<txt,t>> $0 Jimmy++Carter:txt))
+who :- PP/S : (lambda $0:<e,t> (lambda $1:e (c_ARG0-of:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id $0))))
+visited :- S/NP : (lambda $0:e (lambda $1:e (and:<t*,t> (visit-01:<e,t> $1) (c_ARG1:<e,<e,t>> $1 $0))))
+Cuba :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (country:<e,t> $0) (c_name:<e,<txt,t>> $0 Cuba:txt))))
+directly :- AP : (lambda $1:e (c_mod:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $2:e (direct:<e,t> $2))))))
+after :- AP\AP/NP : (lambda $1:e (lambda $2:<e,t> (lambda $3:e (c_time:<e,<e,t>> $3 (a:<id,<<e,t>,e>> na:id (lambda $4:e (and:<t*,t> (after:<e,t> $4) ($2 $4) (c_op1:<e,<e,t>> $4 $1))))))))
+Bolton s statement :- NP : (ref:<id,e> na:id)
+dismissed :- S\NP/NP : (lambda $0:e (lambda $1:e (lambda $2:e (and:<t*,t> (dismiss-02:<e,t> $2) (c_ARG0:<e,<e,t>> $2 $1) (c_ARG1:<e,<e,t>> $2 $0)))))
+Bolton :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (person:<e,t> $0) (c_name:<e,<txt,t>> $0 Bolton:txt))))
+s :- ADJ\NP : (lambda $0:e (lambda $1:e (c_ARG0:<e,<e,t>> $1 $0)))
+statement :- N : (lambda $0:e (state-01:<e,t> $0))
+as :- AP/NP : (lambda $0:e (lambda $1:e (c_ARG2:<e,<e,t>> $1 $0)))
+unfair :- N : (lambda $0:e (unfair:<e,t> $0))
+
+Scientists Castro and former US President Jimmy Carter who visited Cuba directly after Bolton s statement dismissed Bolton s statement as unfair
+id=PROXY_APW_ENG_20020708_0642.31	snt-type=body	file=PROXY_APW_ENG_20020708_0642_31.txt	annotator=UCO-AMR-05	date=2013-07-11T21:40:48	save-date=Fri Sep 27, 2013	preferred=true
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(dismiss-02:<e,t> $0)
+	(c_ARG0:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(and:<e,t> $1)
+			(c_op1:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(person:<e,t> $2)
+					(c_ARG0-of:<e,<e,t>> $2 
+						(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+							(have-org-role-91:<e,t> $3)
+							(c_ARG2:<e,<e,t>> $3 
+								(a:<id,<<e,t>,e>> !5 (lambda $4:e (scientist:<e,t> $4))))))))))))
+			(c_op2:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+					(person:<e,t> $5)
+					(c_name:<e,<txt,t>> $5 Castro:txt)))))
+			(c_op3:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !7 (lambda $6:e (and:<t*,t>
+					(person:<e,t> $6)
+					(c_name:<e,<txt,t>> $6 Jimmy++Carter:txt)
+					(c_ARG0-of:<e,<e,t>> $6 
+						(a:<id,<<e,t>,e>> !8 (lambda $7:e (and:<t*,t>
+							(visit-01:<e,t> $7)
+							(c_ARG1:<e,<e,t>> $7 
+								(a:<id,<<e,t>,e>> !9 (lambda $8:e (and:<t*,t>
+									(country:<e,t> $8)
+									(c_name:<e,<txt,t>> $8 Cuba:txt)))))
+							(c_time:<e,<e,t>> $7 
+								(a:<id,<<e,t>,e>> !10 (lambda $9:e (and:<t*,t>
+									(after:<e,t> $9)
+									(c_op1:<e,<e,t>> $9 
+										(ref:<id,e> !11))
+									(c_mod:<e,<e,t>> $9 
+										(a:<id,<<e,t>,e>> !12 (lambda $10:e (direct:<e,t> $10))))))))))))
+					(c_ARG0-of:<e,<e,t>> $6 
+						(a:<id,<<e,t>,e>> !13 (lambda $11:e (and:<t*,t>
+							(have-org-role-91:<e,t> $11)
+							(c_ARG1:<e,<e,t>> $11 
+								(a:<id,<<e,t>,e>> !14 (lambda $12:e (and:<t*,t>
+									(country:<e,t> $12)
+									(c_name:<e,<txt,t>> $12 United++States:txt)))))
+							(c_ARG2:<e,<e,t>> $11 
+								(a:<id,<<e,t>,e>> !15 (lambda $13:e (and:<t*,t>
+									(president:<e,t> $13)
+									(c_mod:<e,<e,t>> $13 
+										(a:<id,<<e,t>,e>> !16 (lambda $14:e (former:<e,t> $14))))))))))))))))))))
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !11 (lambda $15:e (and:<t*,t>
+			(state-01:<e,t> $15)
+			(c_ARG0:<e,<e,t>> $15 
+				(a:<id,<<e,t>,e>> !17 (lambda $16:e (and:<t*,t>
+					(person:<e,t> $16)
+					(c_name:<e,<txt,t>> $16 Bolton:txt)))))))))
+	(c_ARG2:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !18 (lambda $17:e (unfair:<e,t> $17)))))))
+Scientists :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (person:<e,t> $0) (c_ARG0-of:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (have-org-role-91:<e,t> $1) (c_ARG2:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $2:e (scientist:<e,t> $2))))))))))
+Castro :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (person:<e,t> $0) (c_name:<e,<txt,t>> $0 Castro:txt))))
+and :- C : conj:e
+former :- ADJ : (lambda $0:e (c_mod:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (former:<e,t> $1)))))
+US :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (country:<e,t> $0) (c_name:<e,<txt,t>> $0 United++States:txt))))
+President :- N\ADJ : (lambda $1:<e,t> (lambda $0:e (and:<t*,t> (have-org-role-91:<e,t> $0) (c_ARG2:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $3:e (and:<t*,t> (president:<e,t> $3) ($1 $3))))))))
+Jimmy Carter :- N : (lambda $0:e (and:<t*,t> (person:<e,t> $0) (c_name:<e,<txt,t>> $0 Jimmy++Carter:txt)))
+who :- PP/S : (lambda $0:<e,t> (lambda $1:e (c_ARG0-of:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id $0))))
+visited :- S/NP : (lambda $0:e (lambda $1:e (and:<t*,t> (visit-01:<e,t> $1) (c_ARG1:<e,<e,t>> $1 $0))))
+Cuba :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (country:<e,t> $0) (c_name:<e,<txt,t>> $0 Cuba:txt))))
+directly :- AP : (lambda $1:e (c_mod:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $2:e (direct:<e,t> $2))))))
+after :- AP\AP/NP : (lambda $1:e (lambda $2:<e,t> (lambda $3:e (c_time:<e,<e,t>> $3 (a:<id,<<e,t>,e>> na:id (lambda $4:e (and:<t*,t> (after:<e,t> $4) ($2 $4) (c_op1:<e,<e,t>> $4 $1))))))))
+Bolton s statement :- NP : (ref:<id,e> na:id)
+dismissed :- S\NP/NP : (lambda $0:e (lambda $1:e (lambda $2:e (and:<t*,t> (dismiss-02:<e,t> $2) (c_ARG0:<e,<e,t>> $2 $1) (c_ARG1:<e,<e,t>> $2 $0)))))
+Bolton :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (person:<e,t> $0) (c_name:<e,<txt,t>> $0 Bolton:txt))))
+s :- ADJ\NP : (lambda $0:e (lambda $1:e (c_ARG0:<e,<e,t>> $1 $0)))
+statement :- N : (lambda $0:e (state-01:<e,t> $0))
+as :- AP/NP : (lambda $0:e (lambda $1:e (c_ARG2:<e,<e,t>> $1 $0)))
+unfair :- N : (lambda $0:e (unfair:<e,t> $0))
+

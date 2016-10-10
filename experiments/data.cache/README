@@ -1,0 +1,6 @@
+Data pre-processing experiment.
+Used to pre-process the data and creates cache of processed data.
+
+Experiments:
+	datacache.exp -- create data cache. Expects the data file to cache as argument.
+		data=<file>

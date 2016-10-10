@@ -1,0 +1,47 @@
+Myanmar has asked the Association of Southeast Asian Nations and the international community to assist in these efforts 
+file=PROXY_AFP_ENG_20020517_0339_5.txt	save-date=Wed Jun 19, 2013	annotator=LDC-AMR-04	preferred=true	snt-type=summary	date=2013-06-19T16:57:36	id=PROXY_AFP_ENG_20020517_0339.5
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(ask-02:<e,t> $0)
+	(c_ARG0:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(country:<e,t> $1)
+			(c_name:<e,<txt,t>> $1 Myanmar:txt)))))
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+			(assist-01:<e,t> $2)
+			(c_ARG0:<e,<e,t>> $2 
+				(ref:<id,e> !4))
+			(c_ARG1:<e,<e,t>> $2 
+				(ref:<id,e> !2))
+			(c_ARG2:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !5 (lambda $3:e (and:<t*,t>
+					(effort:<e,t> $3)
+					(c_mod:<e,<e,t>> $3 
+						(a:<id,<<e,t>,e>> !6 (lambda $4:e (this:<e,t> $4))))))))))))
+	(c_ARG2:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !4 (lambda $5:e (and:<t*,t>
+			(and:<e,t> $5)
+			(c_op1:<e,<e,t>> $5 
+				(a:<id,<<e,t>,e>> !7 (lambda $6:e (and:<t*,t>
+					(organization:<e,t> $6)
+					(c_name:<e,<txt,t>> $6 Association++of++Southeast++Asian++Nations:txt)))))
+			(c_op2:<e,<e,t>> $5 
+				(a:<id,<<e,t>,e>> !8 (lambda $7:e (and:<t*,t>
+					(community:<e,t> $7)
+					(c_mod:<e,<e,t>> $7 
+						(a:<id,<<e,t>,e>> !9 (lambda $8:e (international:<e,t> $8)))))))))))))))
+Myanmar :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (country:<e,t> $0) (c_name:<e,<txt,t>> $0 Myanmar:txt))))
+has :- S\NP/(S\NP) : (lambda $0:<e,<e,t>> $0)
+asked :- S\NP/NP : (lambda $0:e (lambda $1:e (lambda $2:e (and:<t*,t> (ask-02:<e,t> $2) (c_ARG0:<e,<e,t>> $2 $1) (c_ARG2:<e,<e,t>> $2 $0)))))
+the :- NP/N : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+Association of Southeast Asian Nations :- N : (lambda $0:e (and:<t*,t> (organization:<e,t> $0) (c_name:<e,<txt,t>> $0 Association++of++Southeast++Asian++Nations:txt)))
+and :- C : conj:e
+the :- NP/N : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+international :- ADJ : (lambda $1:e (c_mod:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $0:e (international:<e,t> $0)))))
+community :- N : (lambda $0:e (community:<e,t> $0))
+to :- AP/S : (lambda $0:<e,t> (lambda $1:e (c_ARG1:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id $0))))
+assist :- S : (lambda $0:e (and:<t*,t> (assist-01:<e,t> $0) (c_ARG0:<e,<e,t>> $0 (ref:<id,e> na:id)) (c_ARG1:<e,<e,t>> $0 (ref:<id,e> na:id))))
+in :- AP/NP : (lambda $0:e (lambda $1:e (c_ARG2:<e,<e,t>> $1 $0)))
+these :- NP/N : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> ($0 $1) (c_mod:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $4:e (this:<e,t> $4))))))))
+efforts :- N : (lambda $0:e (effort:<e,t> $0))
+

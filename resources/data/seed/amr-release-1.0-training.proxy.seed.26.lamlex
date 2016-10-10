@@ -1,0 +1,19 @@
+Witnesses to the protest stated --
+JSON{"date":"2014-09-29T11:07:14.929","tok":"Witnesses to the protest stated --","file":"PROXY_AFP_ENG_20030125_0226_9.txt","alignments":"4-5|0 0-1|0.0+0.0.0 3-4|0.0.0.0","amr":"(s \/ state-01 :ARG0 (p \/ person :ARG0-of (w \/ witness-01 :ARG1 (p2 \/ protest-01))))","snt-type":"body","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20030125_0226.9","alignedExp":"4-5##(a:<id,<<e,t>,e>> !1 (lambda $0:e (state-01:<e,t> $0)))####0-1##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(person:<e,t> $0)\n\t(c_ARG0-of:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (witness-01:<e,t> $1)))))))####3-4##(a:<id,<<e,t>,e>> !1 (lambda $0:e (protest-01:<e,t> $0)))","ptbtok":"Witnesses to the protest stated --","preferred":"","save-date":"Wed Jul 24, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(state-01:<e,t> $0)
+	(c_ARG0:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(person:<e,t> $1)
+			(c_ARG0-of:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(witness-01:<e,t> $2)
+					(c_ARG1:<e,<e,t>> $2 
+						(a:<id,<<e,t>,e>> !4 (lambda $3:e (protest-01:<e,t> $3)))))))))))))))
+Witnesses :- N[pl]/(N[pl]\N[pl]) : (lambda $0:<<e,t>,<e,t>> (lambda $1:e (and:<t*,t> (person:<e,t> $1) (c_ARG0-of:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id ($0 witness-01:<e,t>))))))
+to :- N[x]\N[x]/NP : (lambda $2:e (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_ARG1:<e,<e,t>> $1 $2)))))
+the :- NP[x]/N[x] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+protest :- N[sg] : protest-01:<e,t>
+stated :- S[dcl]\NP : (lambda $0:e (lambda $1:e (and:<t*,t> (state-01:<e,t> $1) (c_ARG0:<e,<e,t>> $1 $0))))
+-- :- PUNCT
+

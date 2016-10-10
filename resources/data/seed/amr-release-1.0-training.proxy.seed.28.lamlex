@@ -1,0 +1,22 @@
+Costa Rica is an unarmed state.
+JSON{"date":"2014-09-29T11:07:34.063","tok":"Costa Rica is an unarmed state .","file":"PROXY_AFP_ENG_20081119_0042_5.txt","alignments":"5-6|0 0-2|0.1+0.1.0+0.1.0.0+0.1.0.1 1-2|0.1.0.1","amr":"(s \/ state :ARG1-of (a \/ arm-01 :polarity -) :domain (c \/ country :name (n \/ name :op1 \"Costa\" :op2 \"Rica\")))","snt-type":"summary","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20081119_0042.5","alignedExp":"5-6##(a:<id,<<e,t>,e>> !1 (lambda $0:e (state:<e,t> $0)))####0-2##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(country:<e,t> $0)\n\t(c_name:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(name:<e,t> $1)\n\t\t\t(c_op:<e,<txt,t>> $1 Costa++Rica:txt))))))))","ptbtok":"Costa Rica is an unarmed state .","preferred":"","save-date":"Tue Jul 16, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(state:<e,t> $0)
+	(c_ARG1-of:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(arm-01:<e,t> $1)
+			(c_polarity:<e,<e,t>> $1 -:e)))))
+	(c_domain:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+			(country:<e,t> $2)
+			(c_name:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+					(name:<e,t> $3)
+					(c_op:<e,<txt,t>> $3 Costa++Rica:txt))))))))))))
+Costa Rica :- NP[sg] : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (country:<e,t> $0) (c_name:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (name:<e,t> $1) (c_op:<e,<txt,t>> $1 Costa++Rica:txt))))))))
+is :- A\NP[sg]/N[sg]/(NP[sg]/N[sg]) : (lambda $1:<<e,t>,e> (lambda $0:<e,t> (lambda $2:e ($1 (lambda $3:e (and:<t*,t> ($0 $3) (c_domain:<e,<e,t>> $3 $2)))))))
+an :- NP[sg]/N[sg] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+unarmed :- N[x]/N[x] : (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_ARG1-of:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $2:e (and:<t*,t> (arm-01:<e,t> $2) (c_polarity:<e,<e,t>> $2 -:e))))))))
+state :- N[sg] : state:<e,t>
+. :- PUNCT
+

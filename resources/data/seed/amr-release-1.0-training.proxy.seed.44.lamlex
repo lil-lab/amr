@@ -1,0 +1,21 @@
+Raghad Hussein is 38 years old.
+JSON{"date":"2014-09-29T11:07:27.186","tok":"Raghad Hussein is 38 years old .","file":"PROXY_AFP_ENG_20070818_0297_58.txt","alignments":"0-2|0+0.0+0.0.0+0.0.1 1-2|0.0.1 3-4|0.1.0 4-5|0.1+0.1.1","amr":"(p2 \/ person :name (n \/ name :op1 \"Raghad\" :op2 \"Hussein\") :age (t \/ temporal-quantity :quant 38 :unit (y \/ year)))","snt-type":"body","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20070818_0297.58","alignedExp":"3-4##38:i####4-5##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(temporal-quantity:<e,t> $0)\n\t(c_unit:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (year:<e,t> $1)))))))####0-2##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(person:<e,t> $0)\n\t(c_name:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(name:<e,t> $1)\n\t\t\t(c_op:<e,<txt,t>> $1 Raghad++Hussein:txt))))))))","ptbtok":"Raghad Hussein is 38 years old .","preferred":"","save-date":"Mon Jun 17, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(person:<e,t> $0)
+	(c_name:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(name:<e,t> $1)
+			(c_op:<e,<txt,t>> $1 Raghad++Hussein:txt)))))
+	(c_age:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+			(temporal-quantity:<e,t> $2)
+			(c_quant:<e,<i,t>> $2 38:i)
+			(c_unit:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !4 (lambda $3:e (year:<e,t> $3)))))))))))
+Raghad Hussein :- N[sg] : (lambda $0:e (and:<t*,t> (person:<e,t> $0) (c_name:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (name:<e,t> $1) (c_op:<e,<txt,t>> $1 Raghad++Hussein:txt)))))))
+is :- S[dcl]\N[sg]/(N[sg]/N[sg]) : (lambda $0:<<e,t>,<e,t>> (lambda $1:<e,t> ($0 $1)))
+// 38 :- NP[pl]/N[pl] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> ($0 $1) (c_quant:<e,<i,t>> $1 38:i)))))
+years :- N[pl] : (lambda $0:e (and:<t*,t> (temporal-quantity:<e,t> $0) (c_unit:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id year:<e,t>))))
+old :- N[x]/N[x]\NP : (lambda $0:e (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_age:<e,<e,t>> $2 $0)))))
+. :- PUNCT
+

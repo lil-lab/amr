@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="src-test"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/spfproxy"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/lemma-0.1.jar" sourcepath="/AMR_DEV_REPO/lib/lemma-0.1.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/stanford-postagger-3.4.jar" sourcepath="/AMR_DEV_REPO/lib/stanford-postagger-3.4-src.jar"/>
+	<classpathentry exported="true" kind="var" path="AMR_DEV_REPO/lib/easyccg.jar" sourcepath="/AMR_DEV_REPO/lib/easyccg.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/IllinoisNerExtended-2.8-SNAPSHOT.jar" sourcepath="/AMR_DEV_REPO/lib/IllinoisNerExtended-2.8-SNAPSHOT-sources.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/nerdep/commons-beanutils-1.7.0.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/nerdep/commons-beanutils-core-1.8.0.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/nerdep/commons-cli-1.2.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/nerdep/commons-codec-1.8.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/nerdep/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/nerdep/commons-configuration-1.6.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/nerdep/commons-digester-1.8.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/nerdep/commons-io-1.3.2.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/nerdep/commons-lang-2.3.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/nerdep/commons-lang3-3.1.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/nerdep/commons-logging-1.1.3.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/nerdep/coreUtilities-0.2.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/nerdep/curator-archive-0.0.2.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/nerdep/curator-interfaces-0.7.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/nerdep/curator-utils-0.0.4-SNAPSHOT.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/nerdep/gurobi-5.0.1.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/nerdep/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/nerdep/httpclient-4.1.2.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/nerdep/httpcore-4.1.3.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/nerdep/illinois-abstract-server-0.1.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/nerdep/illinois-common-resources-1.1.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/nerdep/java-cup-0.11a.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/nerdep/junit-4.11.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/nerdep/LBJava-1.0.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/nerdep/liblinear-1.94.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/nerdep/libthrift-0.8.0.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/nerdep/log4j-1.2.14.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/nerdep/logback-core-1.1.2.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/nerdep/slf4j-api-1.5.8.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/nerdep/slf4j-log4j12-1.5.8.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/nerdep/trove4j-3.0.3.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/nerdep/weka-stable-3.6.10.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/edu.mit.jwi_2.3.0.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/jewelcli-0.7.6.jar"/>
+	<classpathentry kind="var" path="AMR_DEV_REPO/lib/mtj-1.0-snapshot.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

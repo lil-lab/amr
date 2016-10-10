@@ -1,0 +1,5 @@
+bin/
+dist/
+build/
+build.src/
+MANIFEST.MF

@@ -1,0 +1,62 @@
+It is necessary to control imports to Iraq because of the risk that Iraq is receiving nuclear material from outside the country.
+JSON{"date":"2014-09-29T11:07:12.911","tok":"It is necessary to control imports to Iraq because of the risk that Iraq is receiving nuclear material from outside the country .","file":"PROXY_AFP_ENG_20021018_0360_14.txt","alignments":"4-5|0.0 8-9|0.0.1 11-12|0.0.1.0 15-16|0.0.1.0.0 19-20|0.0.1.0.0.1 17-18|0.0.1.0.0.0 5-6|0.0.0 21-22|0.0.0.0 7-8|0.0.0.0.0+0.0.0.0.0.0 16-17|0.0.1.0.0.0.0","amr":"(n3 \/ need-01 :ARG1 (c3 \/ control-01 :ARG1 (i \/ import-01 :ARG0 (c \/ country :name (n \/ name :op1 \"Iraq\"))) :ARG1-of (c4 \/ cause-01 :ARG0 (r \/ risk-01 :ARG1 (r2 \/ receive-01 :ARG0 c :ARG1 (m \/ material :mod (n4 \/ nucleus)) :ARG2 (o \/ outside :op1 c))))))","snt-type":"body","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20021018_0360.14","alignedExp":"4-5##(a:<id,<<e,t>,e>> !1 (lambda $0:e (control-01:<e,t> $0)))####8-9##(a:<id,<<e,t>,e>> !1 (lambda $0:e (cause-01:<e,t> $0)))####16-17##(a:<id,<<e,t>,e>> !1 (lambda $0:e (nucleus:<e,t> $0)))####11-12##(a:<id,<<e,t>,e>> !1 (lambda $0:e (risk-01:<e,t> $0)))####15-16##(a:<id,<<e,t>,e>> !1 (lambda $0:e (receive-01:<e,t> $0)))####19-20##(a:<id,<<e,t>,e>> !1 (lambda $0:e (outside:<e,t> $0)))####17-18##(a:<id,<<e,t>,e>> !1 (lambda $0:e (material:<e,t> $0)))####5-6##(a:<id,<<e,t>,e>> !1 (lambda $0:e (import-01:<e,t> $0)))####21-22##(a:<id,<<e,t>,e>> !1 (lambda $0:e (country:<e,t> $0)))####7-8##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(name:<e,t> $0)\n\t(c_op:<e,<txt,t>> $0 Iraq:txt))))","ptbtok":"It is necessary to control imports to Iraq because of the risk that Iraq is receiving nuclear material from outside the country .","preferred":"","save-date":"Fri Jul 19, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(need-01:<e,t> $0)
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(control-01:<e,t> $1)
+			(c_ARG1:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(import-01:<e,t> $2)
+					(c_ARG0:<e,<e,t>> $2 
+						(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+							(country:<e,t> $3)
+							(c_name:<e,<e,t>> $3 
+								(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+									(name:<e,t> $4)
+									(c_op:<e,<txt,t>> $4 Iraq:txt)))))))))))))
+			(c_ARG1-of:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+					(cause-01:<e,t> $5)
+					(c_ARG0:<e,<e,t>> $5 
+						(a:<id,<<e,t>,e>> !7 (lambda $6:e (and:<t*,t>
+							(risk-01:<e,t> $6)
+							(c_ARG1:<e,<e,t>> $6 
+								(a:<id,<<e,t>,e>> !8 (lambda $7:e (and:<t*,t>
+									(receive-01:<e,t> $7)
+									(c_ARG0:<e,<e,t>> $7 
+										(ref:<id,e> !4))
+									(c_ARG1:<e,<e,t>> $7 
+										(a:<id,<<e,t>,e>> !9 (lambda $8:e (and:<t*,t>
+											(material:<e,t> $8)
+											(c_mod:<e,<e,t>> $8 
+												(a:<id,<<e,t>,e>> !10 (lambda $9:e (nucleus:<e,t> $9))))))))
+									(c_ARG2:<e,<e,t>> $7 
+										(a:<id,<<e,t>,e>> !11 (lambda $10:e (and:<t*,t>
+											(outside:<e,t> $10)
+											(c_op1:<e,<e,t>> $10 
+												(ref:<id,e> !4)))))))))))))))))))))))))
+It is :- A/S[adj] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+// is :- S[dcl]/S[adj] : (lambda $0:<e,t> $0)
+necessary :- S[adj] : need-01:<e,t>
+to :- S[x]\S[x]/S[b] : (lambda $0:<e,t> (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_ARG1:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id $0))))))
+control :- S[b]/NP : (lambda $0:e (lambda $1:e (and:<t*,t> (control-01:<e,t> $1) (c_ARG1:<e,<e,t>> $1 $0))))
+imports :- N[pl] : (lambda $0:e (import-01:<e,t> $0))
+to :- N[x]\N[x]/NP : (lambda $0:e (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_ARG0:<e,<e,t>> $1 $0)))))
+Iraq :- NP[sg] : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (country:<e,t> $0) (c_name:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (name:<e,t> $1) (c_op:<e,<txt,t>> $1 Iraq:txt))))))))
+because :- S[x]\S[x]/(N\N) : (lambda $0:<<e,t>,<e,t>> (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_ARG1-of:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id ($0 cause-01:<e,t>)))))))
+of :- N[x]\N[x]/NP : (lambda $0:e (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_ARG0:<e,<e,t>> $2 $0)))))
+the :- NP[x]/N[x] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+risk :- N[sg] : (lambda $0:e (risk-01:<e,t> $0))
+that :- N[x]\N[x]/S[dcl] : (lambda $0:<e,t> (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_ARG1:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id $0))))))
+Iraq :- NP[sg] : (ref:<id,e> na:id)
+is :- S[dcl]\NP[sg]/(S[ng]\NP[sg]) : (lambda $0:<e,<e,t>> $0)
+receiving :- S[ng]\NP/NP : (lambda $0:e (lambda $1:e (lambda $2:e (and:<t*,t> (receive-01:<e,t> $2) (c_ARG0:<e,<e,t>> $2 $1) (c_ARG1:<e,<e,t>> $2 $0)))))
+nuclear :- N[x]/N[x] : (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_mod:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $0:e (nucleus:<e,t> $0)))))))
+// Mass noun
+material :- N[nb] : (lambda $0:e (material:<e,t> $0))
+from :- S[x]\S[x]/NP : (lambda $0:e (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_ARG2:<e,<e,t>> $1 $0)))))
+outside :- NP[x]/NP[x] : (lambda $1:e (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (outside:<e,t> $0) (c_op1:<e,<e,t>> $0 $1)))))
+the country :- NP[sg] : (ref:<id,e> na:id)
+. :- PUNCT
+

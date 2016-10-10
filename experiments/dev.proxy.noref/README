@@ -1,0 +1,12 @@
+Development proxy experiment with no sentences including references (i.e., re-entrants). Experiment includes training a model from scratch and testing it.
+
+Stages:
+	init model (seed lexicon + weights)
+	log model
+	training (data set: amr-release-1.0-training-proxy.txt [subset])
+	log model
+	testing (data set: amr-release-1.0-dev-proxy.txt [subset])
+
+Experiments:
+	dev.proxy.noref.exp -- single machine experiment.
+	dev.proxy.noref.dist.exp -- distributed experiment.

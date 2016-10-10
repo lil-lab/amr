@@ -1,0 +1,16 @@
+International; military; terrorism
+JSON{"date":"2014-09-29T11:07:07.394","tok":"International ; military ; terrorism","file":"PROXY_AFP_ENG_20020105_0162_3.txt","alignments":"1-2|0 4-5|0.2 2-3|0.1 0-1|0.0","amr":"(a \/ and :op1 (i \/ international) :op2 (m \/ military) :op2 (t \/ terrorism))","snt-type":"topic","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20020105_0162.3","alignedExp":"1-2##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<e,t> $0)))####4-5##(a:<id,<<e,t>,e>> !1 (lambda $0:e (terrorism:<e,t> $0)))####2-3##(a:<id,<<e,t>,e>> !1 (lambda $0:e (military:<e,t> $0)))####0-1##(a:<id,<<e,t>,e>> !1 (lambda $0:e (international:<e,t> $0)))","ptbtok":"International ; military ; terrorism","preferred":"","save-date":"Thu May 2, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(and:<e,t> $0)
+	(c_op1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (international:<e,t> $1))))
+	(c_op2:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !3 (lambda $2:e (military:<e,t> $2))))
+	(c_op3:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !4 (lambda $3:e (terrorism:<e,t> $3)))))))
+International :- S[adj] : international:<e,t>
+; :- KEY\S[adj] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+military :- N[sg] : military:<e,t>
+; :- KEY\N : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+terrorism :- N[nb] : terrorism:<e,t>
+

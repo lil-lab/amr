@@ -1,0 +1,8 @@
+Distributed experiment worker.
+
+Experiments:
+	worker.exp -- distributed experiment worker.
+		masterPort=<port> : port of master node.
+		master=<addr> : address (e.g., IP) of master node.
+		numThreads=<num> : number of worker threads to run.
+		hostname=<name> : the name of the worker host (for logging).

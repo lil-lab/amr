@@ -1,0 +1,40 @@
+//
+// Nouns in adjectivial use. Only singular and mass nouns can be used in such way.
+//
+n_adj_arg	N[x]/N[x]/N[sg] : (lambda $0:<e,t> (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_ARGX:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $0))))))
+n_adj_rel	N[x]/N[x]/N[sg] : (lambda $0:<e,t> (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_REL:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $0))))))
+n_adj_arg_of	N[x]/N[x]/N[sg] : (lambda $0:<e,t> (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_ARGX-of:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $0))))))
+n_adj_rel_of	N[x]/N[x]/N[sg] : (lambda $0:<e,t> (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_REL-of:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $0))))))
+nb_adj_arg	N[x]/N[x]/N[nb] : (lambda $0:<e,t> (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_ARGX:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $0))))))
+nb_adj_rel	N[x]/N[x]/N[nb] : (lambda $0:<e,t> (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_REL:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $0))))))
+nb_adj_arg_of	N[x]/N[x]/N[nb] : (lambda $0:<e,t> (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_ARGX-of:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $0))))))
+nb_adj_rel_of	N[x]/N[x]/N[nb] : (lambda $0:<e,t> (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_REL-of:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $0))))))
+//
+// Noun phrases in adjectivial use.
+//
+np_adj_arg	N[x]/N[x]/NP : (lambda $0:e (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_ARGX:<e,<e,t>> $2 $0)))))
+np_adj_rel	N[x]/N[x]/NP : (lambda $0:e (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_REL:<e,<e,t>> $2 $0)))))
+np_adj_arg_of	N[x]/N[x]/NP : (lambda $0:e (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_ARGX-of:<e,<e,t>> $2 $0)))))
+np_adj_rel_of	N[x]/N[x]/NP : (lambda $0:e (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_REL-of:<e,<e,t>> $2 $0)))))
+//
+// Verb phrases (S) in adjectivial use.
+//
+// TODO: Do we need the other forms as well?
+s_adj_rel_of	N[x]/N[x]/S : (lambda $0:<e,t> (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_REL-of:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $0))))))
+s_adj_arg_of	N[x]/N[x]/S : (lambda $0:<e,t> (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_ARGX-of:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $0))))))
+//
+// Numerals in adjectivial use.
+//
+// TODO: Do we need the other forms as well?
+i_adj_rel	N[x]/N[x]/I : (lambda $0:i (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_REL:<e,<i,t>> $2 $0)))))
+//
+// Prepositional use of verb phrases (S).
+// 
+// TODO: Do we need the other forms as well?
+s_pp_rel_of	N[x]\N[x]/S : (lambda $0:<e,t> (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_REL-of:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $0))))))
+s_pp_arg_of	N[x]\N[x]/S : (lambda $0:<e,t> (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_ARGX-of:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $0))))))
+//
+// Adverbial use of verb phrases (S).
+//
+s_ap_rel_of	S[x]\S[x]/S : (lambda $0:<e,t> (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_REL-of:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $0))))))
+s_ap_arg_of	S[x]\S[x]/S : (lambda $0:<e,t> (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_ARGX-of:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $0))))))

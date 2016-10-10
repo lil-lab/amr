@@ -1,0 +1,4 @@
+PER	person:<e,t>
+ORG	organization:<e,t>
+LOC	country:<e,t>
+MISC	thing:<e,t>

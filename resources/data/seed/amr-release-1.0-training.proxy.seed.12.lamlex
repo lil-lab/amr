@@ -1,0 +1,47 @@
+The ktx was manufactured in South Korea using technology transferred by Alstom.
+JSON{"date":"2014-09-29T11:07:19.573","tok":"The ktx was manufactured in South Korea using technology transferred by Alstom .","file":"PROXY_AFP_ENG_20040329_0408_13.txt","alignments":"3-4|0 7-8|0.2 8-9|0.2.0 9-10|0.2.0.0 11-12|0.2.0.0.0+0.2.0.0.0.0+0.2.0.0.0.0.0 5-7|0.1+0.1.0+0.1.0.0+0.1.0.1 6-7|0.1.0.1","amr":"(m \/ manufacture-01 :ARG1 (r \/ railway-line :name (n \/ name :op1 \"KTX\")) :location (c \/ country :name (n2 \/ name :op1 \"South\" :op2 \"Korea\")) :ARG2-of (u \/ use-01 :ARG1 (t2 \/ technology :ARG1-of (t3 \/ transfer-01 :ARG0 (c2 \/ company :name (n3 \/ name :op1 \"Alstom\"))))))","snt-type":"body","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20040329_0408.13","alignedExp":"3-4##(a:<id,<<e,t>,e>> !1 (lambda $0:e (manufacture-01:<e,t> $0)))####7-8##(a:<id,<<e,t>,e>> !1 (lambda $0:e (use-01:<e,t> $0)))####8-9##(a:<id,<<e,t>,e>> !1 (lambda $0:e (technology:<e,t> $0)))####9-10##(a:<id,<<e,t>,e>> !1 (lambda $0:e (transfer-01:<e,t> $0)))####11-12##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(company:<e,t> $0)\n\t(c_name:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(name:<e,t> $1)\n\t\t\t(c_op:<e,<txt,t>> $1 Alstom:txt))))))))####5-7##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(country:<e,t> $0)\n\t(c_name:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(name:<e,t> $1)\n\t\t\t(c_op:<e,<txt,t>> $1 South++Korea:txt))))))))","ptbtok":"The ktx was manufactured in South Korea using technology transferred by Alstom .","preferred":"","save-date":"Tue May 28, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(manufacture-01:<e,t> $0)
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(railway-line:<e,t> $1)
+			(c_name:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(name:<e,t> $2)
+					(c_op:<e,<txt,t>> $2 KTX:txt)))))))))
+	(c_location:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+			(country:<e,t> $3)
+			(c_name:<e,<e,t>> $3 
+				(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+					(name:<e,t> $4)
+					(c_op:<e,<txt,t>> $4 South++Korea:txt)))))))))
+	(c_ARG2-of:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+			(use-01:<e,t> $5)
+			(c_ARG1:<e,<e,t>> $5 
+				(a:<id,<<e,t>,e>> !7 (lambda $6:e (and:<t*,t>
+					(technology:<e,t> $6)
+					(c_ARG1-of:<e,<e,t>> $6 
+						(a:<id,<<e,t>,e>> !8 (lambda $7:e (and:<t*,t>
+							(transfer-01:<e,t> $7)
+							(c_ARG0:<e,<e,t>> $7 
+								(a:<id,<<e,t>,e>> !9 (lambda $8:e (and:<t*,t>
+									(company:<e,t> $8)
+									(c_name:<e,<e,t>> $8 
+										(a:<id,<<e,t>,e>> !10 (lambda $9:e (and:<t*,t>
+											(name:<e,t> $9)
+											(c_op:<e,<txt,t>> $9 Alstom:txt))))))))))))))))))))))))
+The :- NP[x]/N[x] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+ktx :- N[sg] : (lambda $0:e (and:<t*,t> (railway-line:<e,t> $0) (c_name:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (name:<e,t> $1) (c_op:<e,<txt,t>> $1 KTX:txt)))))))
+was :- S[dcl]\NP[sg]/(S[pss]\NP[sg]) : (lambda $0:<e,<e,t>> $0)
+manufactured :- S[pss]\NP : (lambda $0:e (lambda $1:e (and:<t*,t> (manufacture-01:<e,t> $1) (c_ARG1:<e,<e,t>> $1 $0))))
+in :- S[x]\S[x]/NP : (lambda $0:e (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_location:<e,<e,t>> $1 $0)))))
+South Korea :- NP[sg] : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (country:<e,t> $0) (c_name:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (name:<e,t> $1) (c_op:<e,<txt,t>> $1 South++Korea:txt))))))))
+using :- S[ng]/NP : (lambda $0:e (lambda $1:e (and:<t*,t> (use-01:<e,t> $1) (c_ARG1:<e,<e,t>> $1 $0))))
+technology :- N[nb] : (lambda $0:e (technology:<e,t> $0))
+transferred :- S[pt] : (lambda $0:e (transfer-01:<e,t> $0))
+by :- S[x]\S[x]/NP : (lambda $1:e (lambda $0:<e,t> (lambda $2:e (and:<t*,t> ($0 $2) (c_ARG0:<e,<e,t>> $2 $1)))))
+Alstom :- NP[sg] : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (company:<e,t> $0) (c_name:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (name:<e,t> $1) (c_op:<e,<txt,t>> $1 Alstom:txt))))))))
+. :- PUNCT
+

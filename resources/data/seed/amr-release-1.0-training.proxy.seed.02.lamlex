@@ -1,0 +1,26 @@
+In a statement Naif Arab Academy for Security Sciences announced --
+JSON{"date":"2014-09-29T11:07:07.583","tok":"In a statement Naif Arab Academy for Security Sciences announced --","file":"PROXY_AFP_ENG_20020105_0162_8.txt","alignments":"9-10|0 2-3|0.1+0.1.0 3-9|0.0+0.0.0+0.0.0.0+0.0.0.1+0.0.0.2+0.0.0.3+0.0.0.4+0.0.0.5 4-5|0.0.0.1 5-6|0.0.0.2 6-7|0.0.0.3 7-8|0.0.0.4 8-9|0.0.0.5","amr":"(a \/ announce-01 :ARG0 (u \/ university :name (n \/ name :op1 \"Naif\" :op2 \"Arab\" :op3 \"Academy\" :op4 \"for\" :op5 \"Security\" :op6 \"Sciences\")) :manner (t \/ thing :ARG1-of (s \/ state-01 :ARG0 u)))","snt-type":"body","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20020105_0162.8","alignedExp":"9-10##(a:<id,<<e,t>,e>> !1 (lambda $0:e (announce-01:<e,t> $0)))####2-3##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(thing:<e,t> $0)\n\t(c_ARG1-of:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (state-01:<e,t> $1)))))))####3-9##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(university:<e,t> $0)\n\t(c_name:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(name:<e,t> $1)\n\t\t\t(c_op:<e,<txt,t>> $1 Naif++Arab++Academy++for++Security++Sciences:txt))))))))","ptbtok":"In a statement Naif Arab Academy for Security Sciences announced --","preferred":"","save-date":"Wed May 8, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(announce-01:<e,t> $0)
+	(c_ARG0:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(university:<e,t> $1)
+			(c_name:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(name:<e,t> $2)
+					(c_op:<e,<txt,t>> $2 Naif++Arab++Academy++for++Security++Sciences:txt)))))))))
+	(c_manner:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+			(thing:<e,t> $3)
+			(c_ARG1-of:<e,<e,t>> $3 
+				(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+					(state-01:<e,t> $4)
+					(c_ARG0:<e,<e,t>> $4 
+						(ref:<id,e> !2)))))))))))))
+In :- S[x]\S[x]/NP : (lambda $1:e (lambda $2:<e,t> (lambda $0:e (and:<t*,t> ($2 $0) (c_manner:<e,<e,t>> $0 $1)))))
+a :- NP[sg]/N[sg] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+statement :- N[sg] : (lambda $11:e (and:<t*,t> (thing:<e,t> $11) (c_ARG1-of:<e,<e,t>> $11 (a:<id,<<e,t>,e>> na:id (lambda $12:e (and:<t*,t> (state-01:<e,t> $12) (c_ARG0:<e,<e,t>> $12 (ref:<id,e> na:id))))))))
+Naif Arab Academy for Security Sciences :- NP[sg] : (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (university:<e,t> $1) (c_name:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $2:e (and:<t*,t> (name:<e,t> $2) (c_op:<e,<txt,t>> $2 Naif++Arab++Academy++for++Security++Sciences:txt))))))))
+announced :- S[dcl]\NP : (lambda $1:e (lambda $0:e (and:<t*,t> (announce-01:<e,t> $0) (c_ARG0:<e,<e,t>> $0 $1))))
+-- :- PUNCT
+

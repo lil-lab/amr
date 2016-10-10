@@ -1,0 +1,11 @@
+Seed only parameter estimation experiment. The experiment includes only parameter estimation for the seed. Testing is done on the seed too. 
+
+Stages:
+	init model (seed lexicon + weights)
+	log model
+	training (data set: seed)
+	log model
+	testing (data set: seed)
+
+Experiments:
+	seedonly.exp -- single machine experiment.

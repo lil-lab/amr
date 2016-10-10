@@ -1,0 +1,80 @@
+The early draft of dossier of prewar intelligence on Iraq was produced by then Foreign Office press office chief John Williams.
+JSON{"date":"2014-09-29T11:07:37.494","tok":"The early draft of dossier of prewar intelligence on Iraq was produced by then Foreign Office press office chief John Williams .","file":"PROXY_APW_ENG_20080218_0615_13.txt","alignments":"11-12|0 4-5|0.1 9-10|0.1.2+0.1.2.0+0.1.2.0.0 7-8|0.1.1 2-3|0.1.0 1-2|0.1.0.0 19-21|0.0+0.0.0+0.0.0.0+0.0.0.1 20-21|0.0.0.1 14-15|0.0.1.0.0.0 15-16|0.0.1.0.0.1 18-19|0.0.1.1 17-18|0.0.1.1.0 16-17|0.0.1.1.0.0 13-14|0.0.1.2","amr":"(p2 \/ produce-01 :ARG0 (p4 \/ person :name (n3 \/ name :op1 \"John\" :op2 \"Williams\") :ARG0-of (h \/ have-org-role-91 :ARG1 (g \/ government-organization :name (n2 \/ name :op1 \"Foreign\" :op2 \"Office\")) :ARG2 (c2 \/ chief :mod (o2 \/ office :mod (p \/ press))) :time (t \/ then))) :ARG1 (d \/ dossier :ARG1-of (d2 \/ draft-01 :time (e \/ early)) :source (i \/ intelligence :time (b \/ before :op1 (w \/ war))) :topic (c \/ country :name (n \/ name :op1 \"Iraq\"))))","snt-type":"body","annotator":"Aligner v.02","id":"PROXY_APW_ENG_20080218_0615.13","alignedExp":"4-5##(a:<id,<<e,t>,e>> !1 (lambda $0:e (dossier:<e,t> $0)))####2-3##(a:<id,<<e,t>,e>> !1 (lambda $0:e (draft-01:<e,t> $0)))####18-19##(a:<id,<<e,t>,e>> !1 (lambda $0:e (chief:<e,t> $0)))####16-17##(a:<id,<<e,t>,e>> !1 (lambda $0:e (press:<e,t> $0)))####11-12##(a:<id,<<e,t>,e>> !1 (lambda $0:e (produce-01:<e,t> $0)))####9-10##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(country:<e,t> $0)\n\t(c_name:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(name:<e,t> $1)\n\t\t\t(c_op:<e,<txt,t>> $1 Iraq:txt))))))))####7-8##(a:<id,<<e,t>,e>> !1 (lambda $0:e (intelligence:<e,t> $0)))####1-2##(a:<id,<<e,t>,e>> !1 (lambda $0:e (early:<e,t> $0)))####17-18##(a:<id,<<e,t>,e>> !1 (lambda $0:e (office:<e,t> $0)))####13-14##(a:<id,<<e,t>,e>> !1 (lambda $0:e (then:<e,t> $0)))####19-21##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(person:<e,t> $0)\n\t(c_name:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(name:<e,t> $1)\n\t\t\t(c_op:<e,<txt,t>> $1 John++Williams:txt))))))))","ptbtok":"The early draft of dossier of prewar intelligence on Iraq was produced by then Foreign Office press office chief John Williams .","preferred":"","save-date":"Wed Jan 15, 2014"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(produce-01:<e,t> $0)
+	(c_ARG0:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(person:<e,t> $1)
+			(c_name:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(name:<e,t> $2)
+					(c_op:<e,<txt,t>> $2 John++Williams:txt)))))
+			(c_ARG0-of:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+					(have-org-role-91:<e,t> $3)
+					(c_ARG1:<e,<e,t>> $3 
+						(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+							(government-organization:<e,t> $4)
+							(c_name:<e,<e,t>> $4 
+								(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+									(name:<e,t> $5)
+									(c_op:<e,<txt,t>> $5 Foreign++Office:txt)))))))))
+					(c_ARG2:<e,<e,t>> $3 
+						(a:<id,<<e,t>,e>> !7 (lambda $6:e (and:<t*,t>
+							(chief:<e,t> $6)
+							(c_mod:<e,<e,t>> $6 
+								(a:<id,<<e,t>,e>> !8 (lambda $7:e (and:<t*,t>
+									(office:<e,t> $7)
+									(c_mod:<e,<e,t>> $7 
+										(a:<id,<<e,t>,e>> !9 (lambda $8:e (press:<e,t> $8))))))))))))
+					(c_time:<e,<e,t>> $3 
+						(a:<id,<<e,t>,e>> !10 (lambda $9:e (then:<e,t> $9))))))))))))
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !11 (lambda $10:e (and:<t*,t>
+			(dossier:<e,t> $10)
+			(c_ARG1-of:<e,<e,t>> $10 
+				(a:<id,<<e,t>,e>> !12 (lambda $11:e (and:<t*,t>
+					(draft-01:<e,t> $11)
+					(c_time:<e,<e,t>> $11 
+						(a:<id,<<e,t>,e>> !13 (lambda $12:e (early:<e,t> $12))))))))
+			(c_source:<e,<e,t>> $10 
+				(a:<id,<<e,t>,e>> !14 (lambda $13:e (and:<t*,t>
+					(intelligence:<e,t> $13)
+					(c_time:<e,<e,t>> $13 
+						(a:<id,<<e,t>,e>> !15 (lambda $14:e (and:<t*,t>
+							(before:<e,t> $14)
+							(c_op1:<e,<e,t>> $14 
+								(a:<id,<<e,t>,e>> !16 (lambda $15:e (war:<e,t> $15))))))))))))
+			(c_topic:<e,<e,t>> $10 
+				(a:<id,<<e,t>,e>> !17 (lambda $16:e (and:<t*,t>
+					(country:<e,t> $16)
+					(c_name:<e,<e,t>> $16 
+						(a:<id,<<e,t>,e>> !18 (lambda $17:e (and:<t*,t>
+							(name:<e,t> $17)
+							(c_op:<e,<txt,t>> $17 Iraq:txt))))))))))))))))
+// PARTIAL ENTRIES ONLY
+// FAIL: dossier is out-scoping draft, rather than the other way around
+// FAIL: Ungrammatical sentence missing a determiner. Correct lexical entries:
+The :- NP[x]/N[x] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+early :- N[x]/N[x] : (lambda $1:<e,t> (lambda $0:e (and:<t*,t> ($1 $0) (c_time:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id early:<e,t>)))))
+draft :- N[sg] : (lambda $0:e (draft-01:<e,t> $0))
+// FAIL: missing super-tag
+of :- N[x]\NP/N[x] : (lambda $1:<e,t> (lambda $0:e (lambda $2:e (and:<t*,t> ($1 $2) (c_ARG1-of:<e,<e,t>> $2 $0)))))
+// dossier :- N[sg] : (lambda $0:e (dossier:<e,t> $0))
+dossier :- N[nb] : (lambda $0:e (dossier:<e,t> $0))
+of :- N[x]\N[x]/NP : (lambda $0:e (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_source:<e,<e,t>> $1 $0)))))
+prewar :- N[x]/N[x] : (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_time:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $12:e (and:<t*,t> (before:<e,t> $12) (c_op1:<e,<e,t>> $12 (a:<id,<<e,t>,e>> na:id (lambda $13:e (war:<e,t> $13)))))))))))
+intelligence :- N[nb] : (lambda $0:e (intelligence:<e,t> $0))
+on :- N[x]\N[x]/NP : (lambda $0:e (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_topic:<e,<e,t>> $1 $0)))))
+Iraq :- NP[sg] : (a:<id,<<e,t>,e>> na:id (lambda $14:e (and:<t*,t> (country:<e,t> $14) (c_name:<e,<e,t>> $14 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (name:<e,t> $1) (c_op:<e,<txt,t>> $1 Iraq:txt))))))))
+was :- S[dcl]\NP[sg]/(S[pss]\NP[sg]) : (lambda $0:<e,<e,t>> $0)
+produced :- S[pss]\NP : (lambda $0:e (lambda $1:e (and:<t*,t> (produce-01:<e,t> $1) (c_ARG1:<e,<e,t>> $1 $0))))
+by :- S[x]\S[x]/NP : (lambda $0:e (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_ARG0:<e,<e,t>> $1 $0)))))
+then :- N[x]/N[x] : (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_time:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id then:<e,t>)))))
+Foreign Office :- NP[sg] : (a:<id,<<e,t>,e>> na:id (lambda $3:e (and:<t*,t> (government-organization:<e,t> $3) (c_name:<e,<e,t>> $3 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (name:<e,t> $1) (c_op:<e,<txt,t>> $1 Foreign++Office:txt))))))))
+press :- N[sg] : (lambda $0:e (press:<e,t> $0))
+office :- N[sg] : (lambda $0:e (office:<e,t> $0))
+chief :- N[sg]\(N[sg]/N[sg]) : (lambda $0:<<e,t>,<e,t>> (lambda $2:e (and:<t*,t> (have-org-role-91:<e,t> $2) (c_ARG2:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id ($0 chief:<e,t>))))))
+John Williams :- N[sg] : (lambda $0:e (and:<t*,t> (person:<e,t> $0) (c_name:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (name:<e,t> $1) (c_op:<e,<txt,t>> $1 John++Williams:txt)))))))
+. :- PUNCT
+

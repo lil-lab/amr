@@ -1,0 +1,63 @@
+// Word skipping cost (this does not change during learning)
+DYNSKIP=-5.0
+CLOSURE=-5.0
+SLOPPYLEX=-5.0
+// Lexical generation features
+DYN#dyn-numeral=6.0
+DYN#dyn-numeral=6.0
+DYN#dyn-dates-datestamp=6.0
+DYN#dyn-dates-cdatestamp=6.0
+DYN#dyn-dates-cdatestamp2000=6.0
+DYN#dyn-dates-cdatestamp1900=6.0
+DYN#dyn-dates-datestamp-verbose=6.0
+// Shifting rules
+SHIFT#bare_ne=-3.0
+SHIFT#bare_noun=-3.0
+SHIFT#bare_pl=-3.0
+SHIFT#n_pl_a=-3.0
+SHIFT#massToA=-3.0
+SHIFT#date_stamp=-3.0
+SHIFT#i_adj_rel=-3.0
+SHIFT#keyword_c1=-3.0
+SHIFT#keyword_s=-3.0
+SHIFT#keyword_single=-3.0
+SHIFT#n_adj_arg=-3.0
+SHIFT#n_adj_arg0=-3.0
+SHIFT#n_adj_arg1=-3.0
+SHIFT#n_adj_arg_of=-3.0
+SHIFT#n_adj_rel=-3.0
+SHIFT#n_adj_rel_of=-3.0
+SHIFT#nb_adj_arg=-3.0
+SHIFT#nb_adj_arg0=-3.0
+SHIFT#nb_adj_arg1=-3.0
+SHIFT#nb_adj_arg_of=-3.0
+SHIFT#nb_adj_rel=-3.0
+SHIFT#nb_adj_rel_of=-3.0
+SHIFT#ne_stamp=-3.0
+SHIFT#ne_stamp_coordination=-3.0
+SHIFT#np_adj_arg=-3.0
+SHIFT#np_adj_arg0=-3.0
+SHIFT#np_adj_arg1=-3.0
+SHIFT#np_adj_arg_of=-3.0
+SHIFT#np_adj_rel=-3.0
+SHIFT#np_adj_rel_of=-3.0
+SHIFT#np_with_dummy=-3.0
+SHIFT#s_adj_arg_of=-3.0
+SHIFT#s_adj_rel_of=-3.0
+SHIFT#s_ap_arg_of=-3.0
+SHIFT#s_ap_rel_of=-3.0
+SHIFT#s_pp_arg_of=-3.0
+SHIFT#s_pp_rel_of=-3.0
+SHIFT#s_with_dummy=-3.0
+SHIFT#topic_ap=-3.0
+// Crossing composition
+CROSS#<=-3.0
+CROSS#>=-3.0
+// Alignment between POS tags and syntactic attributes
+ATTRIBPOS#sg#NN=3.0
+ATTRIBPOS#nb#NN=3.0
+ATTRIBPOS#sg#NNP=3.0
+ATTRIBPOS#sg#NNP+NNP=3.0
+ATTRIBPOS#sg#NNP+NNP+NNP=3.0
+ATTRIBPOS#pl#NNS=3.0
+ATTRIBPOS#pl#NNPS=3.0

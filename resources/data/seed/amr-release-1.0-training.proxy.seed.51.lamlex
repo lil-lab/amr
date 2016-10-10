@@ -1,0 +1,34 @@
+Japanese troops have not wage war since 450000.
+JSON{"date":"2015-01-01T22:35:58.790","tok":"Japanese troops have not wage war since 450000 .","file":"PROXY_AFP_ENG_20080521_0475_17.txt","alignments":"7-8|0.3.0+0.3.0.0 4-5|0 6-7|0.3 5-6|0.2 1-2|0.1 0-1|0.1.0+0.1.0.0+0.1.0.0.0","amr":"(w \/ wage-01 :polarity - :ARG0 (t \/ troop :mod (c \/ country :name (n \/ name :op1 \"Japan\"))) :ARG1 (w2 \/ war) :time (s \/ since :op1 (d \/ date-entity :year 1945)))","snt-type":"body","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20080521_0475.17","alignedExp":"7-8##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(date-entity:<e,t> $0)\n\t(c_year:<e,<i,t>> $0 1945:i))))####4-5##(a:<id,<<e,t>,e>> !1 (lambda $0:e (wage-01:<e,t> $0)))####6-7##(a:<id,<<e,t>,e>> !1 (lambda $0:e (since:<e,t> $0)))####5-6##(a:<id,<<e,t>,e>> !1 (lambda $0:e (war:<e,t> $0)))####1-2##(a:<id,<<e,t>,e>> !1 (lambda $0:e (troop:<e,t> $0)))####0-1##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(country:<e,t> $0)\n\t(c_name:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(name:<e,t> $1)\n\t\t\t(c_op:<e,<txt,t>> $1 Japan:txt))))))))","ptbtok":"Japanese troops have not wage war since 450000 .","preferred":"","save-date":"Wed Jul 3, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(wage-01:<e,t> $0)
+	(c_polarity:<e,<e,t>> $0 -:e)
+	(c_ARG0:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(troop:<e,t> $1)
+			(c_mod:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(country:<e,t> $2)
+					(c_name:<e,<e,t>> $2 
+						(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+							(name:<e,t> $3)
+							(c_op:<e,<txt,t>> $3 Japan:txt)))))))))))))
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !5 (lambda $4:e (war:<e,t> $4))))
+	(c_time:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+			(since:<e,t> $5)
+			(c_op1:<e,<e,t>> $5 
+				(a:<id,<<e,t>,e>> !7 (lambda $6:e (and:<t*,t>
+					(date-entity:<e,t> $6)
+					(c_year:<e,<i,t>> $6 1945:i))))))))))))
+Japanese :- N[x]/N[x] : (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_mod:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (country:<e,t> $1) (c_name:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (name:<e,t> $0) (c_op:<e,<txt,t>> $0 Japan:txt))))))))))))
+troops :- N[pl] : troop:<e,t>
+have :- S[dcl]\NP[pl]/(S[pss]\NP[pl]) : (lambda $0:<e,<e,t>> $0)
+not :- S[x]/S[x] : (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_polarity:<e,<e,t>> $1 -:e))))
+wage :- S[pss]\NP/NP : (lambda $0:e (lambda $1:e (lambda $2:e (and:<t*,t> (wage-01:<e,t> $2) (c_ARG0:<e,<e,t>> $2 $1) (c_ARG1:<e,<e,t>> $2 $0)))))
+war :- N[nb] : war:<e,t>
+since :- S[x]\S[x]/NP : (lambda $0:e (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_time:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (since:<e,t> $1) (c_op1:<e,<e,t>> $1 $0)))))))))
+// 450000 :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (date-entity:<e,t> $0) (c_year:<e,<i,t>> $0 1945:i))))
+. :- PUNCT
+

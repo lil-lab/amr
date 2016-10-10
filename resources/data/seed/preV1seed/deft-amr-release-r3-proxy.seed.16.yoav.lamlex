@@ -1,0 +1,39 @@
+It against potential missile threats from countries such as Iran and North Korea 
+file=PROXY_AFP_ENG_20070716_0417_17.txt	save-date=Thu Jun 20, 2013	annotator=SDL-AMR-09	preferred=true	snt-type=body	date=2013-06-15T02:27:54	id=PROXY_AFP_ENG_20070716_0417.17
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(oppose-01:<e,t> $0)
+	(c_ARG0:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (it:<e,t> $1))))
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+			(threaten-01:<e,t> $2)
+			(c_ARG0:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+					(country:<e,t> $3)
+					(c_example:<e,<e,t>> $3 
+						(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+							(and:<e,t> $4)
+							(c_op1:<e,<e,t>> $4 
+								(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+									(country:<e,t> $5)
+									(c_name:<e,<txt,t>> $5 Iran:txt)))))
+							(c_op2:<e,<e,t>> $4 
+								(a:<id,<<e,t>,e>> !7 (lambda $6:e (and:<t*,t>
+									(country:<e,t> $6)
+									(c_name:<e,<txt,t>> $6 North++Korea:txt)))))))))))))
+			(c_ARG1:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !8 (lambda $7:e (missile:<e,t> $7))))
+			(c_mod:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !9 (lambda $8:e (potential:<e,t> $8)))))))))))
+It :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (it:<e,t> $0)))
+against :- S\NP/NP : (lambda $0:e (lambda $1:e (lambda $2:e (and:<t*,t> (oppose-01:<e,t> $2) (c_ARG0:<e,<e,t>> $2 $1) (c_ARG1:<e,<e,t>> $2 $0)))))
+potential :- ADJ : (lambda $0:e (potential:<e,t> $0))
+missile :- N : (lambda $0:e (missile:<e,t> $0))
+threats :- N : (lambda $0:e (threaten-01:<e,t> $0))
+from :- PP/NP : (lambda $0:e (lambda $1:e (c_ARG0:<e,<e,t>> $1 $0)))
+countries :- N : (lambda $0:e (country:<e,t> $0))
+such as :- PP/NP : (lambda $0:e (lambda $1:e (c_example:<e,<e,t>> $1 $0)))
+Iran :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (country:<e,t> $0) (c_name:<e,<txt,t>> $0 Iran:txt))))
+and :- NP\NP/NP : (lambda $0:e (lambda $1:e (a:<id,<<e,t>,e>> na:id (lambda $2:e (and:<t*,t> (and:<e,t> $2) (c_op1:<e,<e,t>> $2 $1) (c_op2:<e,<e,t>> $2 $0))))))
+North Korea :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (country:<e,t> $0) (c_name:<e,<txt,t>> $0 North++Korea:txt))))
+

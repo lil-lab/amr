@@ -1,0 +1,10 @@
+Augment the model with alignment lexical entries from the proxy development set.
+
+Stages:
+	log model
+	augment model
+	log model
+
+Experiments:
+	dev.proxy.augment.exp -- single machine experiment.
+		modelFile=<model file>

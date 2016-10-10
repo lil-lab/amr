@@ -1,0 +1,25 @@
+The sq Hell is considered a computer worm.
+JSON{"date":"2014-09-29T11:07:15.267","tok":"The sq Hell is considered a computer worm .","file":"PROXY_AFP_ENG_20030128_0700_11.txt","alignments":"4-5|0 7-8|0.0 2-3|0.0.1.0.1 6-7|0.0.0","amr":"(c \/ consider-01 :ARG1 (w \/ worm :mod (c2 \/ computer) :domain (p \/ product :name (n2 \/ name :op1 \"SQ\" :op2 \"Hell\"))))","snt-type":"body","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20030128_0700.11","alignedExp":"4-5##(a:<id,<<e,t>,e>> !1 (lambda $0:e (consider-01:<e,t> $0)))####7-8##(a:<id,<<e,t>,e>> !1 (lambda $0:e (worm:<e,t> $0)))####6-7##(a:<id,<<e,t>,e>> !1 (lambda $0:e (computer:<e,t> $0)))","ptbtok":"The sq Hell is considered a computer worm .","preferred":"","save-date":"Fri Dec 6, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(consider-01:<e,t> $0)
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(worm:<e,t> $1)
+			(c_mod:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (computer:<e,t> $2))))
+			(c_domain:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+					(product:<e,t> $3)
+					(c_name:<e,<e,t>> $3 
+						(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+							(name:<e,t> $4)
+							(c_op:<e,<txt,t>> $4 SQ++Hell:txt))))))))))))))))
+The :- NP[x]/N[x] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+sq Hell :- N[sg] : (lambda $0:e (and:<t*,t> (product:<e,t> $0) (c_name:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (name:<e,t> $1) (c_op:<e,<txt,t>> $1 SQ++Hell:txt)))))))
+is :- S[dcl]\NP/(S[pss]\NP) : (lambda $0:<e,<e,t>> $0)
+considered :- S[pss]\NP/N[sg]/(NP[sg]/N[sg]) : (lambda $0:<<e,t>,e> (lambda $1:<e,t> (lambda $2:e (lambda $3:e (and:<t*,t> (consider-01:<e,t> $3) (c_ARG1:<e,<e,t>> $3 ($0 (lambda $4:e (and:<t*,t> ($1 $4) (c_domain:<e,<e,t>> $4 $2))))))))))
+a :- NP[sg]/N[sg] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+computer :- N[sg] : computer:<e,t>
+worm :- N[sg] : worm:<e,t>
+. :- PUNCT
+

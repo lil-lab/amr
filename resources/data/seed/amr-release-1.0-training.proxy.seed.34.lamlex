@@ -1,0 +1,25 @@
+Most executions in Iran have been by hanging.
+JSON{"date":"2014-09-29T11:07:26.707","tok":"Most executions in Iran have been by hanging .","file":"PROXY_AFP_ENG_20070721_0240_16.txt","alignments":"7-8|0.0 0-1|0.1 3-4|0.2+0.2.0+0.2.0.0 1-2|0","amr":"(e2 \/ execute-01 :ARG2 (h \/ hang-01) :quant (m \/ most) :location (c \/ country :name (n \/ name :op1 \"Iran\")))","snt-type":"body","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20070721_0240.16","alignedExp":"7-8##(a:<id,<<e,t>,e>> !1 (lambda $0:e (hang-01:<e,t> $0)))####0-1##(a:<id,<<e,t>,e>> !1 (lambda $0:e (most:<e,t> $0)))####3-4##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(country:<e,t> $0)\n\t(c_name:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(name:<e,t> $1)\n\t\t\t(c_op:<e,<txt,t>> $1 Iran:txt))))))))####1-2##(a:<id,<<e,t>,e>> !1 (lambda $0:e (execute-01:<e,t> $0)))","ptbtok":"Most executions in Iran have been by hanging .","preferred":"","save-date":"Wed Jul 3, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(execute-01:<e,t> $0)
+	(c_ARG2:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (hang-01:<e,t> $1))))
+	(c_quant:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !3 (lambda $2:e (most:<e,t> $2))))
+	(c_location:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+			(country:<e,t> $3)
+			(c_name:<e,<e,t>> $3 
+				(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+					(name:<e,t> $4)
+					(c_op:<e,<txt,t>> $4 Iran:txt))))))))))))
+Most :- N[x]/N[x] : (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_quant:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id most:<e,t>)))))
+executions :- N[pl] : execute-01:<e,t>
+in :- N[x]\N[x]/NP : (lambda $0:e (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_location:<e,<e,t>> $2 $0)))))
+Iran :- NP[sg] : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (country:<e,t> $0) (c_name:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (name:<e,t> $1) (c_op:<e,<txt,t>> $1 Iran:txt))))))))
+have :- S[dcl]\N[pl]/(S[pss]\N[pl]) : (lambda $0:<<e,t>,<e,t>> $0)
+been :- S[pss]\N/(N[x]\N[x]) : (lambda $0:<<e,t>,<e,t>> (lambda $1:<e,t> (lambda $2:e ($0 $1 $2))))
+by :- N[x]\N[x]/S[ng] : (lambda $0:<e,t> (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_ARG2:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $0))))))
+hanging :- S[ng] : hang-01:<e,t>
+. :- PUNCT
+

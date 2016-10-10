@@ -1,0 +1,9 @@
+Parsing util for raw sentences. Includes all pre-processing.
+
+Experiments:
+	parse.exp -- parsing util.
+		sentences=<file> : file with sentences to parse. One sentence per line.
+		chartLogs=<dir> : directory to log CKY charts (optional).
+		allowSloppy=<true|false> : enable two-pass sloppy parsing (default: true).
+		modelFile=<file> : model to use.
+		logLevel=<DEBUG|DEV|INFO|WARN|ERROR|NO_LOG> : logging level (default: ERROR).

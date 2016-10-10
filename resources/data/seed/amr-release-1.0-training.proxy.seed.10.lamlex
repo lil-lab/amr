@@ -1,0 +1,73 @@
+Newspaper seller Mohammad Farooq stated that Pervez Musharraf's clamp-down on extremism had done little to limit the demand for banned religious extremist publications.
+JSON{"date":"2014-09-29T11:07:08.602","tok":"Newspaper seller Mohammad Farooq stated that Pervez Musharraf 's clamp - down on extremism had done little to limit the demand for banned religious extremist publications .","file":"PROXY_AFP_ENG_20020115_0320_29.txt","alignments":"4-5|0 16-17|0.1 14-15|0.1.2 18-19|0.1.1 11-12|0.1.1.0.1 21-22|0.1.1.0.1.0 20-21|0.1.1.0.2 6-8|0.1.0.0+0.1.0.0.0+0.1.0.0.0.0+0.1.0.0.0.1 7-8|0.1.0.0.0.1 2-3|0.0.0.0 3-4|0.0.0.1 1-2|0.0+0.0.1 0-1|0.0.1.0 23-24|0.1.1.0+0.1.1.0.0","amr":"(s \/ state-01 :ARG0 (p \/ person :name (n \/ name :op1 \"Mohammad\" :op2 \"Farooq\") :ARG0-of (s2 \/ sell-01 :ARG1 (n2 \/ newspaper))) :ARG1 (l \/ limit-01 :ARG0 (c \/ clamp-01 :ARG0 (p2 \/ person :name (n3 \/ name :op1 \"Pervez\" :op2 \"Musharraf\")) :ARG1 (e \/ extremism)) :ARG1 (d \/ demand-01 :ARG1 (t \/ thing :ARG1-of (p3 \/ publish-01) :mod (e2 \/ extremism :mod (r \/ religious)) :ARG1-of (b \/ ban-01))) :degree (l2 \/ little)))","snt-type":"body","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20020115_0320.29","alignedExp":"4-5##(a:<id,<<e,t>,e>> !1 (lambda $0:e (state-01:<e,t> $0)))####16-17##(a:<id,<<e,t>,e>> !1 (lambda $0:e (limit-01:<e,t> $0)))####14-15##(a:<id,<<e,t>,e>> !1 (lambda $0:e (little:<e,t> $0)))####18-19##(a:<id,<<e,t>,e>> !1 (lambda $0:e (demand-01:<e,t> $0)))####20-21##(a:<id,<<e,t>,e>> !1 (lambda $0:e (ban-01:<e,t> $0)))####0-1##(a:<id,<<e,t>,e>> !1 (lambda $0:e (newspaper:<e,t> $0)))####6-8##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(person:<e,t> $0)\n\t(c_name:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(name:<e,t> $1)\n\t\t\t(c_op:<e,<txt,t>> $1 Pervez++Musharraf:txt))))))))####11-12##(a:<id,<<e,t>,e>> !1 (lambda $0:e (extremism:<e,t> $0)))####21-22##(a:<id,<<e,t>,e>> !1 (lambda $0:e (religious:<e,t> $0)))####1-2##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(person:<e,t> $0)\n\t(c_ARG0-of:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (sell-01:<e,t> $1)))))))####23-24##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(thing:<e,t> $0)\n\t(c_ARG1-of:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (publish-01:<e,t> $1)))))))","ptbtok":"Newspaper seller Mohammad Farooq stated that Pervez Musharraf 's clamp-down on extremism had done little to limit the demand for banned religious extremist publications .","preferred":"","save-date":"Wed May 29, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(state-01:<e,t> $0)
+	(c_ARG0:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(person:<e,t> $1)
+			(c_name:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(name:<e,t> $2)
+					(c_op:<e,<txt,t>> $2 Mohammad++Farooq:txt)))))
+			(c_ARG0-of:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+					(sell-01:<e,t> $3)
+					(c_ARG1:<e,<e,t>> $3 
+						(a:<id,<<e,t>,e>> !5 (lambda $4:e (newspaper:<e,t> $4))))))))))))
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+			(limit-01:<e,t> $5)
+			(c_ARG0:<e,<e,t>> $5 
+				(a:<id,<<e,t>,e>> !7 (lambda $6:e (and:<t*,t>
+					(clamp-01:<e,t> $6)
+					(c_ARG0:<e,<e,t>> $6 
+						(a:<id,<<e,t>,e>> !8 (lambda $7:e (and:<t*,t>
+							(person:<e,t> $7)
+							(c_name:<e,<e,t>> $7 
+								(a:<id,<<e,t>,e>> !9 (lambda $8:e (and:<t*,t>
+									(name:<e,t> $8)
+									(c_op:<e,<txt,t>> $8 Pervez++Musharraf:txt)))))))))
+					(c_ARG1:<e,<e,t>> $6 
+						(a:<id,<<e,t>,e>> !10 (lambda $9:e (extremism:<e,t> $9))))))))
+			(c_ARG1:<e,<e,t>> $5 
+				(a:<id,<<e,t>,e>> !11 (lambda $10:e (and:<t*,t>
+					(demand-01:<e,t> $10)
+					(c_ARG1:<e,<e,t>> $10 
+						(a:<id,<<e,t>,e>> !12 (lambda $11:e (and:<t*,t>
+							(thing:<e,t> $11)
+							(c_ARG1-of:<e,<e,t>> $11 
+								(a:<id,<<e,t>,e>> !13 (lambda $12:e (publish-01:<e,t> $12))))
+							(c_mod:<e,<e,t>> $11 
+								(a:<id,<<e,t>,e>> !14 (lambda $13:e (and:<t*,t>
+									(extremism:<e,t> $13)
+									(c_mod:<e,<e,t>> $13 
+										(a:<id,<<e,t>,e>> !15 (lambda $14:e (religious:<e,t> $14))))))))
+							(c_ARG1-of:<e,<e,t>> $11 
+								(a:<id,<<e,t>,e>> !16 (lambda $15:e (ban-01:<e,t> $15))))))))))))
+			(c_degree:<e,<e,t>> $5 
+				(a:<id,<<e,t>,e>> !17 (lambda $16:e (little:<e,t> $16)))))))))))
+Newspaper :- N[sg] : (lambda $0:e (newspaper:<e,t> $0))
+seller :- N[sg] : (lambda $0:e (sell-01:<e,t> $0))
+Mohammad Farooq :- N[sg] : (lambda $0:e (and:<t*,t> (person:<e,t> $0) (c_name:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (name:<e,t> $1) (c_op:<e,<txt,t>> $1 Mohammad++Farooq:txt)))))))
+stated :- S[dcl]\NP/S[em] : (lambda $2:<e,t> (lambda $0:e (lambda $1:e (and:<t*,t> (state-01:<e,t> $1) (c_ARG0:<e,<e,t>> $1 $0) (c_ARG1:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id $2))))))
+that :- S[em]/S[dcl] : (lambda $0:<e,t> $0)
+Pervez Musharraf :- NP[sg] : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (person:<e,t> $0) (c_name:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (name:<e,t> $1) (c_op:<e,<txt,t>> $1 Pervez++Musharraf:txt))))))))
+'s :- NP[x]/N[x]\NP : (lambda $0:e (lambda $2:<e,t> (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> ($2 $1) (c_ARG0:<e,<e,t>> $1 $0))))))
+clamp-down :- N[sg] : (lambda $0:e (clamp-01:<e,t> $0))
+on :- N[x]\N[x]/NP : (lambda $0:e (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_ARG1:<e,<e,t>> $1 $0)))))
+// Mass noun
+extremism :- N[nb] : (lambda $0:e (extremism:<e,t> $0))
+had :- S[dcl]\NP[x]/(S[pt]\NP[x]) : (lambda $0:<e,<e,t>> $0)
+done :- S[pt]\NP[x]/(S[to]\NP[x]) : (lambda $0:<e,<e,t>> $0)
+little :- S[x]/S[x] : (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_degree:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $0:e (little:<e,t> $0)))))))
+to :- S[to]\NP[x]/(S[b]\NP[x]) : (lambda $0:<e,<e,t>> $0)
+limit :- S[b]\NP/NP : (lambda $0:e (lambda $2:e (lambda $1:e (and:<t*,t> (limit-01:<e,t> $1) (c_ARG1:<e,<e,t>> $1 $0) (c_ARG0:<e,<e,t>> $1 $2)))))
+the :- NP[x]/N[x] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+demand :- N[sg] : (lambda $0:e (demand-01:<e,t> $0))
+for :- N[x]\N[x]/NP : (lambda $0:e (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_ARG1:<e,<e,t>> $1 $0)))))
+banned :- N[x]/N[x] : (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_ARG1-of:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $0:e (ban-01:<e,t> $0)))))))
+religious :- N[x]/N[x] : (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_mod:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $0:e (religious:<e,t> $0)))))))
+extremist :- N[sg] : (lambda $0:e (extremism:<e,t> $0))
+publications :- N[pl] : (lambda $0:e (and:<t*,t> (thing:<e,t> $0) (c_ARG1-of:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (publish-01:<e,t> $1))))))
+. :- PUNCT
+

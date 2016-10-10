@@ -1,0 +1,2 @@
+(a / and :op1 (w / weapon :ARG2 w) :op2 (w2 / weapon :ARG2 w2) :ARG2 (s / state :ARG2 a))
+

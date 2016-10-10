@@ -1,0 +1,11 @@
+Development proxy test with no sentences including references (i.e., re-entrants).
+
+Stages:
+	log model
+	testing (data set: amr-release-1.0-dev-proxy.txt [subset])
+
+Experiments:
+	dev.proxy.noref.test.exp -- single machine experiment.
+		modelFile=<model file>
+	dev.proxy.noref.test.dist.exp -- distributed experiment.
+		modelFile=<model file>

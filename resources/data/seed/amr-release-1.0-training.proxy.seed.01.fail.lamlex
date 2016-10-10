@@ -1,0 +1,51 @@
+The Riyadh-based Naif Arab Academy for Security Sciences said in a statement that it was running a two-week workshop for 50 anti-terrorism experts.
+JSON{"date":"2014-09-29T11:07:07.473","tok":"The Riyadh - based Naif Arab Academy for Security Sciences said in a statement that it was running a two - week workshop for 50 anti - terrorism experts .","file":"PROXY_AFP_ENG_20020105_0162_4.txt","alignments":"8-9|0 11-12|0.2 15-16|0.1 18-19|0.1.0 20-21|0.1.0.0.0 22-23|0.1.0.0+0.1.0.0.1 2-8|0.0+0.0.0+0.0.0.0+0.0.0.1+0.0.0.2+0.0.0.3+0.0.0.4+0.0.0.5 3-4|0.0.0.1 4-5|0.0.0.2 5-6|0.0.0.3 6-7|0.0.0.4 7-8|0.0.0.5","amr":"(s \/ say-01 :ARG0 (u \/ university :name (n \/ name :op1 \"Naif\" :op2 \"Arab\" :op3 \"Academy\" :op4 \"for\" :op5 \"Security\" :op6 \"Sciences\") :ARG1-of (b \/ base-01 :location (c \/ city :name (n2 \/ name :op1 \"Riyadh\")))) :ARG1 (r \/ run-01 :ARG0 u :ARG1 (w \/ workshop :beneficiary (p \/ person :quant 50 :ARG1-of (e \/ expert-41 :ARG2 (c2 \/ counter-01 :ARG1 (t2 \/ terrorism))))) :duration (t \/ temporal-quantity :quant 2 :unit (w2 \/ week))) :medium (s2 \/ statement))","snt-type":"summary","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20020105_0162.4","alignedExp":"8-9##(a:<id,<<e,t>,e>> !1 (lambda $0:e (say-01:<e,t> $0)))####11-12##(a:<id,<<e,t>,e>> !1 (lambda $0:e (statement:<e,t> $0)))####15-16##(a:<id,<<e,t>,e>> !1 (lambda $0:e (run-01:<e,t> $0)))####18-19##(a:<id,<<e,t>,e>> !1 (lambda $0:e (workshop:<e,t> $0)))####20-21##50:i####22-23##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(person:<e,t> $0)\n\t(c_ARG1-of:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (expert-41:<e,t> $1)))))))####2-8##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(university:<e,t> $0)\n\t(c_name:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(name:<e,t> $1)\n\t\t\t(c_op:<e,<txt,t>> $1 Naif++Arab++Academy++for++Security++Sciences:txt))))))))","ptbtok":"The Riyadh-based Naif Arab Academy for Security Sciences said in a statement that it was running a two-week workshop for 50 anti-terrorism experts .","preferred":"","save-date":"Sun Jul 28, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(say-01:<e,t> $0)
+	(c_ARG0:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(university:<e,t> $1)
+			(c_name:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(name:<e,t> $2)
+					(c_op:<e,<txt,t>> $2 Naif++Arab++Academy++for++Security++Sciences:txt)))))
+			(c_ARG1-of:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+					(base-01:<e,t> $3)
+					(c_location:<e,<e,t>> $3 
+						(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+							(city:<e,t> $4)
+							(c_name:<e,<e,t>> $4 
+								(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+									(name:<e,t> $5)
+									(c_op:<e,<txt,t>> $5 Riyadh:txt)))))))))))))))))
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !7 (lambda $6:e (and:<t*,t>
+			(run-01:<e,t> $6)
+			(c_ARG0:<e,<e,t>> $6 
+				(ref:<id,e> !2))
+			(c_ARG1:<e,<e,t>> $6 
+				(a:<id,<<e,t>,e>> !8 (lambda $7:e (and:<t*,t>
+					(workshop:<e,t> $7)
+					(c_beneficiary:<e,<e,t>> $7 
+						(a:<id,<<e,t>,e>> !9 (lambda $8:e (and:<t*,t>
+							(person:<e,t> $8)
+							(c_quant:<e,<i,t>> $8 50:i)
+							(c_ARG1-of:<e,<e,t>> $8 
+								(a:<id,<<e,t>,e>> !10 (lambda $9:e (and:<t*,t>
+									(expert-41:<e,t> $9)
+									(c_ARG2:<e,<e,t>> $9 
+										(a:<id,<<e,t>,e>> !11 (lambda $10:e (and:<t*,t>
+											(counter-01:<e,t> $10)
+											(c_ARG1:<e,<e,t>> $10 
+												(a:<id,<<e,t>,e>> !12 (lambda $11:e (terrorism:<e,t> $11))))))))))))))))))))
+			(c_duration:<e,<e,t>> $6 
+				(a:<id,<<e,t>,e>> !13 (lambda $12:e (and:<t*,t>
+					(temporal-quantity:<e,t> $12)
+					(c_quant:<e,<i,t>> $12 2:i)
+					(c_unit:<e,<e,t>> $12 
+						(a:<id,<<e,t>,e>> !14 (lambda $13:e (week:<e,t> $13))))))))))))
+	(c_medium:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !15 (lambda $14:e (statement:<e,t> $14)))))))
+// FAIL: 'two week' modifies the 'running' event and not the 'workshop'. 
+

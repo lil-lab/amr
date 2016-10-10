@@ -1,0 +1,2 @@
+(a / attest-01 :ARG0 (c / cargo :location (s / ship :name (n / name :op1 "Kuwolsan"))) :ARG1 (e / exist-01 :ARG1 (z / zone :mod (g / gray) :ARG1-of (c2 / compose-01 :ARG2 (t / thing :ARG3-of (c3 / combine-01 :ARG1 (a2 / and :op1 (s2 / state :mod (w / weak)) :op2 (b / border :ARG1-of (o / open-01)) :op3 (l / lack-01 :ARG1 (c4 / control-01)) :op4 (m / market :consist-of (a3 / and :op1 (p / person :ARG0-of (b2 / buy-01 :ARG1 (w2 / weapon :ARG2-of (d / destroy-01 :degree (m2 / mass))))) :op2 (p2 / person :ARG0-of (s3 / sell-01 :ARG1 w2)))))))))))
+

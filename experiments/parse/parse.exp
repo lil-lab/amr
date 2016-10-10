@@ -1,0 +1,20 @@
+outputDir=logs
+globalLog=logs/global.log
+include=../params.inc
+allowSloppy=true
+logLevel=ERROR
+
+# Resources
+include=parse.inc
+## Tokenizer
+type=tokenizer id=tokenizer
+## Data collection
+type=data.sent tokenizer=tokenizer file=%{sentences} id=rawData
+type=data.amr id=data data=rawData
+## Chart logging
+type=chart.logger id=logger outputDir=%{chartLogs}
+## Execution module -- wraps the parser and model
+type=exec.amr parser=parser model=model id=exec logger=logger vocab=%{resDir}/vocab.extended breakTies=true
+
+# Jobs
+type=parse id=parse sentences=data exec=exec sloppy=%{allowSloppy}

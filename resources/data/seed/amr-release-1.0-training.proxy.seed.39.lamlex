@@ -1,0 +1,27 @@
+Afghanistan is the world's top opium producer.
+JSON{"date":"2014-09-29T11:07:11.045","tok":"Afghanistan is the world 's top opium producer .","file":"PROXY_AFP_ENG_20020416_0331_7.txt","alignments":"7-8|0 5-6|0.3 3-4|0.2 6-7|0.1 0-1|0.0+0.0.0+0.0.0.0","amr":"(p \/ produce-01 :ARG0 (c \/ country :name (n \/ name :op1 \"Afghanistan\")) :ARG1 (o \/ opium) :location (w \/ world) :mod (t \/ top))","snt-type":"body","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20020416_0331.7","alignedExp":"7-8##(a:<id,<<e,t>,e>> !1 (lambda $0:e (produce-01:<e,t> $0)))####5-6##(a:<id,<<e,t>,e>> !1 (lambda $0:e (top:<e,t> $0)))####3-4##(a:<id,<<e,t>,e>> !1 (lambda $0:e (world:<e,t> $0)))####6-7##(a:<id,<<e,t>,e>> !1 (lambda $0:e (opium:<e,t> $0)))####0-1##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(country:<e,t> $0)\n\t(c_name:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(name:<e,t> $1)\n\t\t\t(c_op:<e,<txt,t>> $1 Afghanistan:txt))))))))","ptbtok":"Afghanistan is the world 's top opium producer .","preferred":"","save-date":"Wed Jul 24, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(produce-01:<e,t> $0)
+	(c_ARG0:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(country:<e,t> $1)
+			(c_name:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(name:<e,t> $2)
+					(c_op:<e,<txt,t>> $2 Afghanistan:txt)))))))))
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !4 (lambda $3:e (opium:<e,t> $3))))
+	(c_location:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !5 (lambda $4:e (world:<e,t> $4))))
+	(c_mod:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !6 (lambda $5:e (top:<e,t> $5)))))))
+Afghanistan :- NP[sg] : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (country:<e,t> $0) (c_name:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (name:<e,t> $1) (c_op:<e,<txt,t>> $1 Afghanistan:txt))))))))
+is :- S[dcl]\NP[sg]/N[sg] : (lambda $0:<e,t> (lambda $1:e (lambda $2:e (and:<t*,t> ($0 $2) (c_ARG0:<e,<e,t>> $2 $1)))))
+the :- NP[x]/N[x] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+world :- N[sg] : world:<e,t>
+'s :- N[x]/N[x]\NP[sg] : (lambda $0:e (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_location:<e,<e,t>> $2 $0)))))
+top :- N[x]/N[x] : (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_mod:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id top:<e,t>)))))
+opium :- N[nb] : opium:<e,t>
+producer :- N[sg] : produce-01:<e,t>
+. :- PUNCT
+

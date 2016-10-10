@@ -1,0 +1,238 @@
+The China Times stated that once the missile was deployed it would mark the first time that Taiwan is able to put strategic weapons into use and that the political and military impact of this would be far reaching 
+file=PROXY_AFP_ENG_20050604_0444_8.txt	save-date=Tue May 28, 2013	annotator=SDL-AMR-09	preferred=true	snt-type=body	date=2013-05-24T05:03:41	id=PROXY_AFP_ENG_20050604_0444.8
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(state-01:<e,t> $0)
+	(c_ARG0:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(publication:<e,t> $1)
+			(c_name:<e,<txt,t>> $1 The++China++Times:txt)))))
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+			(deploy-01:<e,t> $2)
+			(c_ARG1:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !4 (lambda $3:e (missile:<e,t> $3))))
+			(c_ARG0-of:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+					(mark-01:<e,t> $4)
+					(c_ARG1:<e,<e,t>> $4 
+						(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+							(use-01:<e,t> $5)
+							(c_ARG0:<e,<e,t>> $5 
+								(a:<id,<<e,t>,e>> !7 (lambda $6:e (and:<t*,t>
+									(country:<e,t> $6)
+									(c_name:<e,<txt,t>> $6 Taiwan:txt)))))
+							(c_ARG1:<e,<e,t>> $5 
+								(a:<id,<<e,t>,e>> !8 (lambda $7:e (and:<t*,t>
+									(weapon:<e,t> $7)
+									(c_mod:<e,<e,t>> $7 
+										(a:<id,<<e,t>,e>> !9 (lambda $8:e (strategy:<e,t> $8))))))))
+							(c_mod:<e,<e,t>> $5 
+								(a:<id,<<e,t>,e>> !10 (lambda $9:e (possible:<e,t> $9))))
+							(c_ord:<e,<e,t>> $5 
+								(a:<id,<<e,t>,e>> !11 (lambda $10:e (and:<t*,t>
+									(ordinal-entity:<e,t> $10)
+									(c_value:<e,<i,t>> $10 1:i)))))))))))))
+			(c_ARG0-of:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !12 (lambda $11:e (and:<t*,t>
+					(impact-01:<e,t> $11)
+					(c_ARG1:<e,<e,t>> $11 
+						(a:<id,<<e,t>,e>> !13 (lambda $12:e (and:<t*,t>
+							(and:<e,t> $12)
+							(c_op1:<e,<e,t>> $12 
+								(a:<id,<<e,t>,e>> !14 (lambda $13:e (politics:<e,t> $13))))
+							(c_op2:<e,<e,t>> $12 
+								(a:<id,<<e,t>,e>> !15 (lambda $14:e (military:<e,t> $14))))))))
+					(c_ARG0-of:<e,<e,t>> $11 
+						(a:<id,<<e,t>,e>> !16 (lambda $15:e (and:<t*,t>
+							(reach-01:<e,t> $15)
+							(c_extent:<e,<e,t>> $15 
+								(a:<id,<<e,t>,e>> !17 (lambda $16:e (far:<e,t> $16)))))))))))))))))))
+// Issue: The coordiantion should be scoped under 'stated', but it's scoped under 'deployed' 
+// Issue: The use c_ARG0-of:<e,<e,t>> instead of references 
+// Issue: Treating 'impact' as a frame which scopes the verb
+The China Times :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (publication:<e,t> $0) (c_name:<e,<txt,t>> $0 The++China++Times:txt))))
+stated :- S\NP/NP : (lambda $0:e (lambda $1:e (lambda $2:e (and:<t*,t> (state-01:<e,t> $2) (c_ARG0:<e,<e,t>> $2 $1) (c_ARG1:<e,<e,t>> $2 $0)))))
+that :- NP/S : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+once :- NP/NP : (lambda $0:e $0)
+the :- NP/N : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+missile :- N : (lambda $0:e (missile:<e,t> $0))
+was :-  S\NP/(S/NP) : (lambda $0:<e,<e,t>> $0)
+deployed :- S/NP : (lambda $1:e (lambda $2:e (and:<t*,t> (deploy-01:<e,t> $2) (c_ARG1:<e,<e,t>> $2 $1))))
+it :- AP/S : (lambda $0:<e,t> (lambda $1:e (c_ARG0-of:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id $0))))
+would :- S/NP/(S/NP) : (lambda $0:<e,<e,t>> $0)
+mark :- S/NP : (lambda $0:e (lambda $2:e (and:<t*,t> (mark-01:<e,t> $2) (c_ARG1:<e,<e,t>> $2 $0))))
+the :- NP/N : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+first :- I : 1:i
+time :- N : (lambda $0:e (ordinal-entity:<e,t> $0))
+that :- NP\NP/S : (lambda $2:<e,t> (lambda $1:e (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> ($2 $0) (c_ord:<e,<e,t>> $0 $1))))))
+Taiwan :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (country:<e,t> $0) (c_name:<e,<txt,t>> $0 Taiwan:txt))))
+is :- S\NP/(S\NP) : (lambda $0:<e,<e,t>> $0)
+able :- AP : (lambda $1:e (c_mod:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $0:e (possible:<e,t> $0)))))
+to  :- S\NP/(S\NP) : (lambda $0:<e,<e,t>> $0)
+put :- S\NP/NP : (lambda $0:e (lambda $1:e (lambda $5:e (and:<t*,t> (c_ARG0:<e,<e,t>> $5 $1) (c_ARG1:<e,<e,t>> $5 $0)))))
+strategic :- ADJ : (lambda $1:e (c_mod:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $0:e (strategy:<e,t> $0)))))
+weapons :- N : (lambda $0:e (weapon:<e,t> $0))
+into :- AP/S : (lambda $0:<e,t> (lambda $1:e ($0 $1)))
+use :- S : (lambda $0:e (use-01:<e,t> $0))
+and :- C : conj:e
+that :- AP/NP : (lambda $0:e (lambda $1:e (c_ARG0-of:<e,<e,t>> $1 $0)))
+the :- NP/N : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+political :- ADJ : (lambda $0:e (c_ARG1:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (politics:<e,t> $1)))))
+and :- C : conj:e
+military :- ADJ : (lambda $0:e (c_ARG1:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (military:<e,t> $1)))))
+impact :- N : (lambda $0:e (impact-01:<e,t> $0))
+of :- PP/S : (lambda $0:<e,t> $0)
+this :- EMPTY
+would :- S/S : (lambda $0:<e,t> $0)
+be :- S/NP : (lambda $0:e (lambda $1:e (c_ARG0-of:<e,<e,t>> $1 $0)))
+far :- ADJ : (lambda $0:e (c_extent:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $16:e (far:<e,t> $16)))))
+reaching :- N : (lambda $15:e (reach-01:<e,t> $15))
+
+The China Times stated that once the missile was deployed it would mark the first time that Taiwan is able to put strategic weapons into use and that the political and military impact of this would be far reaching 
+file=PROXY_AFP_ENG_20050604_0444_8.txt	save-date=Wed May 29, 2013	annotator=SDL-AMR-08	snt-type=body	date=2013-05-23T16:41:23	id=PROXY_AFP_ENG_20050604_0444.8
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(state-01:<e,t> $0)
+	(c_ARG0:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(publication:<e,t> $1)
+			(c_name:<e,<txt,t>> $1 The++China++Times:txt)))))
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+			(deploy-01:<e,t> $2)
+			(c_ARG1:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !4 (lambda $3:e (missile:<e,t> $3))))
+			(c_mod:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+					(and:<e,t> $4)
+					(c_op1:<e,<e,t>> $4 
+						(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+							(mark-01:<e,t> $5)
+							(c_ARG1:<e,<e,t>> $5 
+								(a:<id,<<e,t>,e>> !7 (lambda $6:e (and:<t*,t>
+									(capable-41:<e,t> $6)
+									(c_ARG1:<e,<e,t>> $6 
+										(a:<id,<<e,t>,e>> !8 (lambda $7:e (and:<t*,t>
+											(country:<e,t> $7)
+											(c_name:<e,<txt,t>> $7 Taiwan:txt)))))
+									(c_ARG2:<e,<e,t>> $6 
+										(a:<id,<<e,t>,e>> !9 (lambda $8:e (and:<t*,t>
+											(use-01:<e,t> $8)
+											(c_ARG1:<e,<e,t>> $8 
+												(a:<id,<<e,t>,e>> !10 (lambda $9:e (and:<t*,t>
+													(weapon:<e,t> $9)
+													(c_mod:<e,<e,t>> $9 
+														(a:<id,<<e,t>,e>> !11 (lambda $10:e (strategy:<e,t> $10))))))))
+											(c_time:<e,<e,t>> $8 
+												(a:<id,<<e,t>,e>> !12 (lambda $11:e (first:<e,t> $11))))))))))))))))
+					(c_op2:<e,<e,t>> $4 
+						(a:<id,<<e,t>,e>> !13 (lambda $12:e (and:<t*,t>
+							(impact-01:<e,t> $12)
+							(c_ARG0:<e,<e,t>> $12 
+								(ref:<id,e> !3))
+							(c_mod:<e,<e,t>> $12 
+								(a:<id,<<e,t>,e>> !14 (lambda $13:e (and:<t*,t>
+									(and:<e,t> $13)
+									(c_op1:<e,<e,t>> $13 
+										(a:<id,<<e,t>,e>> !15 (lambda $14:e (politic:<e,t> $14))))
+									(c_op2:<e,<e,t>> $13 
+										(a:<id,<<e,t>,e>> !16 (lambda $15:e (military:<e,t> $15))))))))
+							(c_ARG0-of:<e,<e,t>> $12 
+								(a:<id,<<e,t>,e>> !17 (lambda $16:e (and:<t*,t>
+									(reach-01:<e,t> $16)
+									(c_direction:<e,<e,t>> $16 
+										(a:<id,<<e,t>,e>> !18 (lambda $17:e (far:<e,t> $17)))))))))))))))))))))))
+// FAIL: "into use" introduces the frame use-01 with a c_time modifier, which comes from "first time". However, the phrase "Taiwan" between them is attached higher, to the frame capable-41, introduced by "is able to"
+
+The China Times stated that once the missile was deployed it would mark the first time that Taiwan is able to put strategic weapons into use and that the political and military impact of this would be far reaching 
+file=PROXY_AFP_ENG_20050604_0444_8.txt	save-date=Wed May 29, 2013	annotator=SDL-AMR-07	snt-type=body	date=2013-05-24T05:03:41	id=PROXY_AFP_ENG_20050604_0444.8
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(state-01:<e,t> $0)
+	(c_ARG0:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(publication:<e,t> $1)
+			(c_name:<e,<txt,t>> $1 The++China++Times:txt)))))
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+			(deploy-01:<e,t> $2)
+			(c_ARG1:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !4 (lambda $3:e (missile:<e,t> $3))))
+			(c_time:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !5 (lambda $4:e (once:<e,t> $4))))
+			(c_ARG0-of:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+					(mark-01:<e,t> $5)
+					(c_ARG1:<e,<e,t>> $5 
+						(a:<id,<<e,t>,e>> !7 (lambda $6:e (and:<t*,t>
+							(use-01:<e,t> $6)
+							(c_ARG0:<e,<e,t>> $6 
+								(a:<id,<<e,t>,e>> !8 (lambda $7:e (and:<t*,t>
+									(country:<e,t> $7)
+									(c_name:<e,<txt,t>> $7 Taiwan:txt)))))
+							(c_ARG1:<e,<e,t>> $6 
+								(a:<id,<<e,t>,e>> !9 (lambda $8:e (and:<t*,t>
+									(weapon:<e,t> $8)
+									(c_mod:<e,<e,t>> $8 
+										(a:<id,<<e,t>,e>> !10 (lambda $9:e (strategy:<e,t> $9))))))))
+							(c_mod:<e,<e,t>> $6 
+								(a:<id,<<e,t>,e>> !11 (lambda $10:e (possible:<e,t> $10))))
+							(c_time:<e,<e,t>> $6 
+								(a:<id,<<e,t>,e>> !12 (lambda $11:e (and:<t*,t>
+									(time:<e,t> $11)
+									(c_ord:<e,<e,t>> $11 
+										(a:<id,<<e,t>,e>> !13 (lambda $12:e (and:<t*,t>
+											(ordinal-entity:<e,t> $12)
+											(c_value:<e,<i,t>> $12 1:i)))))))))))))))))
+			(c_ARG0-of:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !14 (lambda $13:e (and:<t*,t>
+					(impact-01:<e,t> $13)
+					(c_mod:<e,<e,t>> $13 
+						(a:<id,<<e,t>,e>> !15 (lambda $14:e (and:<t*,t>
+							(and:<e,t> $14)
+							(c_op1:<e,<e,t>> $14 
+								(a:<id,<<e,t>,e>> !16 (lambda $15:e (politics:<e,t> $15))))
+							(c_op2:<e,<e,t>> $14 
+								(a:<id,<<e,t>,e>> !17 (lambda $16:e (military:<e,t> $16))))))))
+					(c_ARG0-of:<e,<e,t>> $13 
+						(a:<id,<<e,t>,e>> !18 (lambda $17:e (and:<t*,t>
+							(reach-01:<e,t> $17)
+							(c_extent:<e,<e,t>> $17 
+								(a:<id,<<e,t>,e>> !19 (lambda $18:e (far:<e,t> $18)))))))))))))))))))
+// Potential issue: the 'impact' frame is under the scope of 'deploy', while it should be under the 'state' frame.
+The China Times :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (publication:<e,t> $0) (c_name:<e,<txt,t>> $0 The++China++Times:txt))))
+stated :- S\NP/NP : (lambda $0:e (lambda $1:e (lambda $2:e (and:<t*,t> (state-01:<e,t> $2) (c_ARG0:<e,<e,t>> $2 $1) (c_ARG1:<e,<e,t>> $2 $0)))))
+that :- NP/S : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+once :- AP : (lambda $1:e (c_time:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $0:e (once:<e,t> $0)))))
+the :- NP/N : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+missile :- N : (lambda $0:e (missile:<e,t> $0))
+was :- S\NP/(S/NP) : (lambda $0:<e,<e,t>> $0)
+deployed :- S/NP : (lambda $1:e (lambda $2:e (and:<t*,t> (deploy-01:<e,t> $2) (c_ARG1:<e,<e,t>> $2 $1))))
+it :- AP/S : (lambda $0:<e,t> (lambda $1:e (c_ARG0-of:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id $0))))
+would :- S/NP/(S/NP) : (lambda $0:<e,<e,t>> $0)
+mark :- S/NP : (lambda $0:e (lambda $2:e (and:<t*,t> (mark-01:<e,t> $2) (c_ARG1:<e,<e,t>> $2 $0))))
+the :- NP/N : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+first :- ADJ : (lambda $1:e (c_ord:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (ordinal-entity:<e,t> $0) (c_value:<e,<i,t>> $0 1:i))))))
+time :- N : (lambda $0:e (time:<e,t> $0))
+that :- NP\NP/S : (lambda $1:<e,t> (lambda $2:e (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> ($1 $0) (c_time:<e,<e,t>> $0 $2))))))
+Taiwan :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (country:<e,t> $0) (c_name:<e,<txt,t>> $0 Taiwan:txt))))
+is :- S\NP/(S\NP) : (lambda $0:<e,<e,t>> $0)
+able :- AP : (lambda $1:e (c_mod:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $0:e (possible:<e,t> $0)))))
+to :- S\NP/(S\NP) : (lambda $0:<e,<e,t>> $0)
+put :- S\NP/NP : (lambda $0:e (lambda $1:e (lambda $5:e (and:<t*,t> (c_ARG0:<e,<e,t>> $5 $1) (c_ARG1:<e,<e,t>> $5 $0)))))
+strategic :- ADJ : (lambda $1:e (c_mod:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $0:e (strategy:<e,t> $0)))))
+weapons :- N : (lambda $0:e (weapon:<e,t> $0))
+into :- AP/S : (lambda $0:<e,t> (lambda $1:e ($0 $1)))
+use :- S : (lambda $0:e (use-01:<e,t> $0))
+and :- C : conj:e
+that :- AP/NP: (lambda $0:e (lambda $1:e (c_ARG0-of:<e,<e,t>> $1 $0)))
+the :- NP/N : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+political :- ADJ : (lambda $0:e (c_mod:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (politics:<e,t> $1)))))
+and :- C : conj:e
+military :- ADJ : (lambda $0:e (c_mod:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (military:<e,t> $1)))))
+impact :- N : (lambda $0:e (impact-01:<e,t> $0))
+of :- PP/S : (lambda $0:<e,t> $0)
+this :- EMPTY
+would :- S/S : (lambda $0:<e,t> $0)
+be :- S/NP : (lambda $0:e (lambda $1:e (c_ARG0-of:<e,<e,t>> $1 $0)))
+far :- ADJ : (lambda $1:e (c_extent:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $16:e (far:<e,t> $16)))))
+reaching :- N : (lambda $15:e (reach-01:<e,t> $15))
+

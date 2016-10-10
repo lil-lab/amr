@@ -1,0 +1,53 @@
+Adel was a top member in the Egyptian Islamic militant movement Al-Jihad.
+JSON{"date":"2014-09-29T11:07:16.821","tok":"Adel was a top member in the Egyptian Islamic militant movement Al - Jihad .","file":"PROXY_AFP_ENG_20030522_0447_22.txt","alignments":"0-1|0+0.0+0.0.0 10-11|0.1.0 9-10|0.1.0.1 4-5|0.1.1 3-4|0.1.1.0 7-8|0.1.0.3+0.1.0.3.0+0.1.0.3.0.0 8-9|0.1.0.2+0.1.0.2.0+0.1.0.2.0.0","amr":"(p \/ person :name (n2 \/ name :op1 \"Adel\") :ARG0-of (h \/ have-org-role-91 :ARG1 (m \/ movement :name (n3 \/ name :op1 \"al-Jihad\") :mod (m2 \/ militant) :mod (r \/ religious-group :name (n4 \/ name :op1 \"Islam\")) :mod (c \/ country :name (n \/ name :op1 \"Egypt\"))) :ARG2 (m3 \/ member :mod (t \/ top))))","snt-type":"body","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20030522_0447.22","alignedExp":"0-1##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(person:<e,t> $0)\n\t(c_name:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(name:<e,t> $1)\n\t\t\t(c_op:<e,<txt,t>> $1 Adel:txt))))))))####10-11##(a:<id,<<e,t>,e>> !1 (lambda $0:e (movement:<e,t> $0)))####9-10##(a:<id,<<e,t>,e>> !1 (lambda $0:e (militant:<e,t> $0)))####4-5##(a:<id,<<e,t>,e>> !1 (lambda $0:e (member:<e,t> $0)))####3-4##(a:<id,<<e,t>,e>> !1 (lambda $0:e (top:<e,t> $0)))####7-8##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(country:<e,t> $0)\n\t(c_name:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(name:<e,t> $1)\n\t\t\t(c_op:<e,<txt,t>> $1 Egypt:txt))))))))####8-9##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(religious-group:<e,t> $0)\n\t(c_name:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(name:<e,t> $1)\n\t\t\t(c_op:<e,<txt,t>> $1 Islam:txt))))))))","ptbtok":"Adel was a top member in the Egyptian Islamic militant movement Al-Jihad .","preferred":"","save-date":"Tue Sep 10, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(person:<e,t> $0)
+	(c_name:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(name:<e,t> $1)
+			(c_op:<e,<txt,t>> $1 Adel:txt)))))
+	(c_ARG0-of:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+			(have-org-role-91:<e,t> $2)
+			(c_ARG1:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+					(movement:<e,t> $3)
+					(c_name:<e,<e,t>> $3 
+						(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+							(name:<e,t> $4)
+							(c_op:<e,<txt,t>> $4 al-Jihad:txt)))))
+					(c_mod:<e,<e,t>> $3 
+						(a:<id,<<e,t>,e>> !6 (lambda $5:e (militant:<e,t> $5))))
+					(c_mod:<e,<e,t>> $3 
+						(a:<id,<<e,t>,e>> !7 (lambda $6:e (and:<t*,t>
+							(religious-group:<e,t> $6)
+							(c_name:<e,<e,t>> $6 
+								(a:<id,<<e,t>,e>> !8 (lambda $7:e (and:<t*,t>
+									(name:<e,t> $7)
+									(c_op:<e,<txt,t>> $7 Islam:txt)))))))))
+					(c_mod:<e,<e,t>> $3 
+						(a:<id,<<e,t>,e>> !9 (lambda $8:e (and:<t*,t>
+							(country:<e,t> $8)
+							(c_name:<e,<e,t>> $8 
+								(a:<id,<<e,t>,e>> !10 (lambda $9:e (and:<t*,t>
+									(name:<e,t> $9)
+									(c_op:<e,<txt,t>> $9 Egypt:txt)))))))))))))
+			(c_ARG2:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !11 (lambda $10:e (and:<t*,t>
+					(member:<e,t> $10)
+					(c_mod:<e,<e,t>> $10 
+						(a:<id,<<e,t>,e>> !12 (lambda $11:e (top:<e,t> $11)))))))))))))))
+Adel :- N[sg] : (lambda $0:e (and:<t*,t> (person:<e,t> $0) (c_name:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (name:<e,t> $1) (c_op:<e,<txt,t>> $1 Adel:txt)))))))
+was :- S[dcl]\N[sg]/NP[sg] : (lambda $0:e (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_ARG0-of:<e,<e,t>> $2 $0)))))
+a :- NP[sg]/N[sg] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+top :- N[x]/N[x] : (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_mod:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id top:<e,t>)))))
+member :- N[sg]\(N[x]/N[x]) : (lambda $1:<<e,t>,<e,t>> (lambda $0:e (and:<t*,t> (have-org-role-91:<e,t> $0) (c_ARG2:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id ($1 member:<e,t>))))))
+in :- N[x]\N[x]/NP : (lambda $2:e (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_ARG1:<e,<e,t>> $1 $2)))))
+the :- NP[x]/N[x] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+Egyptian :- N[x]/N[x] : (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_mod:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (country:<e,t> $1) (c_name:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (name:<e,t> $1) (c_op:<e,<txt,t>> $1 Egypt:txt))))))))))))
+Islamic :- N[x]/N[x] : (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_mod:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $2:e (and:<t*,t> (religious-group:<e,t> $2) (c_name:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id (lambda $3:e (and:<t*,t> (name:<e,t> $3) (c_op:<e,<txt,t>> $3 Islam:txt))))))))))))
+militant :- N[x]/N[x] : (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_mod:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id militant:<e,t>)))))
+movement :- N[sg] : movement:<e,t>
+Al-Jihad :- N[sg]\N[sg] : (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_name:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $2:e (and:<t*,t> (name:<e,t> $2) (c_op:<e,<txt,t>> $2 al-Jihad:txt))))))))
+. :- PUNCT
+

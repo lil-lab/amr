@@ -1,0 +1,9 @@
+outputDir=logs
+globalLog=logs/global.log
+include=../params.inc
+
+# Resources
+include=dev.proxy.noref.inc
+
+# Jobs
+include=../jobs.inc

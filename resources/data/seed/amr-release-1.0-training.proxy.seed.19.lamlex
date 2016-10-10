@@ -1,0 +1,39 @@
+It will sponsor a 2-week workshop for 50 anti-terrorism experts.
+JSON{"date":"2014-09-29T11:07:07.595","tok":"It will sponsor a 2 - week workshop for 50 anti - terrorism experts .","file":"PROXY_AFP_ENG_20020105_0162_9.txt","alignments":"2-3|0 5-6|0.1 7-8|0.1.0.0 9-10|0.1.0+0.1.0.1 0-1|0.0","amr":"(s \/ sponsor-01 :ARG0 (i \/ it) :ARG1 (w \/ workshop :beneficiary (p \/ person :quant 50 :ARG1-of (e \/ expert-41 :ARG2 (o \/ oppose-01 :ARG1 (t2 \/ terrorism)))) :duration (t \/ temporal-quantity :quant 2 :unit (w2 \/ week))))","snt-type":"body subordinate","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20020105_0162.9","alignedExp":"2-3##(a:<id,<<e,t>,e>> !1 (lambda $0:e (sponsor-01:<e,t> $0)))####5-6##(a:<id,<<e,t>,e>> !1 (lambda $0:e (workshop:<e,t> $0)))####7-8##50:i####9-10##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(person:<e,t> $0)\n\t(c_ARG1-of:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (expert-41:<e,t> $1)))))))####0-1##(a:<id,<<e,t>,e>> !1 (lambda $0:e (it:<e,t> $0)))","ptbtok":"It will sponsor a 2-week workshop for 50 anti-terrorism experts .","preferred":"","save-date":"Sat Jul 6, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(sponsor-01:<e,t> $0)
+	(c_ARG0:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (it:<e,t> $1))))
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+			(workshop:<e,t> $2)
+			(c_beneficiary:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+					(person:<e,t> $3)
+					(c_quant:<e,<i,t>> $3 50:i)
+					(c_ARG1-of:<e,<e,t>> $3 
+						(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+							(expert-41:<e,t> $4)
+							(c_ARG2:<e,<e,t>> $4 
+								(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+									(oppose-01:<e,t> $5)
+									(c_ARG1:<e,<e,t>> $5 
+										(a:<id,<<e,t>,e>> !7 (lambda $6:e (terrorism:<e,t> $6))))))))))))))))
+			(c_duration:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !8 (lambda $7:e (and:<t*,t>
+					(temporal-quantity:<e,t> $7)
+					(c_quant:<e,<i,t>> $7 2:i)
+					(c_unit:<e,<e,t>> $7 
+						(a:<id,<<e,t>,e>> !9 (lambda $8:e (week:<e,t> $8)))))))))))))))
+It :- NP[sg] : (a:<id,<<e,t>,e>> na:id it:<e,t>)
+will :- S[dcl]\NP[x]/(S[b]\NP[x]) : (lambda $0:<e,<e,t>> $0)
+sponsor :- S[b]\NP/NP : (lambda $0:e (lambda $1:e (lambda $2:e (and:<t*,t> (sponsor-01:<e,t> $2) (c_ARG0:<e,<e,t>> $2 $1) (c_ARG1:<e,<e,t>> $2 $0)))))
+a :- NP[sg]/N[sg] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+2-week :- N[x]/N[x] : (lambda $1:<e,t> (lambda $0:e (and:<t*,t> ($1 $0) (c_duration:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (temporal-quantity:<e,t> $0) (c_quant:<e,<i,t>> $0 2:i) (c_unit:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id week:<e,t>)))))))))
+workshop :- N[sg] : workshop:<e,t>
+for :- N[x]\N[x]/NP : (lambda $0:e (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_beneficiary:<e,<e,t>> $1 $0)))))
+// 50 :- I : 50:i
+anti-terrorism :- N[x]/N[x] : (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_ARG2:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $2:e (and:<t*,t> (oppose-01:<e,t> $2) (c_ARG1:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id terrorism:<e,t>)))))))))
+experts :- N[pl]\(N[pl]/N[pl]) : (lambda $0:<<e,t>,<e,t>> (lambda $6:e (and:<t*,t> (person:<e,t> $6) (c_ARG1-of:<e,<e,t>> $6 (a:<id,<<e,t>,e>> na:id ($0 expert-41:<e,t>))))))
+. :- PUNCT
+

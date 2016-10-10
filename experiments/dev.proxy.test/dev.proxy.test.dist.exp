@@ -1,0 +1,12 @@
+outputDir=logs
+globalLog=logs/global.log
+include=../params.inc
+
+# Resources
+include=dev.proxy.test.inc
+include=../dist.inc
+
+# Jobs
+type=tinydist.master id=tinydist manager=manager
+type=log id=log.model model=model logger=modelLogger
+type=test id=test exec=exec tester=testerDist data=test stats=statsExact,statsSmatch dep=tinydist

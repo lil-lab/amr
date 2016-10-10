@@ -1,0 +1,92 @@
+A computer worm is unlike a computer virus and does not require a user to open an e-mail attachment or initiate any other type of command to infect the computer.
+JSON{"date":"2014-09-29T11:07:15.273","tok":"A computer worm is unlike a computer virus and does not require a user to open an e-mail attachment or initiate any other type of command to infect the computer .","file":"PROXY_AFP_ENG_20030128_0700_12.txt","alignments":"8-9|0 11-12|0.1 13-14|0.1.2+0.1.2.0 19-20|0.1.1 27-28|0.1.1.2 1-2|0.1.1.2.0 20-21|0.1.1.1 25-26|0.1.1.1.0 23-24|0.1.1.1.0.0 22-23|0.1.1.1.0.0.0 21-22|0.1.1.1.0.0.0.0 15-16|0.1.1.0 18-19|0.1.1.0.0 17-18|0.1.1.0.0.0 2-3|0.0.1 1-2|0.0.1.0 7-8|0.0.2 1-2|0.0.2.0","amr":"(a \/ and :op1 (r \/ resemble-01 :polarity - :ARG1 (w \/ worm :mod (c \/ computer)) :ARG2 (v \/ virus :mod (c2 \/ computer))) :op2 (r2 \/ require-01 :polarity - :ARG0 w :ARG1 (o \/ or :op1 (o2 \/ open-01 :ARG1 (a2 \/ attachment :mod (e \/ e-mail))) :op2 (i \/ initiate-01 :ARG1 (c4 \/ command :poss (t \/ type :mod (o3 \/ other :mod (a3 \/ any))))) :purpose (i2 \/ infect-01 :ARG1 (c3 \/ computer))) :ARG2 (p \/ person :ARG0-of (u \/ use-01))))","snt-type":"body","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20030128_0700.12","alignedExp":"8-9##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<e,t> $0)))####20-21##(a:<id,<<e,t>,e>> !1 (lambda $0:e (initiate-01:<e,t> $0)))####22-23##(a:<id,<<e,t>,e>> !1 (lambda $0:e (other:<e,t> $0)))####18-19##(a:<id,<<e,t>,e>> !1 (lambda $0:e (attachment:<e,t> $0)))####2-3##(a:<id,<<e,t>,e>> !1 (lambda $0:e (worm:<e,t> $0)))####21-22##(a:<id,<<e,t>,e>> !1 (lambda $0:e (any:<e,t> $0)))####11-12##(a:<id,<<e,t>,e>> !1 (lambda $0:e (require-01:<e,t> $0)))####13-14##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(person:<e,t> $0)\n\t(c_ARG0-of:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (use-01:<e,t> $1)))))))####19-20##(a:<id,<<e,t>,e>> !1 (lambda $0:e (or:<e,t> $0)))####27-28##(a:<id,<<e,t>,e>> !1 (lambda $0:e (infect-01:<e,t> $0)))####1-2##(a:<id,<<e,t>,e>> !1 (lambda $0:e (computer:<e,t> $0)))####7-8##(a:<id,<<e,t>,e>> !1 (lambda $0:e (virus:<e,t> $0)))####25-26##(a:<id,<<e,t>,e>> !1 (lambda $0:e (command:<e,t> $0)))####23-24##(a:<id,<<e,t>,e>> !1 (lambda $0:e (type:<e,t> $0)))####15-16##(a:<id,<<e,t>,e>> !1 (lambda $0:e (open-01:<e,t> $0)))####17-18##(a:<id,<<e,t>,e>> !1 (lambda $0:e (e-mail:<e,t> $0)))","ptbtok":"A computer worm is unlike a computer virus and does not require a user to open an e-mail attachment or initiate any other type of command to infect the computer .","preferred":"","save-date":"Sun Jul 14, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(and:<e,t> $0)
+	(c_op1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(resemble-01:<e,t> $1)
+			(c_polarity:<e,<e,t>> $1 -:e)
+			(c_ARG1:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(worm:<e,t> $2)
+					(c_mod:<e,<e,t>> $2 
+						(a:<id,<<e,t>,e>> !4 (lambda $3:e (computer:<e,t> $3))))))))
+			(c_ARG2:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+					(virus:<e,t> $4)
+					(c_mod:<e,<e,t>> $4 
+						(a:<id,<<e,t>,e>> !6 (lambda $5:e (computer:<e,t> $5))))))))))))
+	(c_op2:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !7 (lambda $6:e (and:<t*,t>
+			(require-01:<e,t> $6)
+			(c_polarity:<e,<e,t>> $6 -:e)
+			(c_ARG0:<e,<e,t>> $6 
+				(ref:<id,e> !3))
+			(c_ARG1:<e,<e,t>> $6 
+				(a:<id,<<e,t>,e>> !8 (lambda $7:e (and:<t*,t>
+					(or:<e,t> $7)
+					(c_op1:<e,<e,t>> $7 
+						(a:<id,<<e,t>,e>> !9 (lambda $8:e (and:<t*,t>
+							(open-01:<e,t> $8)
+							(c_ARG1:<e,<e,t>> $8 
+								(a:<id,<<e,t>,e>> !10 (lambda $9:e (and:<t*,t>
+									(attachment:<e,t> $9)
+									(c_mod:<e,<e,t>> $9 
+										(a:<id,<<e,t>,e>> !11 (lambda $10:e (e-mail:<e,t> $10))))))))))))
+					(c_op2:<e,<e,t>> $7 
+						(a:<id,<<e,t>,e>> !12 (lambda $11:e (and:<t*,t>
+							(initiate-01:<e,t> $11)
+							(c_ARG1:<e,<e,t>> $11 
+								(a:<id,<<e,t>,e>> !13 (lambda $12:e (and:<t*,t>
+									(command:<e,t> $12)
+									(c_poss:<e,<e,t>> $12 
+										(a:<id,<<e,t>,e>> !14 (lambda $13:e (and:<t*,t>
+											(type:<e,t> $13)
+											(c_mod:<e,<e,t>> $13 
+												(a:<id,<<e,t>,e>> !15 (lambda $14:e (and:<t*,t>
+													(other:<e,t> $14)
+													(c_mod:<e,<e,t>> $14 
+														(a:<id,<<e,t>,e>> !16 (lambda $15:e (any:<e,t> $15))))))))))))))))))))
+					(c_purpose:<e,<e,t>> $7 
+						(a:<id,<<e,t>,e>> !17 (lambda $16:e (and:<t*,t>
+							(infect-01:<e,t> $16)
+							(c_ARG1:<e,<e,t>> $16 
+								(a:<id,<<e,t>,e>> !18 (lambda $17:e (computer:<e,t> $17))))))))))))
+			(c_ARG2:<e,<e,t>> $6 
+				(a:<id,<<e,t>,e>> !19 (lambda $18:e (and:<t*,t>
+					(person:<e,t> $18)
+					(c_ARG0-of:<e,<e,t>> $18 
+						(a:<id,<<e,t>,e>> !20 (lambda $19:e (use-01:<e,t> $19)))))))))))))))
+// 'any other type of command' has weird construction. It seems more appropriate for 'type of command' to combine with 'other' and then with 'any'. In the current form, it seems like 'any' quantifies 'other', which is incorrect. 
+A :- NP[sg]/N[sg] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+computer :- N[sg] : computer:<e,t>
+worm :- N[sg] : worm:<e,t>
+is :- S[dcl]\NP/(S[adj]\NP) : (lambda $0:<e,<e,t>> $0)
+unlike :- S[adj]\NP/NP : (lambda $0:e (lambda $1:e (lambda $2:e (and:<t*,t> (resemble-01:<e,t> $2) (c_polarity:<e,<e,t>> $2 -:e) (c_ARG1:<e,<e,t>> $2 $1) (c_ARG2:<e,<e,t>> $2 $0)))))
+a :- NP[sg]/N[sg] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+computer :- N[sg] : computer:<e,t>
+virus :- N[sg] : virus:<e,t>
+and :- C : conj:e
+does :- S[dcl]/(S[b]\NP) : (lambda $0:<e,<e,t>> ($0 (ref:<id,e> na:id)))
+not :- S[x]/S[x] : (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_polarity:<e,<e,t>> $1 -:e))))
+require :- S[b]\NP/NP : (lambda $0:e (lambda $1:e (lambda $2:e (and:<t*,t> (require-01:<e,t> $2) (c_ARG0:<e,<e,t>> $2 $1) (c_ARG2:<e,<e,t>> $2 $0)))))
+a :- NP[sg]/N[sg] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+user :- N[sg] : (lambda $0:e (and:<t*,t> (person:<e,t> $0) (c_ARG0-of:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id use-01:<e,t>))))
+to :- S[x]\S[x]/S[b] : (lambda $0:<e,t> (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_ARG1:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $0))))))
+open :- S[b]/NP : (lambda $0:e (lambda $1:e (and:<t*,t> (open-01:<e,t> $1) (c_ARG1:<e,<e,t>> $1 $0))))
+an :- NP[sg]/N[sg] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+e-mail :- N[sg] : e-mail:<e,t>
+attachment :- N[sg] : attachment:<e,t>
+or :- C : disj:e
+initiate :- S[b]/NP : (lambda $0:e (lambda $1:e (and:<t*,t> (initiate-01:<e,t> $1) (c_ARG1:<e,<e,t>> $1 $0))))
+any :- N[x]/N[x] : (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_mod:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id any:<e,t>)))))
+other :- N[nb] : other:<e,t>
+type :- N[sg] : type:<e,t>
+of :- NP[x]\N/N[x] : (lambda $0:<e,t> (lambda $1:<e,t> (a:<id,<<e,t>,e>> na:id (lambda $2:e (and:<t*,t> ($0 $2) (c_poss:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $1)))))))
+command :- N[sg] : command:<e,t>
+to :- S[x]\S[x]/S[b] : (lambda $0:<e,t> (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_purpose:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $0))))))
+infect :- S[b]/NP : (lambda $0:e (lambda $1:e (and:<t*,t> (infect-01:<e,t> $1) (c_ARG1:<e,<e,t>> $1 $0))))
+the :- NP[x]/N[x] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+computer :- N[sg] : computer:<e,t>
+. :- PUNCT
+

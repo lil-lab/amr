@@ -1,0 +1,125 @@
+In a 030210 briefing in Bangkok regarding Amnesty International's first visit to Myanmar, Amnesty International called for the release of all political prisoners and pressured Myanmar's government to improve Myanmar's human rights record.
+JSON{"date":"2014-09-29T11:07:15.582","tok":"In a 030210 briefing in Bangkok regarding Amnesty International 's first visit to Myanmar , Amnesty International called for the release of all political prisoners and pressured Myanmar 's government to improve Myanmar 's human rights record .","file":"PROXY_AFP_ENG_20030210_0248_24.txt","alignments":"2-3|0.2.2+0.2.2.0+0.2.2.1+0.2.2.2 25-26|0 3-4|0.2 5-6|0.2.1+0.2.1.0+0.2.1.0.0 11-12|0.2.0 26-27|0.1 31-32|0.1.1 36-37|0.1.1.0 35-36|0.1.1.0.0 34-35|0.1.1.0.0.0 13-14|0.1.0.0.0+0.1.0.0.0.0+0.1.0.0.0.0.0 17-18|0.0 20-21|0.0.1 22-23|0.0.1.0.1 7-9|0.0.0+0.0.0.0+0.0.0.0.0+0.0.0.0.1 8-9|0.0.0.0.1 29-30|0.1.0+0.1.0.0 23-24|0.0.1.0.0.0","amr":"(a \/ and :op1 (c5 \/ call-03 :ARG0 (o \/ organization :name (n2 \/ name :op1 \"Amnesty\" :op2 \"International\")) :ARG1 (r \/ release-01 :ARG1 (p2 \/ person :ARG1-of (i \/ imprison-01 :mod (p3 \/ politics)) :quant (a2 \/ all)))) :op2 (p \/ pressure-01 :ARG0 o :ARG1 (g \/ government-organization :ARG0-of (g2 \/ govern-01 :ARG1 (c2 \/ country :name (n3 \/ name :op1 \"Myanmar\")))) :ARG2 (i2 \/ improve-01 :ARG0 g :ARG1 (r2 \/ record :mod (r3 \/ right :mod (h \/ human)) :poss c2))) :location (b \/ brief-01 :ARG2 (v \/ visit-01 :ARG0 o :ARG1 c2 :ord (o3 \/ ordinal-entity :value 1)) :location (c \/ city :name (n \/ name :op1 \"Bangkok\")) :time (d \/ date-entity :day 10 :month 2 :year 2003)))","snt-type":"body","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20030210_0248.24","alignedExp":"2-3##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(date-entity:<e,t> $0)\n\t(c_day:<e,<i,t>> $0 10:i)\n\t(c_month:<e,<i,t>> $0 2:i)\n\t(c_year:<e,<i,t>> $0 2003:i))))####26-27##(a:<id,<<e,t>,e>> !1 (lambda $0:e (pressure-01:<e,t> $0)))####36-37##(a:<id,<<e,t>,e>> !1 (lambda $0:e (record:<e,t> $0)))####34-35##(a:<id,<<e,t>,e>> !1 (lambda $0:e (human:<e,t> $0)))####20-21##(a:<id,<<e,t>,e>> !1 (lambda $0:e (release-01:<e,t> $0)))####22-23##(a:<id,<<e,t>,e>> !1 (lambda $0:e (all:<e,t> $0)))####13-14##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(country:<e,t> $0)\n\t(c_name:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(name:<e,t> $1)\n\t\t\t(c_op:<e,<txt,t>> $1 Myanmar:txt))))))))####5-6##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(city:<e,t> $0)\n\t(c_name:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(name:<e,t> $1)\n\t\t\t(c_op:<e,<txt,t>> $1 Bangkok:txt))))))))####25-26##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<e,t> $0)))####3-4##(a:<id,<<e,t>,e>> !1 (lambda $0:e (brief-01:<e,t> $0)))####11-12##(a:<id,<<e,t>,e>> !1 (lambda $0:e (visit-01:<e,t> $0)))####31-32##(a:<id,<<e,t>,e>> !1 (lambda $0:e (improve-01:<e,t> $0)))####35-36##(a:<id,<<e,t>,e>> !1 (lambda $0:e (right:<e,t> $0)))####17-18##(a:<id,<<e,t>,e>> !1 (lambda $0:e (call-03:<e,t> $0)))####23-24##(a:<id,<<e,t>,e>> !1 (lambda $0:e (politics:<e,t> $0)))####29-30##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(government-organization:<e,t> $0)\n\t(c_ARG0-of:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (govern-01:<e,t> $1)))))))####7-9##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(organization:<e,t> $0)\n\t(c_name:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(name:<e,t> $1)\n\t\t\t(c_op:<e,<txt,t>> $1 Amnesty++International:txt))))))))","ptbtok":"In a 030210 briefing in Bangkok regarding Amnesty International 's first visit to Myanmar , Amnesty International called for the release of all political prisoners and pressured Myanmar 's government to improve Myanmar 's human rights record .","preferred":"","save-date":"Thu Sep 26, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(and:<e,t> $0)
+	(c_op1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(call-03:<e,t> $1)
+			(c_ARG0:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(organization:<e,t> $2)
+					(c_name:<e,<e,t>> $2 
+						(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+							(name:<e,t> $3)
+							(c_op:<e,<txt,t>> $3 Amnesty++International:txt)))))))))
+			(c_ARG1:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+					(release-01:<e,t> $4)
+					(c_ARG1:<e,<e,t>> $4 
+						(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+							(person:<e,t> $5)
+							(c_ARG1-of:<e,<e,t>> $5 
+								(a:<id,<<e,t>,e>> !7 (lambda $6:e (and:<t*,t>
+									(imprison-01:<e,t> $6)
+									(c_mod:<e,<e,t>> $6 
+										(a:<id,<<e,t>,e>> !8 (lambda $7:e (politics:<e,t> $7))))))))
+							(c_quant:<e,<e,t>> $5 
+								(a:<id,<<e,t>,e>> !9 (lambda $8:e (all:<e,t> $8))))))))))))))))
+	(c_op2:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !10 (lambda $9:e (and:<t*,t>
+			(pressure-01:<e,t> $9)
+			(c_ARG0:<e,<e,t>> $9 
+				(ref:<id,e> !3))
+			(c_ARG1:<e,<e,t>> $9 
+				(a:<id,<<e,t>,e>> !11 (lambda $10:e (and:<t*,t>
+					(government-organization:<e,t> $10)
+					(c_ARG0-of:<e,<e,t>> $10 
+						(a:<id,<<e,t>,e>> !12 (lambda $11:e (and:<t*,t>
+							(govern-01:<e,t> $11)
+							(c_ARG1:<e,<e,t>> $11 
+								(a:<id,<<e,t>,e>> !13 (lambda $12:e (and:<t*,t>
+									(country:<e,t> $12)
+									(c_name:<e,<e,t>> $12 
+										(a:<id,<<e,t>,e>> !14 (lambda $13:e (and:<t*,t>
+											(name:<e,t> $13)
+											(c_op:<e,<txt,t>> $13 Myanmar:txt)))))))))))))))))
+			(c_ARG2:<e,<e,t>> $9 
+				(a:<id,<<e,t>,e>> !15 (lambda $14:e (and:<t*,t>
+					(improve-01:<e,t> $14)
+					(c_ARG0:<e,<e,t>> $14 
+						(ref:<id,e> !11))
+					(c_ARG1:<e,<e,t>> $14 
+						(a:<id,<<e,t>,e>> !16 (lambda $15:e (and:<t*,t>
+							(record:<e,t> $15)
+							(c_mod:<e,<e,t>> $15 
+								(a:<id,<<e,t>,e>> !17 (lambda $16:e (and:<t*,t>
+									(right:<e,t> $16)
+									(c_mod:<e,<e,t>> $16 
+										(a:<id,<<e,t>,e>> !18 (lambda $17:e (human:<e,t> $17))))))))
+							(c_poss:<e,<e,t>> $15 
+								(ref:<id,e> !13))))))))))))))
+	(c_location:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !19 (lambda $18:e (and:<t*,t>
+			(brief-01:<e,t> $18)
+			(c_ARG2:<e,<e,t>> $18 
+				(a:<id,<<e,t>,e>> !20 (lambda $19:e (and:<t*,t>
+					(visit-01:<e,t> $19)
+					(c_ARG0:<e,<e,t>> $19 
+						(ref:<id,e> !3))
+					(c_ARG1:<e,<e,t>> $19 
+						(ref:<id,e> !13))
+					(c_ord:<e,<e,t>> $19 
+						(a:<id,<<e,t>,e>> !21 (lambda $20:e (and:<t*,t>
+							(ordinal-entity:<e,t> $20)
+							(c_value:<e,<i,t>> $20 1:i)))))))))
+			(c_location:<e,<e,t>> $18 
+				(a:<id,<<e,t>,e>> !22 (lambda $21:e (and:<t*,t>
+					(city:<e,t> $21)
+					(c_name:<e,<e,t>> $21 
+						(a:<id,<<e,t>,e>> !23 (lambda $22:e (and:<t*,t>
+							(name:<e,t> $22)
+							(c_op:<e,<txt,t>> $22 Bangkok:txt)))))))))
+			(c_time:<e,<e,t>> $18 
+				(a:<id,<<e,t>,e>> !24 (lambda $23:e (and:<t*,t>
+					(date-entity:<e,t> $23)
+					(c_day:<e,<i,t>> $23 10:i)
+					(c_month:<e,<i,t>> $23 2:i)
+					(c_year:<e,<i,t>> $23 2003:i))))))))))))
+In :- S[x]\S[x]/NP : (lambda $0:e (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_location:<e,<e,t>> $1 $0)))))
+a :- NP[sg]/N[sg] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+// 030210 :- NP[sg] : (a:<id,<<e,t>,e>> na:id (lambda $20:e (and:<t*,t> (date-entity:<e,t> $20) (c_day:<e,<i,t>> $20 10:i) (c_month:<e,<i,t>> $20 2:i) (c_year:<e,<i,t>> $20 2003:i))))
+briefing :- N[sg] : (lambda $0:e (brief-01:<e,t> $0))
+in :- N[x]\N[x]/NP : (lambda $0:e (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_location:<e,<e,t>> $1 $0)))))
+Bangkok :- NP[sg] : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (city:<e,t> $0) (c_name:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (name:<e,t> $1) (c_op:<e,<txt,t>> $1 Bangkok:txt))))))))
+regarding :- N[x]\N[x]/NP : (lambda $0:e (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_ARG2:<e,<e,t>> $1 $0)))))
+Amnesty International :- NP[sg] : (ref:<id,e> na:id)
+'s :- NP[x]/N[x]\NP : (lambda $0:e (lambda $1:<e,t> (a:<id,<<e,t>,e>> na:id (lambda $2:e (and:<t*,t> ($1 $2) (c_ARG0:<e,<e,t>> $2 $0))))))
+first :- N[sg]/N[sg] : (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_ord:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (ordinal-entity:<e,t> $0) (c_value:<e,<i,t>> $0 1:i))))))))
+visit :- N[sg] : (lambda $0:e (visit-01:<e,t> $0))
+to :- N[x]\N[x]/NP : (lambda $0:e (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_ARG1:<e,<e,t>> $1 $0)))))
+// FAIL: super-tagger, NP or N not available
+Myanmar :- NP[sg] : (ref:<id,e> na:id)
+, :- PUNCT
+Amnesty International :- NP[sg] : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (organization:<e,t> $0) (c_name:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (name:<e,t> $1) (c_op:<e,<txt,t>> $1 Amnesty++International:txt))))))))
+called :- S[dcl]\NP : (lambda $0:e (lambda $1:e (and:<t*,t> (call-03:<e,t> $1) (c_ARG0:<e,<e,t>> $1 $0))))
+for :- S[x]\S[x]/NP : (lambda $0:e (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_ARG1:<e,<e,t>> $1 $0)))))
+the :- NP[x]/N[x] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+release :- N[sg] : (lambda $0:e (release-01:<e,t> $0))
+of :- N[x]\N[x]/NP : (lambda $0:e (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_ARG1:<e,<e,t>> $1 $0)))))
+all :- N[x]/N[x] : (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_quant:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $0:e (all:<e,t> $0)))))))
+political :- N[x]/N[x] : (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_mod:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $0:e (politics:<e,t> $0)))))))
+prisoners :- N[pl]\(N[pl]/N[pl]) : (lambda $0:<<e,t>,<e,t>> (lambda $1:e (and:<t*,t> (person:<e,t> $1) (c_ARG1-of:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id ($0 imprison-01:<e,t>))))))
+and :- C : conj:e
+pressured :- S[dcl]/NP : (lambda $0:e (lambda $1:e (and:<t*,t> (pressure-01:<e,t> $1) (c_ARG0:<e,<e,t>> $1 (ref:<id,e> na:id)) (c_ARG1:<e,<e,t>> $1 $0))))
+Myanmar :- NP[sg] : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (country:<e,t> $0) (c_name:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (name:<e,t> $1) (c_op:<e,<txt,t>> $1 Myanmar:txt))))))))
+'s :- NP[x]/(N[x]\(N[x]/N[x]))\NP : (lambda $0:e (lambda $2:<<<e,t>,<e,t>>,<e,t>> (a:<id,<<e,t>,e>> na:id ($2 (lambda $4:<e,t> (lambda $1:e (and:<t*,t> ($4 $1) (c_ARG1:<e,<e,t>> $1 $0))))))))
+government :- N[sg]\(N[sg]/N[sg]) : (lambda $0:<<e,t>,<e,t>> (lambda $1:e (and:<t*,t> (government-organization:<e,t> $1) (c_ARG0-of:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id ($0 govern-01:<e,t>))))))
+to :- S[x]\S[x]/S[b] : (lambda $0:<e,t> (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_ARG2:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id $0))))))
+improve :- S[b]/NP : (lambda $0:e (lambda $1:e (and:<t*,t> (improve-01:<e,t> $1) (c_ARG0:<e,<e,t>> $1 (ref:<id,e> na:id)) (c_ARG1:<e,<e,t>> $1 $0))))
+Myanmar :- NP[sg] : (ref:<id,e> na:id)
+'s :- NP[x]/N[x]\NP : (lambda $0:e (lambda $1:<e,t> (a:<id,<<e,t>,e>> na:id (lambda $2:e (and:<t*,t> ($1 $2) (c_poss:<e,<e,t>> $2 $0))))))
+human :- N[x]/N[x] : (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_mod:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id human:<e,t>)))))
+rights :- N[nb] : (lambda $0:e (right:<e,t> $0))
+record :- N[sg] : (lambda $0:e (record:<e,t> $0))
+. :- PUNCT
+

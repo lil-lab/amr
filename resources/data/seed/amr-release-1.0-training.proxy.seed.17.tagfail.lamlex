@@ -1,0 +1,74 @@
+The Australian government revealed in the budget on May 5, 2008 that Australia is to spend hundreds of millions of dollars to safeguard the country against terrorism.
+JSON{"date":"2014-09-29T11:07:24.514","tok":"The Australian government revealed in the budget on May 5 , 2008 that Australia is to spend hundreds of millions of dollars to safeguard the country against terrorism .","file":"PROXY_AFP_ENG_20070508_0291_5.txt","alignments":"8-12|0.3+0.3.0+0.3.1+0.3.2 3-4|0 6-7|0.2 16-17|0.1 21-22|0.1.1.0+0.1.1.0.1 23-24|0.1.0 27-28|0.1.0.0 25-26|0.0.0.0 13-14|0.0.0.0.0+0.0.0.0.0.0 2-3|0.0+0.0.0","amr":"(r \/ reveal-01 :ARG0 (g \/ government-organization :ARG0-of (g2 \/ govern-01 :ARG1 (c2 \/ country :name (n \/ name :op1 \"Australia\")))) :ARG1 (s2 \/ spend-01 :ARG0 c2 :ARG1 (s3 \/ safeguard-01 :ARG1 c2 :ARG2 (t \/ terrorism)) :ARG3 (m \/ multiple :op1 (m2 \/ monetary-quantity :quant 100000000 :unit (d2 \/ dollar)))) :location (b \/ budget) :time (d \/ date-entity :year 2008 :month 5 :day 5))","snt-type":"body","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20070508_0291.5","alignedExp":"3-4##(a:<id,<<e,t>,e>> !1 (lambda $0:e (reveal-01:<e,t> $0)))####6-7##(a:<id,<<e,t>,e>> !1 (lambda $0:e (budget:<e,t> $0)))####16-17##(a:<id,<<e,t>,e>> !1 (lambda $0:e (spend-01:<e,t> $0)))####21-22##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(monetary-quantity:<e,t> $0)\n\t(c_unit:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (dollar:<e,t> $1)))))))####23-24##(a:<id,<<e,t>,e>> !1 (lambda $0:e (safeguard-01:<e,t> $0)))####27-28##(a:<id,<<e,t>,e>> !1 (lambda $0:e (terrorism:<e,t> $0)))####25-26##(a:<id,<<e,t>,e>> !1 (lambda $0:e (country:<e,t> $0)))####13-14##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(name:<e,t> $0)\n\t(c_op:<e,<txt,t>> $0 Australia:txt))))####2-3##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(government-organization:<e,t> $0)\n\t(c_ARG0-of:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (govern-01:<e,t> $1)))))))####8-12##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(date-entity:<e,t> $0)\n\t(c_year:<e,<i,t>> $0 2008:i)\n\t(c_month:<e,<i,t>> $0 5:i)\n\t(c_day:<e,<i,t>> $0 5:i))))","ptbtok":"The Australian government revealed in the budget on May 5 , 2008 that Australia is to spend hundreds of millions of dollars to safeguard the country against terrorism .","preferred":"","save-date":"Mon Jul 22, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(reveal-01:<e,t> $0)
+	(c_ARG0:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(government-organization:<e,t> $1)
+			(c_ARG0-of:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(govern-01:<e,t> $2)
+					(c_ARG1:<e,<e,t>> $2 
+						(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+							(country:<e,t> $3)
+							(c_name:<e,<e,t>> $3 
+								(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+									(name:<e,t> $4)
+									(c_op:<e,<txt,t>> $4 Australia:txt)))))))))))))))))
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+			(spend-01:<e,t> $5)
+			(c_ARG0:<e,<e,t>> $5 
+				(ref:<id,e> !4))
+			(c_ARG1:<e,<e,t>> $5 
+				(a:<id,<<e,t>,e>> !7 (lambda $6:e (and:<t*,t>
+					(safeguard-01:<e,t> $6)
+					(c_ARG1:<e,<e,t>> $6 
+						(ref:<id,e> !4))
+					(c_ARG2:<e,<e,t>> $6 
+						(a:<id,<<e,t>,e>> !8 (lambda $7:e (terrorism:<e,t> $7))))))))
+			(c_ARG3:<e,<e,t>> $5 
+				(a:<id,<<e,t>,e>> !9 (lambda $8:e (and:<t*,t>
+					(multiple:<e,t> $8)
+					(c_op1:<e,<e,t>> $8 
+						(a:<id,<<e,t>,e>> !10 (lambda $9:e (and:<t*,t>
+							(monetary-quantity:<e,t> $9)
+							(c_quant:<e,<i,t>> $9 100000000:i)
+							(c_unit:<e,<e,t>> $9 
+								(a:<id,<<e,t>,e>> !11 (lambda $10:e (dollar:<e,t> $10))))))))))))))))
+	(c_location:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !12 (lambda $11:e (budget:<e,t> $11))))
+	(c_time:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !13 (lambda $12:e (and:<t*,t>
+			(date-entity:<e,t> $12)
+			(c_year:<e,<i,t>> $12 2008:i)
+			(c_month:<e,<i,t>> $12 5:i)
+			(c_day:<e,<i,t>> $12 5:i))))))))
+// Issue: the spend-01 frame has arg1 has the purchased goods, not the spent amount
+The :- NP[x]/N[x] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+Australian :- N[x]/N[x] : (lambda $1:<e,t> (lambda $4:e (and:<t*,t> ($1 $4) (c_ARG1:<e,<e,t>> $4 (a:<id,<<e,t>,e>> na:id (lambda $3:e (and:<t*,t> (country:<e,t> $3) (c_name:<e,<e,t>> $3 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (name:<e,t> $1) (c_op:<e,<txt,t>> $1 Australia:txt))))))))))))
+government :- N[sg]\(N[sg]/N[sg]) : (lambda $0:<<e,t>,<e,t>> (lambda $1:e (and:<t*,t> (government-organization:<e,t> $1) (c_ARG0-of:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id ($0 govern-01:<e,t>))))))
+revealed :- S[dcl]\NP/NP : (lambda $2:e (lambda $0:e (lambda $1:e (and:<t*,t> (reveal-01:<e,t> $1) (c_ARG0:<e,<e,t>> $1 $0) (c_ARG1:<e,<e,t>> $1 $2)))))
+in :- S[x]\S[x]/NP : (lambda $0:e (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_location:<e,<e,t>> $1 $0)))))
+the :- NP[x]/N[x] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+budget :- N[sg] : (lambda $0:e (budget:<e,t> $0))
+on :- S[x]\S[x]/NP[sg] : (lambda $0:e (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_time:<e,<e,t>> $1 $0)))))
+// May 5 2008 :- NP[sg] : (a:<id,<<e,t>,e>> na:id (lambda $11:e (and:<t*,t> (date-entity:<e,t> $11) (c_year:<e,<i,t>> $11 2008:i) (c_month:<e,<i,t>> $11 5:i) (c_day:<e,<i,t>> $11 5:i))))
+// FAIL: super-tag not available
+that :- NP/S[dcl] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+Australia :- NP[sg] : (ref:<id,e> na:id)
+is :- S[dcl]\NP[sg]/(S[to]\NP[sg]) : (lambda $0:<e,<e,t>> $0)
+to :- S[to]\NP[x]/(S[b]\NP[x]) : (lambda $0:<e,<e,t>> $0)
+spend :- S[b]\NP/NP : (lambda $7:e (lambda $1:e (lambda $4:e (and:<t*,t> (spend-01:<e,t> $4) (c_ARG0:<e,<e,t>> $4 $1) (c_ARG3:<e,<e,t>> $4 $7)))))
+hundreds of millions :- NP[pl] : 100000000:i
+// FAIL: super-tag doesn't offer this category or anything that allows to modify 'dollars'
+of :- NP[pl]\NP/N[pl] : (lambda $0:<e,t> (lambda $1:i (a:<id,<<e,t>,e>> na:id (lambda $7:e (and:<t*,t> (multiple:<e,t> $7) (c_op1:<e,<e,t>> $7 (a:<id,<<e,t>,e>> na:id (lambda $3:e (and:<t*,t> ($0 $3) (c_quant:<e,<i,t>> $3 $1))))))))))
+dollars :- N[pl] : (lambda $8:e (and:<t*,t> (monetary-quantity:<e,t> $8) (c_unit:<e,<e,t>> $8 (a:<id,<<e,t>,e>> na:id (lambda $9:e (dollar:<e,t> $9))))))
+to :- S[x]\S[x]/S[b] : (lambda $0:<e,t> (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_ARG1:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id $0))))))
+safeguard :- S[b]/NP : (lambda $0:e (lambda $1:e (and:<t*,t> (safeguard-01:<e,t> $1) (c_ARG1:<e,<e,t>> $1 $0))))
+// reference
+the country :- NP[sg] : (ref:<id,e> na:id)
+against :- S[x]\S[x]/NP : (lambda $0:e (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_ARG2:<e,<e,t>> $1 $0)))))
+terrorism :- N[nb] : (lambda $6:e (terrorism:<e,t> $6))
+. :- PUNCT
+

@@ -1,0 +1,38 @@
+Police said the activist was wanted in a number of cases.
+JSON{"date":"2014-09-29T11:07:13.084","tok":"Police said the activist was wanted in a number of cases .","file":"PROXY_AFP_ENG_20021102_0031_27.txt","alignments":"1-2|0 5-6|0.1 10-11|0.1.1.0 8-9|0.1.1.0.0 3-4|0.1.0.0.0 0-1|0.0","amr":"(s \/ say-01 :ARG0 (p \/ police) :ARG1 (w \/ want-01 :ARG1 (p2 \/ person :ARG0-of (h \/ have-org-role-91 :ARG2 (a \/ activist))) :ARG1-of (c \/ cause-01 :ARG0 (c2 \/ case :quant (n \/ number)))))","snt-type":"body","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20021102_0031.27","alignedExp":"1-2##(a:<id,<<e,t>,e>> !1 (lambda $0:e (say-01:<e,t> $0)))####5-6##(a:<id,<<e,t>,e>> !1 (lambda $0:e (want-01:<e,t> $0)))####10-11##(a:<id,<<e,t>,e>> !1 (lambda $0:e (case:<e,t> $0)))####8-9##(a:<id,<<e,t>,e>> !1 (lambda $0:e (number:<e,t> $0)))####3-4##(a:<id,<<e,t>,e>> !1 (lambda $0:e (activist:<e,t> $0)))####0-1##(a:<id,<<e,t>,e>> !1 (lambda $0:e (police:<e,t> $0)))","ptbtok":"Police said the activist was wanted in a number of cases .","preferred":"","save-date":"Mon Sep 16, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(say-01:<e,t> $0)
+	(c_ARG0:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (police:<e,t> $1))))
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+			(want-01:<e,t> $2)
+			(c_ARG1:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+					(person:<e,t> $3)
+					(c_ARG0-of:<e,<e,t>> $3 
+						(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+							(have-org-role-91:<e,t> $4)
+							(c_ARG2:<e,<e,t>> $4 
+								(a:<id,<<e,t>,e>> !6 (lambda $5:e (activist:<e,t> $5))))))))))))
+			(c_ARG1-of:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !7 (lambda $6:e (and:<t*,t>
+					(cause-01:<e,t> $6)
+					(c_ARG0:<e,<e,t>> $6 
+						(a:<id,<<e,t>,e>> !8 (lambda $7:e (and:<t*,t>
+							(case:<e,t> $7)
+							(c_quant:<e,<e,t>> $7 
+								(a:<id,<<e,t>,e>> !9 (lambda $8:e (number:<e,t> $8)))))))))))))))))))
+Police :- N[nb] : (lambda $0:e (police:<e,t> $0))
+said :- S[dcl]\NP/S[dcl] : (lambda $0:<e,t> (lambda $1:e (lambda $2:e (and:<t*,t> (say-01:<e,t> $2) (c_ARG0:<e,<e,t>> $2 $1) (c_ARG1:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id (lambda $3:e ($0 $3))))))))
+the :- NP[x]/N[x] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id (lambda $1:e ($0 $1))))
+activist :- N[sg] : (lambda $0:e (and:<t*,t> (c_ARG0-of:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (have-org-role-91:<e,t> $1) (c_ARG2:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $2:e (activist:<e,t> $2)))))))) (person:<e,t> $0)))
+was :- S[dcl]\NP[sg]/(S[pt]\NP[sg]) : (lambda $0:<e,<e,t>> (lambda $1:e (lambda $2:e ($0 $1 $2))))
+wanted :- S[pt]\NP : (lambda $0:e (lambda $1:e (and:<t*,t> (want-01:<e,t> $1) (c_ARG1:<e,<e,t>> $1 $0))))
+in :- S[x]\S[x]/NP : (lambda $0:e (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_ARG1-of:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (cause-01:<e,t> $1) (c_ARG0:<e,<e,t>> $1 $0)))))))))
+a :- NP[sg]/N[sg] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id (lambda $1:e ($0 $1))))
+number :- N[sg] : (lambda $0:e (number:<e,t> $0))
+of :- NP[pl]\NP/N[pl] : (lambda $0:<e,t> (lambda $1:e (a:<id,<<e,t>,e>> na:id (lambda $2:e (and:<t*,t> ($0 $2) (c_quant:<e,<e,t>> $2 $1))))))
+cases :- N[pl] : (lambda $0:e (case:<e,t> $0))
+. :- PUNCT
+

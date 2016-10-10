@@ -1,0 +1,210 @@
+IAEA and other UN inspectors have been taking soil water and air samples since November 27 2001 at Iraqi sites suspected of being used for programs to make weapons of mass destruction
+id=PROXY_AFP_ENG_20021210_0370.9	snt-type=body	file=PROXY_AFP_ENG_20021210_0370_9.txt	annotator=UCO-AMR-01	date=2013-05-27T05:45:41	save-date=Tue Jun 11, 2013	preferred=true
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(sample-01:<e,t> $0)
+	(c_ARG0:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(and:<e,t> $1)
+			(c_op1:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(person:<e,t> $2)
+					(c_ARG0-of:<e,<e,t>> $2 
+						(a:<id,<<e,t>,e>> !4 (lambda $3:e (inspect-01:<e,t> $3))))
+					(c_poss:<e,<e,t>> $2 
+						(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+							(organization:<e,t> $4)
+							(c_name:<e,<txt,t>> $4 IAEA:txt)))))))))
+			(c_op2:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+					(person:<e,t> $5)
+					(c_ARG0-of:<e,<e,t>> $5 
+						(a:<id,<<e,t>,e>> !7 (lambda $6:e (inspect-01:<e,t> $6))))
+					(c_mod:<e,<e,t>> $5 
+						(a:<id,<<e,t>,e>> !8 (lambda $7:e (other:<e,t> $7))))
+					(c_poss:<e,<e,t>> $5 
+						(a:<id,<<e,t>,e>> !9 (lambda $8:e (and:<t*,t>
+							(organization:<e,t> $8)
+							(c_name:<e,<txt,t>> $8 UN:txt)))))))))))))
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !10 (lambda $9:e (and:<t*,t>
+			(and:<e,t> $9)
+			(c_op1:<e,<e,t>> $9 
+				(a:<id,<<e,t>,e>> !11 (lambda $10:e (soil:<e,t> $10))))
+			(c_op2:<e,<e,t>> $9 
+				(a:<id,<<e,t>,e>> !12 (lambda $11:e (water:<e,t> $11))))
+			(c_op3:<e,<e,t>> $9 
+				(a:<id,<<e,t>,e>> !13 (lambda $12:e (air:<e,t> $12))))))))
+	(c_time:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !14 (lambda $13:e (and:<t*,t>
+			(since:<e,t> $13)
+			(c_op1:<e,<e,t>> $13 
+				(a:<id,<<e,t>,e>> !15 (lambda $14:e (and:<t*,t>
+					(date-entity:<e,t> $14)
+					(c_month:<e,<i,t>> $14 11:i)
+					(c_day:<e,<i,t>> $14 27:i)
+					(c_year:<e,<i,t>> $14 2001:i)))))))))
+	(c_location:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !16 (lambda $15:e (and:<t*,t>
+			(site:<e,t> $15)
+			(c_location:<e,<e,t>> $15 
+				(a:<id,<<e,t>,e>> !17 (lambda $16:e (and:<t*,t>
+					(country:<e,t> $16)
+					(c_name:<e,<txt,t>> $16 Iraq:txt)))))
+			(c_ARG2-of:<e,<e,t>> $15 
+				(a:<id,<<e,t>,e>> !18 (lambda $17:e (and:<t*,t>
+					(suspect-01:<e,t> $17)
+					(c_ARG1:<e,<e,t>> $17 
+						(a:<id,<<e,t>,e>> !19 (lambda $18:e (and:<t*,t>
+							(use-01:<e,t> $18)
+							(c_ARG1:<e,<e,t>> $18 
+								(ref:<id,e> !16))
+							(c_ARG2:<e,<e,t>> $18 
+								(a:<id,<<e,t>,e>> !20 (lambda $19:e (and:<t*,t>
+									(make-01:<e,t> $19)
+									(c_ARG0:<e,<e,t>> $19 
+										(a:<id,<<e,t>,e>> !21 (lambda $20:e (program:<e,t> $20))))
+									(c_ARG1:<e,<e,t>> $19 
+										(a:<id,<<e,t>,e>> !22 (lambda $21:e (and:<t*,t>
+											(weapon:<e,t> $21)
+											(c_ARG2-of:<e,<e,t>> $21 
+												(a:<id,<<e,t>,e>> !23 (lambda $22:e (and:<t*,t>
+													(destroy-01:<e,t> $22)
+													(c_degree:<e,<e,t>> $22 
+														(a:<id,<<e,t>,e>> !24 (lambda $23:e (mass:<e,t> $23)))))))))))))))))))))))))))))))
+IAEA :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (organization:<e,t> $0) (c_name:<e,<txt,t>> $0 IAEA:txt))))
+and :- C : conj:e
+other :- N : (lambda $0:e (other:<e,t> $0))
+UN :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (organization:<e,t> $0) (c_name:<e,<txt,t>> $0 UN:txt))))
+inspectors :- N : (lambda $0:e (and:<t*,t> (person:<e,t> $0) (c_ARG0-of:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (inspect-01:<e,t> $1))))))
+have :- S\NP/(S\NP) : (lambda $0:<e,<e,t>> $0)
+been :- S\NP/(S\NP) : (lambda $0:<e,<e,t>> $0)
+taking :- S\NP/N/NP : (lambda $0:e (lambda $1:<e,t> (lambda $2:e (lambda $3:e (and:<t*,t> ($1 $3) (c_ARG0:<e,<e,t>> $3 $2) (c_ARG1:<e,<e,t>> $3 $0))))))
+soil :- N : soil:<e,t>
+water :- N : water:<e,t>
+and :- C : conj:e
+air :- N : air:<e,t>
+samples :- N : sample-01:<e,t>
+since :- AP/NP : (lambda $0:e (lambda $2:e (c_time:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (since:<e,t> $1) (c_op1:<e,<e,t>> $1 $0)))))))
+// November 27 2001 :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (date-entity:<e,t> $0) (c_month:<e,<i,t>> $0 11:i) (c_day:<e,<i,t>> $0 27:i) (c_year:<e,<i,t>> $0 2001:i))))
+at :- AP/NP : (lambda $0:e (lambda $1:e (c_location:<e,<e,t>> $1 $0)))
+Iraqi :- ADJ : (lambda $0:e (c_location:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (country:<e,t> $1) (c_name:<e,<txt,t>> $1 Iraq:txt))))))
+sites :- N : site:<e,t>
+suspected :- S : (lambda $0:e (suspect-01:<e,t> $0))
+of :- AP/S : (lambda $0:<e,t> (lambda $1:e (c_ARG1:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id $0))))
+being :- S/S : (lambda $0:<e,t> $0)
+used :- S : (lambda $0:e (and:<t*,t> (use-01:<e,t> $0) (c_ARG1:<e,<e,t>> $0 (ref:<id,e> na:id)))) 
+for :- AP/S : (lambda $0:<e,t> (lambda $1:e (c_ARG2:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id $0))))
+programs :- N : program:<e,t>
+to :- AP\NP : (lambda $0:e (lambda $1:e (c_ARG0:<e,<e,t>> $1 $0)))
+make :- S/NP : (lambda $0:e (lambda $1:e (and:<t*,t> (make-01:<e,t> $1) (c_ARG1:<e,<e,t>> $1 $0))))
+weapons :- N : weapon:<e,t>
+of :- PP/NP : (lambda $0:e (lambda $1:e (c_ARG2-of:<e,<e,t>> $1 $0)))
+mass :- ADJ : (lambda $0:e (c_degree:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (mass:<e,t> $1)))))
+destruction :- N : destroy-01:<e,t>
+
+IAEA and other UN inspectors have been taking soil water and air samples since November 27 2001 at Iraqi sites suspected of being used for programs to make weapons of mass destruction
+id=PROXY_AFP_ENG_20021210_0370.9	snt-type=body	file=PROXY_AFP_ENG_20021210_0370_9.txt	annotator=UCO-AMR-04	date=2013-05-27T05:45:41	save-date=Wed May 29, 2013
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(take-01:<e,t> $0)
+	(c_ARG0:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(and:<e,t> $1)
+			(c_op1:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(person:<e,t> $2)
+					(c_ARG0-of:<e,<e,t>> $2 
+						(a:<id,<<e,t>,e>> !4 (lambda $3:e (inspect-01:<e,t> $3))))
+					(c_poss:<e,<e,t>> $2 
+						(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+							(organization:<e,t> $4)
+							(c_name:<e,<txt,t>> $4 IAEA:txt)))))))))
+			(c_op2:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+					(person:<e,t> $5)
+					(c_ARG0-of:<e,<e,t>> $5 
+						(a:<id,<<e,t>,e>> !7 (lambda $6:e (inspect-01:<e,t> $6))))
+					(c_mod:<e,<e,t>> $5 
+						(a:<id,<<e,t>,e>> !8 (lambda $7:e (other:<e,t> $7))))
+					(c_poss:<e,<e,t>> $5 
+						(a:<id,<<e,t>,e>> !9 (lambda $8:e (and:<t*,t>
+							(organization:<e,t> $8)
+							(c_name:<e,<txt,t>> $8 UN:txt)))))))))))))
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !10 (lambda $9:e (and:<t*,t>
+			(sample-01:<e,t> $9)
+			(c_ARG1:<e,<e,t>> $9 
+				(a:<id,<<e,t>,e>> !11 (lambda $10:e (and:<t*,t>
+					(and:<e,t> $10)
+					(c_op1:<e,<e,t>> $10 
+						(a:<id,<<e,t>,e>> !12 (lambda $11:e (soil:<e,t> $11))))
+					(c_op2:<e,<e,t>> $10 
+						(a:<id,<<e,t>,e>> !13 (lambda $12:e (water:<e,t> $12))))
+					(c_op3:<e,<e,t>> $10 
+						(a:<id,<<e,t>,e>> !14 (lambda $13:e (air:<e,t> $13))))))))))))
+	(c_time:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !15 (lambda $14:e (and:<t*,t>
+			(since:<e,t> $14)
+			(c_op1:<e,<e,t>> $14 
+				(a:<id,<<e,t>,e>> !16 (lambda $15:e (and:<t*,t>
+					(date-entity:<e,t> $15)
+					(c_month:<e,<i,t>> $15 11:i)
+					(c_day:<e,<i,t>> $15 27:i)
+					(c_year:<e,<i,t>> $15 2001:i)))))))))
+	(c_location:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !17 (lambda $16:e (and:<t*,t>
+			(site:<e,t> $16)
+			(c_location:<e,<e,t>> $16 
+				(a:<id,<<e,t>,e>> !18 (lambda $17:e (and:<t*,t>
+					(country:<e,t> $17)
+					(c_name:<e,<txt,t>> $17 Iraq:txt)))))
+			(c_ARG1-of:<e,<e,t>> $16 
+				(a:<id,<<e,t>,e>> !19 (lambda $18:e (and:<t*,t>
+					(suspect-01:<e,t> $18)
+					(c_ARG2:<e,<e,t>> $18 
+						(a:<id,<<e,t>,e>> !20 (lambda $19:e (and:<t*,t>
+							(use-01:<e,t> $19)
+							(c_ARG2:<e,<e,t>> $19 
+								(a:<id,<<e,t>,e>> !21 (lambda $20:e (and:<t*,t>
+									(program:<e,t> $20)
+									(c_purpose:<e,<e,t>> $20 
+										(a:<id,<<e,t>,e>> !22 (lambda $21:e (and:<t*,t>
+											(make-01:<e,t> $21)
+											(c_ARG1:<e,<e,t>> $21 
+												(a:<id,<<e,t>,e>> !23 (lambda $22:e (and:<t*,t>
+													(weapon:<e,t> $22)
+													(c_ARG2-of:<e,<e,t>> $22 
+														(a:<id,<<e,t>,e>> !24 (lambda $23:e (and:<t*,t>
+															(destroy-01:<e,t> $23)
+															(c_manner:<e,<e,t>> $23 
+																(a:<id,<<e,t>,e>> !25 (lambda $24:e (mass:<e,t> $24)))))))))))))))))))))))))))))))))))
+IAEA :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (organization:<e,t> $0) (c_name:<e,<txt,t>> $0 IAEA:txt))))
+and :- C : conj:e
+other :- N : (lambda $0:e (other:<e,t> $0))
+UN :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (organization:<e,t> $0) (c_name:<e,<txt,t>> $0 UN:txt))))
+inspectors :- N : (lambda $0:e (and:<t*,t> (person:<e,t> $0) (c_ARG0-of:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (inspect-01:<e,t> $1))))))
+have :- S\NP/(S\NP) : (lambda $0:<e,<e,t>> $0)
+been :- S\NP/(S\NP) : (lambda $0:<e,<e,t>> $0)
+taking :- S\NP/NP : (lambda $0:e (lambda $2:e (lambda $3:e (and:<t*,t> (take-01:<e,t> $3) (c_ARG0:<e,<e,t>> $3 $2) (c_ARG1:<e,<e,t>> $3 $0))))))
+soil :- N : soil:<e,t>
+water :- N : water:<e,t>
+and :- C : conj:e
+air :- N : air:<e,t>
+samples :- N : sample-01:<e,t>
+since :- AP/NP : (lambda $0:e (lambda $2:e (c_time:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (since:<e,t> $1) (c_op1:<e,<e,t>> $1 $0)))))))
+// November 27 2001 :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (date-entity:<e,t> $0) (c_month:<e,<i,t>> $0 11:i) (c_day:<e,<i,t>> $0 27:i) (c_year:<e,<i,t>> $0 2001:i))))
+at :- AP/NP : (lambda $0:e (lambda $1:e (c_location:<e,<e,t>> $1 $0)))
+Iraqi :- ADJ : (lambda $0:e (c_location:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (country:<e,t> $1) (c_name:<e,<txt,t>> $1 Iraq:txt))))))
+sites :- N : site:<e,t>
+suspected :- S : (lambda $0:e (suspect-01:<e,t> $0))
+of :- AP/S : (lambda $0:<e,t> (lambda $1:e (c_ARG2:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id $0))))
+being :- S/S : (lambda $0:<e,t> $0)
+used :- S : use-01:<e,t>
+for :- AP/NP : (lambda $0:e (lambda $1:e (c_ARG2:<e,<e,t>> $1 $0)))
+programs :- N : program:<e,t>
+to :- PP/S : (lambda $0:<e,t> (lambda $1:e (c_purpose:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id $0))))
+make :- S/NP : (lambda $0:e (lambda $1:e (and:<t*,t> (make-01:<e,t> $1) (c_ARG1:<e,<e,t>> $1 $0))))
+weapons :- N : weapon:<e,t>
+of :- PP/NP : (lambda $0:e (lambda $1:e (c_ARG2-of:<e,<e,t>> $1 $0)))
+mass :- ADJ : (lambda $0:e (c_manner:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (mass:<e,t> $1)))))
+destruction :- N : destroy-01:<e,t>
+

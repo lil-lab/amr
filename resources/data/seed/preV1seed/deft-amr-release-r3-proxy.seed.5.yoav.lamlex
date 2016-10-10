@@ -1,0 +1,76 @@
+The Israelis said they had film of the launching and breakup
+id=PROXY_AFP_ENG_20050603_0056.25	snt-type=body	file=PROXY_AFP_ENG_20050603_0056_25.txt	annotator=SDL-AMR-07	date=2013-05-26T16:06:33	save-date=Sun May 26, 2013	preferred=true
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(say-01:<e,t> $0)
+	(c_ARG0:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(person:<e,t> $1)
+			(c_mod:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(country:<e,t> $2)
+					(c_name:<e,<txt,t>> $2 Israel:txt)))))))))
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+			(have-03:<e,t> $3)
+			(c_ARG0:<e,<e,t>> $3 
+				(ref:<id,e> !2))
+			(c_ARG1:<e,<e,t>> $3 
+				(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+					(film:<e,t> $4)
+					(c_topic:<e,<e,t>> $4 
+						(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+							(and:<e,t> $5)
+							(c_op1:<e,<e,t>> $5 
+								(a:<id,<<e,t>,e>> !7 (lambda $6:e (launch-01:<e,t> $6))))
+							(c_op2:<e,<e,t>> $5 
+								(a:<id,<<e,t>,e>> !8 (lambda $7:e (break-08:<e,t> $7)))))))))))))))))))
+The :- NP/N : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+Israelis :- N : (lambda $0:e (and:<t*,t> (person:<e,t> $0) (c_mod:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $2:e (and:<t*,t> (country:<e,t> $2) (c_name:<e,<txt,t>> $2 Israel:txt)))))))
+said :- S\NP/S : (lambda $0:<e,t> (lambda $1:e (lambda $2:e (and:<t*,t> (say-01:<e,t> $2) (c_ARG0:<e,<e,t>> $2 $1) (c_ARG1:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $0))))))
+they :- NP : (ref:<id,e> na:id)
+had :- S\NP/NP : (lambda $0:e (lambda $1:e (lambda $2:e (and:<t*,t> (have-03:<e,t> $2) (c_ARG0:<e,<e,t>> $2 $1) (c_ARG1:<e,<e,t>> $2 $0)))))
+film :- N : (lambda $0:e (film:<e,t> $0))
+of :- PP/NP : (lambda $0:e (lambda $1:e (c_topic:<e,<e,t>> $1 $0)))
+the :- NP/S : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+launching :- S : (lambda $0:e (launch-01:<e,t> $0))
+and :- C : conj:e
+breakup :- S : (lambda $0:e (break-08:<e,t> $0))
+
+The Israelis said they had film of the launching and breakup
+id=PROXY_AFP_ENG_20050603_0056.25	snt-type=body	file=PROXY_AFP_ENG_20050603_0056_25.txt	annotator=SDL-AMR-08	date=2013-05-23T10:37:30	save-date=Wed May 29, 2013
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(say-01:<e,t> $0)
+	(c_ARG0:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(person:<e,t> $1)
+			(c_mod:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(country:<e,t> $2)
+					(c_name:<e,<txt,t>> $2 Israel:txt)))))))))
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+			(have-03:<e,t> $3)
+			(c_ARG0:<e,<e,t>> $3 
+				(ref:<id,e> !2))
+			(c_ARG1:<e,<e,t>> $3 
+				(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+					(film:<e,t> $4)
+					(c_topic:<e,<e,t>> $4 
+						(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+							(and:<e,t> $5)
+							(c_op1:<e,<e,t>> $5 
+								(a:<id,<<e,t>,e>> !7 (lambda $6:e (launch-01:<e,t> $6))))
+							(c_op2:<e,<e,t>> $5 
+								(a:<id,<<e,t>,e>> !8 (lambda $7:e (break-08:<e,t> $7)))))))))))))))))))
+The :- NP/N : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+Israelis :- N : (lambda $0:e (and:<t*,t> (person:<e,t> $0) (c_mod:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $2:e (and:<t*,t> (country:<e,t> $2) (c_name:<e,<txt,t>> $2 Israel:txt)))))))
+said :- S\NP/S : (lambda $0:<e,t> (lambda $1:e (lambda $2:e (and:<t*,t> (say-01:<e,t> $2) (c_ARG0:<e,<e,t>> $2 $1) (c_ARG1:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $0))))))
+they :- NP : (ref:<id,e> na:id)
+had :- S\NP/NP : (lambda $0:e (lambda $1:e (lambda $2:e (and:<t*,t> (have-03:<e,t> $2) (c_ARG0:<e,<e,t>> $2 $1) (c_ARG1:<e,<e,t>> $2 $0)))))
+film :- N : (lambda $0:e (film:<e,t> $0))
+of :- PP/NP : (lambda $0:e (lambda $1:e (c_topic:<e,<e,t>> $1 $0)))
+the :- NP/S : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+launching :- S : (lambda $0:e (launch-01:<e,t> $0))
+and :- C : conj:e
+breakup :- S : (lambda $0:e (break-08:<e,t> $0))
+

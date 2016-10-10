@@ -1,0 +1,28 @@
+Earlier in 2007 Abdullah announced that --
+JSON{"date":"2015-01-01T22:36:03.730","tok":"Earlier in 2007 Abdullah announced that --","file":"PROXY_APW_ENG_20071226_0497_13.txt","alignments":"2-3|0.1.1+0.1.1.0 4-5|0 0-1|0.1 3-4|0.0+0.0.0+0.0.0.0","amr":"(a \/ announce-01 :ARG0 (p \/ person :name (n \/ name :op1 \"Abdullah\")) :time (e \/ early :degree (m \/ more) :time (d \/ date-entity :year 2007)))","snt-type":"body","annotator":"Aligner v.02","id":"PROXY_APW_ENG_20071226_0497.13","alignedExp":"2-3##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(date-entity:<e,t> $0)\n\t(c_year:<e,<i,t>> $0 2007:i))))####4-5##(a:<id,<<e,t>,e>> !1 (lambda $0:e (announce-01:<e,t> $0)))####0-1##(a:<id,<<e,t>,e>> !1 (lambda $0:e (early:<e,t> $0)))####3-4##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(person:<e,t> $0)\n\t(c_name:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(name:<e,t> $1)\n\t\t\t(c_op:<e,<txt,t>> $1 Abdullah:txt))))))))","ptbtok":"Earlier in 2007 Abdullah announced that --","preferred":"","save-date":"Wed Jul 10, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(announce-01:<e,t> $0)
+	(c_ARG0:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(person:<e,t> $1)
+			(c_name:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(name:<e,t> $2)
+					(c_op:<e,<txt,t>> $2 Abdullah:txt)))))))))
+	(c_time:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+			(early:<e,t> $3)
+			(c_degree:<e,<e,t>> $3 
+				(a:<id,<<e,t>,e>> !5 (lambda $4:e (more:<e,t> $4))))
+			(c_time:<e,<e,t>> $3 
+				(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+					(date-entity:<e,t> $5)
+					(c_year:<e,<i,t>> $5 2007:i))))))))))))
+Earlier :- S[x]\S[x]/(S[x]\S[x]) : (lambda $0:<<e,t>,<e,t>> (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_time:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id ($0 (lambda $3:e (and:<t*,t> (early:<e,t> $3) (c_degree:<e,<e,t>> $3 (a:<id,<<e,t>,e>> na:id more:<e,t>)))))))))))
+in :- S[x]\S[x]/NP : (lambda $2:e (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_time:<e,<e,t>> $1 $2)))))
+// 2007
+Abdullah :- NP[sg] : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (person:<e,t> $0) (c_name:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (name:<e,t> $0) (c_op:<e,<txt,t>> $0 Abdullah:txt))))))))
+announced :- S[dcl]\NP : (lambda $0:e (lambda $1:e (and:<t*,t> (announce-01:<e,t> $1) (c_ARG0:<e,<e,t>> $1 $0))))
+that :- S[x]\S[x] : (lambda $0:<e,t> $0)
+-- :- PUNCT
+

@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+set -eu
+set -o pipefail
+
+MY_DIR="$( dirname "${BASH_SOURCE[0]}" )"
+. "${MY_DIR}/scripts/config.sh"
+
+export JAVA_OPTS="-ea -Dfile.encoding=UTF-8 -XX:ParallelGCThreads=2 -Xmx4g -XX:+CMSClassUnloadingEnabled"
+
+## so we don't have to type out "edu.cmu.lti.nlp.amr." every time
+klass="edu.cmu.lti.nlp.amr.$1"
+shift
+
+# (cd "${MY_DIR}" > /dev/null; ./sbt --error "runMain $klass $*")
+
+# Alternatively (assumes you've already run `./compile`):
+java ${JAVA_OPTS} -cp "${CLASSPATH}" "$klass" "$@"

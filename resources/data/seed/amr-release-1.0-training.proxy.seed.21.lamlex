@@ -1,0 +1,22 @@
+Russian Federation (RU); France (FR)
+JSON{"date":"2014-09-29T11:07:13.213","tok":"Russian Federation ( RU ) ; France ( FR )","file":"PROXY_AFP_ENG_20021110_0396_2.txt","alignments":"5-6|0 6-7|0.1+0.1.0+0.1.0.0 0-2|0.0+0.0.0+0.0.0.0+0.0.0.1 1-2|0.0.0.1","amr":"(a \/ and :op1 (c2 \/ country :name (n2 \/ name :op1 \"Russian\" :op2 \"Federation\")) :op2 (c \/ country :name (n \/ name :op1 \"France\")))","snt-type":"country","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20021110_0396.2","alignedExp":"5-6##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<e,t> $0)))####6-7##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(country:<e,t> $0)\n\t(c_name:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(name:<e,t> $1)\n\t\t\t(c_op:<e,<txt,t>> $1 France:txt))))))))####0-2##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(country:<e,t> $0)\n\t(c_name:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(name:<e,t> $1)\n\t\t\t(c_op:<e,<txt,t>> $1 Russian++Federation:txt))))))))","ptbtok":"Russian Federation -LRB- RU -RRB- ; France -LRB- FR -RRB-","preferred":"","save-date":"Wed May 29, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(and:<e,t> $0)
+	(c_op1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(country:<e,t> $1)
+			(c_name:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(name:<e,t> $2)
+					(c_op:<e,<txt,t>> $2 Russian++Federation:txt)))))))))
+	(c_op2:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+			(country:<e,t> $3)
+			(c_name:<e,<e,t>> $3 
+				(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+					(name:<e,t> $4)
+					(c_op:<e,<txt,t>> $4 France:txt))))))))))))
+Russian Federation -LRB- RU -RRB- :- NP[sg] : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (country:<e,t> $0) (c_name:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (name:<e,t> $1) (c_op:<e,<txt,t>> $1 Russian++Federation:txt))))))))
+; :- KEY\NP[sg] : (lambda $0:e $0)
+France -LRB- FR -RRB- :- NP[sg] : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (country:<e,t> $0) (c_name:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (name:<e,t> $1) (c_op:<e,<txt,t>> $1 France:txt))))))))
+

@@ -1,0 +1,111 @@
+The ktx was manufactured in South Korea using technology transferred by Alstom
+id=PROXY_AFP_ENG_20040329_0408.13	snt-type=body	file=PROXY_AFP_ENG_20040329_0408_13.txt	annotator=SDL-AMR-06	date=2013-05-23T08:31:07	save-date=Wed May 29, 2013
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(manufacture-01:<e,t> $0)
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(train:<e,t> $1)
+			(c_name:<e,<txt,t>> $1 KTX:txt)))))
+	(c_ARG2:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+			(use-01:<e,t> $2)
+			(c_ARG1:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+					(technology:<e,t> $3)
+					(c_mod:<e,<e,t>> $3 
+						(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+							(transfer-01:<e,t> $4)
+							(c_ARG0:<e,<e,t>> $4 
+								(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+									(company:<e,t> $5)
+									(c_name:<e,<txt,t>> $5 Alstom:txt)))))))))))))))))
+	(c_location:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !7 (lambda $6:e (and:<t*,t>
+			(country:<e,t> $6)
+			(c_name:<e,<txt,t>> $6 South++Korea:txt))))))))
+The :- NP/N : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+ktx :- N : (lambda $0:e (and:<t*,t> (train:<e,t> $0) (c_name:<e,<txt,t>> $0 KTX:txt)))
+was :- S\NP/(S\NP) : (lambda $0:<e,<e,t>> $0)
+manufactured :- S\NP : (lambda $0:e (lambda $1:e (and:<t*,t> (manufacture-01:<e,t> $1) (c_ARG1:<e,<e,t>> $1 $0))))
+in :- AP/NP : (lambda $0:e (lambda $1:e (c_location:<e,<e,t>> $1 $0)))
+South Korea :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (country:<e,t> $0) (c_name:<e,<txt,t>> $0 South++Korea:txt))))
+using :- S/NP : (lambda $0:e (lambda $1:e (and:<t*,t> (use-01:<e,t> $1) (c_ARG1:<e,<e,t>> $1 $0))))
+technology :- N : (lambda $0:e (technology:<e,t> $0))
+transferred :- S : (lambda $0:e (transfer-01:<e,t> $0))
+by :- AP/NP : (lambda $1:e (lambda $2:e (c_ARG0:<e,<e,t>> $2 $1)))
+Alstom :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (company:<e,t> $0) (c_name:<e,<txt,t>> $0 Alstom:txt))))
+
+The ktx was manufactured in South Korea using technology transferred by Alstom
+id=PROXY_AFP_ENG_20040329_0408.13	snt-type=body	file=PROXY_AFP_ENG_20040329_0408_13.txt	annotator=SDL-AMR-05	date=2013-05-26T03:15:06	save-date=Sun Jun 2, 2013
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(manufacture-01:<e,t> $0)
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(railway-line:<e,t> $1)
+			(c_name:<e,<txt,t>> $1 ktx:txt)))))
+	(c_location:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+			(country:<e,t> $2)
+			(c_name:<e,<txt,t>> $2 South++Korea:txt)))))
+	(c_ARG0-of:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+			(use-01:<e,t> $3)
+			(c_ARG1:<e,<e,t>> $3 
+				(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+					(technology:<e,t> $4)
+					(c_ARG1-of:<e,<e,t>> $4 
+						(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+							(transfer-01:<e,t> $5)
+							(c_ARG0:<e,<e,t>> $5 
+								(a:<id,<<e,t>,e>> !7 (lambda $6:e (and:<t*,t>
+									(company:<e,t> $6)
+									(c_name:<e,<txt,t>> $6 Alstom:txt))))))))))))))))))))
+The :- NP/N : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+ktx :- N : (lambda $0:e (and:<t*,t> (railway-line:<e,t> $0) (c_name:<e,<txt,t>> $0 ktx:txt)))
+was :- S\NP/(S\NP) : (lambda $0:<e,<e,t>> $0)
+manufactured :- S\NP : (lambda $0:e (lambda $1:e (and:<t*,t> (manufacture-01:<e,t> $1) (c_ARG1:<e,<e,t>> $1 $0))))
+in :- AP/NP : (lambda $0:e (lambda $1:e (c_location:<e,<e,t>> $1 $0)))
+South Korea :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (country:<e,t> $0) (c_name:<e,<txt,t>> $0 South++Korea:txt))))
+using :- S/NP : (lambda $0:e (lambda $1:e (and:<t*,t> (use-01:<e,t> $1) (c_ARG1:<e,<e,t>> $1 $0))))
+technology :- N : (lambda $0:e (technology:<e,t> $0))
+transferred :- S : (lambda $0:e (transfer-01:<e,t> $0))
+by :- AP/NP : (lambda $1:e (lambda $2:e (c_ARG0:<e,<e,t>> $2 $1)))
+Alstom :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (company:<e,t> $0) (c_name:<e,<txt,t>> $0 Alstom:txt))))
+
+The ktx was manufactured in South Korea using technology transferred by Alstom
+id=PROXY_AFP_ENG_20040329_0408.13	snt-type=body	file=PROXY_AFP_ENG_20040329_0408_13.txt	annotator=SDL-AMR-09	date=2013-05-26T03:15:06	save-date=Tue May 28, 2013	preferred=true
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(manufacture-01:<e,t> $0)
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(railway-line:<e,t> $1)
+			(c_name:<e,<txt,t>> $1 KTX:txt)))))
+	(c_location:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+			(country:<e,t> $2)
+			(c_name:<e,<txt,t>> $2 South++Korea:txt)))))
+	(c_ARG2-of:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+			(use-01:<e,t> $3)
+			(c_ARG1:<e,<e,t>> $3 
+				(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+					(technology:<e,t> $4)
+					(c_ARG1-of:<e,<e,t>> $4 
+						(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+							(transfer-01:<e,t> $5)
+							(c_ARG0:<e,<e,t>> $5 
+								(a:<id,<<e,t>,e>> !7 (lambda $6:e (and:<t*,t>
+									(company:<e,t> $6)
+									(c_name:<e,<txt,t>> $6 Alstom:txt))))))))))))))))))))
+The :- NP/N : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+ktx :- N : (lambda $0:e (and:<t*,t> (railway-line:<e,t> $0) (c_name:<e,<txt,t>> $0 KTX:txt)))
+was :- S\NP/(S\NP) : (lambda $0:<e,<e,t>> $0)
+manufactured :- S\NP : (lambda $0:e (lambda $1:e (and:<t*,t> (manufacture-01:<e,t> $1) (c_ARG1:<e,<e,t>> $1 $0))))
+in :- AP/NP : (lambda $0:e (lambda $1:e (c_location:<e,<e,t>> $1 $0)))
+South Korea :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (country:<e,t> $0) (c_name:<e,<txt,t>> $0 South++Korea:txt))))
+using :- S/NP : (lambda $0:e (lambda $1:e (and:<t*,t> (use-01:<e,t> $1) (c_ARG1:<e,<e,t>> $1 $0))))
+technology :- N : (lambda $0:e (technology:<e,t> $0))
+transferred :- S : (lambda $0:e (transfer-01:<e,t> $0))
+by :- AP/NP : (lambda $1:e (lambda $2:e (c_ARG0:<e,<e,t>> $2 $1)))
+Alstom :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (company:<e,t> $0) (c_name:<e,<txt,t>> $0 Alstom:txt))))
+

@@ -1,0 +1,32 @@
+#!/bin/bash
+set -e
+set -o errexit
+echo "Starting init script" &> /home/yoav/amr/init.log && \
+export AMR_DIR=/home/yoav/amr && \
+export MASTER=ec2-54-163-198-172.compute-1.amazonaws.com && \
+export MASTER_PORT=4444 && \
+export MEMORY=`grep MemTotal /proc/meminfo | awk '{print $2}' | xargs -I {} echo "scale=0; {}*0.85/1024^2" | bc`g && \
+export THREADS=1 && \
+cd /home/yoav/amr &>> /home/yoav/amr/init.log && \
+cp /home/yoav/.ssh/id_rsa . &>> /home/yoav/amr/init.log && \
+chown 600 id_rsa &>> /home/yoav/amr/init.log && \
+mkdir -p /mnt/charts &>> /home/yoav/amr/init.log && \
+mkdir -p /scratch/yoav &>> /home/yoav/amr/init.log && \
+ln -s /mnt/charts /scratch/yoav/charts &>> /home/yoav/amr/init.log
+
+n=0
+until [ $n -ge 5 ]
+do
+	set +e
+	echo "Syncing from master..." &>> /home/yoav/amr/init.log && \
+	rsync -avz --progress --exclude "*.sh" --exclude "*.sh.*" --exclude "out" --exclude "err" --exclude "experiments/*/logs*" --exclude "core.*" --exclude "utils/jamr" -e 'ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i id_rsa' "yoav@$MASTER:$AMR_DIR/*" /home/yoav/amr &>> /home/yoav/amr/init.log && \
+	echo "Starting worker..." &>> /home/yoav/amr/init.log && \
+	./worker.sh $MASTER $MASTER_PORT $MEMORY $THREADS &>> /home/yoav/amr/init.log && \
+	echo "Done." && \
+	break
+	set -e
+	echo "Failed ($n attempts), sleeping ... "
+	n=$[$n+1]
+	sleep 30
+done
+

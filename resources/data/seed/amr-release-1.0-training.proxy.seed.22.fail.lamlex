@@ -1,0 +1,87 @@
+On 021015 officials stated that all Vietnam-based websites will require a license to operate in Vietnam in new Vietnamese government efforts to control the dissemination of reactionary or pornographic material online.
+JSON{"date":"2014-09-29T11:07:12.779","tok":"On 021015 officials stated that all Vietnam - based websites will require a license to operate in Vietnam in new Vietnamese government efforts to control the dissemination of reactionary or pornographic material online .","file":"PROXY_AFP_ENG_20021015_0171_5.txt","alignments":"1-2|0.2+0.2.0+0.2.1+0.2.2 3-4|0 9-10|0.1 22-23|0.1.2.0.1 27-28|0.1.2.0.1.0.0 29-30|0.1.2.0.1.0.0.1 26-27|0.1.2.0.1.0.0.0.0 30-31|0.1.2.0.1.0.1 17-18|0.1.2.0.2 7-8|0.1.1 5-6|0.1.1.1 15-16|0.1.1.0.0+0.1.1.0.0.0+0.1.1.0.0.0.0 11-12|0.1.0 13-14|0.1.0.0 2-3|0.0.0.0 19-20|0.1.2.0.0+0.1.2.0.0.0 24-25|0.1.2.0.1.0 28-29|0.1.2.0.1.0.0.1.0","amr":"(s \/ state-01 :ARG0 (p2 \/ person :ARG0-of (h \/ have-org-role-91 :ARG2 (o \/ official))) :ARG1 (r \/ require-01 :ARG1 (l \/ license-01 :ARG1 (o2 \/ operate-01 :ARG1 w :location c)) :ARG2 (w \/ website :ARG1-of (b \/ base-01 :location (c \/ country :name (n \/ name :op1 \"Vietnam\"))) :quant (a \/ all)) :ARG1-of (c4 \/ cause-01 :ARG0 (t \/ try-01 :ARG0 (g \/ government-organization :ARG0-of (g2 \/ govern-01 :ARG1 c)) :ARG1 (c5 \/ control-01 :ARG0 g :ARG1 (d2 \/ disseminate-01 :ARG1 (o3 \/ or :op1 (m \/ material :mod (r2 \/ reactionary)) :op2 (m2 \/ material :mod (p \/ pornography))) :medium (o4 \/ online))) :ARG1-of (n2 \/ new-41)))) :time (d \/ date-entity :day 15 :month 10 :year 2002))","snt-type":"body","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20021015_0171.5","alignedExp":"22-23##(a:<id,<<e,t>,e>> !1 (lambda $0:e (control-01:<e,t> $0)))####26-27##(a:<id,<<e,t>,e>> !1 (lambda $0:e (reactionary:<e,t> $0)))####30-31##(a:<id,<<e,t>,e>> !1 (lambda $0:e (online:<e,t> $0)))####2-3##(a:<id,<<e,t>,e>> !1 (lambda $0:e (official:<e,t> $0)))####24-25##(a:<id,<<e,t>,e>> !1 (lambda $0:e (disseminate-01:<e,t> $0)))####28-29##(a:<id,<<e,t>,e>> !1 (lambda $0:e (pornography:<e,t> $0)))####9-10##(a:<id,<<e,t>,e>> !1 (lambda $0:e (require-01:<e,t> $0)))####1-2##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(date-entity:<e,t> $0)\n\t(c_day:<e,<i,t>> $0 15:i)\n\t(c_month:<e,<i,t>> $0 10:i)\n\t(c_year:<e,<i,t>> $0 2002:i))))####3-4##(a:<id,<<e,t>,e>> !1 (lambda $0:e (state-01:<e,t> $0)))####27-28##(a:<id,<<e,t>,e>> !1 (lambda $0:e (or:<e,t> $0)))####29-30##(a:<id,<<e,t>,e>> !1 (lambda $0:e (material:<e,t> $0)))####17-18##(a:<id,<<e,t>,e>> !1 (lambda $0:e (new-41:<e,t> $0)))####19-20##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(government-organization:<e,t> $0)\n\t(c_ARG0-of:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (govern-01:<e,t> $1)))))))####7-8##(a:<id,<<e,t>,e>> !1 (lambda $0:e (website:<e,t> $0)))####5-6##(a:<id,<<e,t>,e>> !1 (lambda $0:e (all:<e,t> $0)))####15-16##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(country:<e,t> $0)\n\t(c_name:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(name:<e,t> $1)\n\t\t\t(c_op:<e,<txt,t>> $1 Vietnam:txt))))))))####11-12##(a:<id,<<e,t>,e>> !1 (lambda $0:e (license-01:<e,t> $0)))####13-14##(a:<id,<<e,t>,e>> !1 (lambda $0:e (operate-01:<e,t> $0)))","ptbtok":"On 021015 officials stated that all Vietnam-based websites will require a license to operate in Vietnam in new Vietnamese government efforts to control the dissemination of reactionary or pornographic material online .","preferred":"","save-date":"Mon Sep 16, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(state-01:<e,t> $0)
+	(c_ARG0:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(person:<e,t> $1)
+			(c_ARG0-of:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(have-org-role-91:<e,t> $2)
+					(c_ARG2:<e,<e,t>> $2 
+						(a:<id,<<e,t>,e>> !4 (lambda $3:e (official:<e,t> $3))))))))))))
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+			(require-01:<e,t> $4)
+			(c_ARG1:<e,<e,t>> $4 
+				(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+					(license-01:<e,t> $5)
+					(c_ARG1:<e,<e,t>> $5 
+						(a:<id,<<e,t>,e>> !7 (lambda $6:e (and:<t*,t>
+							(operate-01:<e,t> $6)
+							(c_ARG1:<e,<e,t>> $6 
+								(ref:<id,e> !8))
+							(c_location:<e,<e,t>> $6 
+								(ref:<id,e> !9))))))))))
+			(c_ARG2:<e,<e,t>> $4 
+				(a:<id,<<e,t>,e>> !8 (lambda $7:e (and:<t*,t>
+					(website:<e,t> $7)
+					(c_ARG1-of:<e,<e,t>> $7 
+						(a:<id,<<e,t>,e>> !10 (lambda $8:e (and:<t*,t>
+							(base-01:<e,t> $8)
+							(c_location:<e,<e,t>> $8 
+								(a:<id,<<e,t>,e>> !9 (lambda $9:e (and:<t*,t>
+									(country:<e,t> $9)
+									(c_name:<e,<e,t>> $9 
+										(a:<id,<<e,t>,e>> !11 (lambda $10:e (and:<t*,t>
+											(name:<e,t> $10)
+											(c_op:<e,<txt,t>> $10 Vietnam:txt)))))))))))))
+					(c_quant:<e,<e,t>> $7 
+						(a:<id,<<e,t>,e>> !12 (lambda $11:e (all:<e,t> $11))))))))
+			(c_ARG1-of:<e,<e,t>> $4 
+				(a:<id,<<e,t>,e>> !13 (lambda $12:e (and:<t*,t>
+					(cause-01:<e,t> $12)
+					(c_ARG0:<e,<e,t>> $12 
+						(a:<id,<<e,t>,e>> !14 (lambda $13:e (and:<t*,t>
+							(try-01:<e,t> $13)
+							(c_ARG0:<e,<e,t>> $13 
+								(a:<id,<<e,t>,e>> !15 (lambda $14:e (and:<t*,t>
+									(government-organization:<e,t> $14)
+									(c_ARG0-of:<e,<e,t>> $14 
+										(a:<id,<<e,t>,e>> !16 (lambda $15:e (and:<t*,t>
+											(govern-01:<e,t> $15)
+											(c_ARG1:<e,<e,t>> $15 
+												(ref:<id,e> !9))))))))))
+							(c_ARG1:<e,<e,t>> $13 
+								(a:<id,<<e,t>,e>> !17 (lambda $16:e (and:<t*,t>
+									(control-01:<e,t> $16)
+									(c_ARG0:<e,<e,t>> $16 
+										(ref:<id,e> !15))
+									(c_ARG1:<e,<e,t>> $16 
+										(a:<id,<<e,t>,e>> !18 (lambda $17:e (and:<t*,t>
+											(disseminate-01:<e,t> $17)
+											(c_ARG1:<e,<e,t>> $17 
+												(a:<id,<<e,t>,e>> !19 (lambda $18:e (and:<t*,t>
+													(or:<e,t> $18)
+													(c_op1:<e,<e,t>> $18 
+														(a:<id,<<e,t>,e>> !20 (lambda $19:e (and:<t*,t>
+															(material:<e,t> $19)
+															(c_mod:<e,<e,t>> $19 
+																(a:<id,<<e,t>,e>> !21 (lambda $20:e (reactionary:<e,t> $20))))))))
+													(c_op2:<e,<e,t>> $18 
+														(a:<id,<<e,t>,e>> !22 (lambda $21:e (and:<t*,t>
+															(material:<e,t> $21)
+															(c_mod:<e,<e,t>> $21 
+																(a:<id,<<e,t>,e>> !23 (lambda $22:e (pornography:<e,t> $22))))))))))))
+											(c_medium:<e,<e,t>> $17 
+												(a:<id,<<e,t>,e>> !24 (lambda $23:e (online:<e,t> $23))))))))))))
+							(c_ARG1-of:<e,<e,t>> $13 
+								(a:<id,<<e,t>,e>> !25 (lambda $24:e (new-41:<e,t> $24))))))))))))))))
+	(c_time:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !26 (lambda $25:e (and:<t*,t>
+			(date-entity:<e,t> $25)
+			(c_day:<e,<i,t>> $25 15:i)
+			(c_month:<e,<i,t>> $25 10:i)
+			(c_year:<e,<i,t>> $25 2002:i))))))))
+// FAIL: "efforts" introduces two frames: cause-01 and try-01, and all modifications are embedded in the internal one (try-01), so it has to take all the modifiers.
+

@@ -1,0 +1,8 @@
+a:<id,<<e,t>,e>>	\mathcal{A}
+a:<id,<<p,t>,p>>	\mathcal{A}
+ref:<id,e>	\mathcal{R}
+ref:<id,p>	\mathcal{R}
+and:<t*,t>	\land
+or:<t*,t>	\lor
+true:t	true
+false:t	false

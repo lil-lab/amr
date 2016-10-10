@@ -1,0 +1,68 @@
+The Australian government revealed in the budget on May 5 2008 that Australia is to spend hundreds of millions of dollars to safeguard the country against terrorism 
+file=PROXY_AFP_ENG_20070508_0291_5.txt	save-date=Mon Jul 22, 2013	annotator=SDL-AMR-09	preferred=true	snt-type=body	date=2013-06-13T08:33:54	id=PROXY_AFP_ENG_20070508_0291.5
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(reveal-01:<e,t> $0)
+	(c_ARG0:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(government-organization:<e,t> $1)
+			(c_ARG0-of:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(govern-01:<e,t> $2)
+					(c_ARG1:<e,<e,t>> $2 
+						(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+							(country:<e,t> $3)
+							(c_name:<e,<txt,t>> $3 Australia:txt)))))))))))))
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+			(spend-01:<e,t> $4)
+			(c_ARG0:<e,<e,t>> $4 
+				(ref:<id,e> !4))
+			(c_ARG1:<e,<e,t>> $4 
+				(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+					(safeguard-01:<e,t> $5)
+					(c_ARG1:<e,<e,t>> $5 
+						(ref:<id,e> !4))
+					(c_ARG2:<e,<e,t>> $5 
+						(a:<id,<<e,t>,e>> !7 (lambda $6:e (terrorism:<e,t> $6))))))))
+			(c_ARG3:<e,<e,t>> $4 
+				(a:<id,<<e,t>,e>> !8 (lambda $7:e (and:<t*,t>
+					(multiple:<e,t> $7)
+					(c_op1:<e,<e,t>> $7 
+						(a:<id,<<e,t>,e>> !9 (lambda $8:e (and:<t*,t>
+							(monetary-quantity:<e,t> $8)
+							(c_quant:<e,<i,t>> $8 100000000:i)
+							(c_unit:<e,<e,t>> $8 
+								(a:<id,<<e,t>,e>> !10 (lambda $9:e (dollar:<e,t> $9))))))))))))))))
+	(c_location:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !11 (lambda $10:e (budget:<e,t> $10))))
+	(c_time:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !12 (lambda $11:e (and:<t*,t>
+			(date-entity:<e,t> $11)
+			(c_year:<e,<i,t>> $11 2008:i)
+			(c_month:<e,<i,t>> $11 5:i)
+			(c_day:<e,<i,t>> $11 5:i))))))))
+// Issue: the spend-01 frame has arg1 has the purchased goods, not the spent amount
+The :- NP/N : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id  $0))
+Australian :- ADJ : (lambda $3:e (and:<t*,t> (country:<e,t> $3) (c_name:<e,<txt,t>> $3 Australia:txt)))
+government :- N\ADJ : (lambda $0:<e,t> (lambda $1:e (and:<t*,t> (government-organization:<e,t> $1) (c_ARG0-of:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $2:e (and:<t*,t> (govern-01:<e,t> $2) (c_ARG1:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $0)))))))))
+revealed :- S\NP/NP : (lambda $2:e (lambda $0:e (lambda $1:e (and:<t*,t> (reveal-01:<e,t> $1) (c_ARG0:<e,<e,t>> $1 $0) (c_ARG1:<e,<e,t>> $1 $2)))))
+in :- AP/NP : (lambda $0:e (lambda $1:e (c_location:<e,<e,t>> $1 $0)))
+the :- NP/N : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+budget :- N : (lambda $0:e (budget:<e,t> $0))
+on :- AP/NP : (lambda $0:e (lambda $1:e (c_time:<e,<e,t>> $1 $0)))
+May 5 2008 :- NP : (a:<id,<<e,t>,e>> na:id (lambda $11:e (and:<t*,t> (date-entity:<e,t> $11) (c_year:<e,<i,t>> $11 2008:i) (c_month:<e,<i,t>> $11 5:i) (c_day:<e,<i,t>> $11 5:i))))
+that :- NP/S : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+Australia :- NP : (ref:<id,e> na:id)
+is :- S\NP/(S\NP) : (lambda $0:<e,<e,t>> $0)
+to :- S\NP/(S\NP) : (lambda $0:<e,<e,t>> $0)
+spend :- S\NP/NP : (lambda $7:e (lambda $1:e (lambda $4:e (and:<t*,t> (spend-01:<e,t> $4) (c_ARG0:<e,<e,t>> $4 $1) (c_ARG3:<e,<e,t>> $4 $7))))))
+hundreds of millions :- NP : 100000000:i
+of :- NP\NP/N : (lambda $0:<e,t> (lambda $1:i (a:<id,<<e,t>,e>> na:id (lambda $7:e (and:<t*,t> (multiple:<e,t> $7) (c_op1:<e,<e,t>> $7 (a:<id,<<e,t>,e>> na:id (lambda $3:e (and:<t*,t> ($0 $3) (c_quant:<e,<i,t>> $3 $1))))))))))
+dollars :- N : (lambda $8:e (and:<t*,t> (monetary-quantity:<e,t> $8) (c_unit:<e,<e,t>> $8 (a:<id,<<e,t>,e>> na:id (lambda $9:e (dollar:<e,t> $9))))))
+to :- AP/S : (lambda $0:<e,t> (lambda $1:e (c_ARG1:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id $0))))
+safeguard :- S/NP : (lambda $0:e (lambda $1:e (and:<t*,t> (safeguard-01:<e,t> $1) (c_ARG1:<e,<e,t>> $1 $0))))
+the :- NP/N : (lambda $0:<e,t> (ref:<id,e> na:id))
+country :- N : (lambda $0:e (country:<e,t> $0))
+against :- AP/N : (lambda $0:<e,t> (lambda $1:e (c_ARG2:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id $0))))
+terrorism :- N : (lambda $6:e (terrorism:<e,t> $6))
+

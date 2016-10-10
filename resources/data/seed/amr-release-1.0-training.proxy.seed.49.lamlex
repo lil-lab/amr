@@ -1,0 +1,15 @@
+No transfer of helicopters has occurred.
+JSON{"date":"2014-09-29T11:07:26.239","tok":"No transfer of helicopters has occurred .","file":"PROXY_AFP_ENG_20070716_0392_12.txt","alignments":"1-2|0 3-4|0.1","amr":"(t \/ transfer-01 :polarity - :ARG1 (h \/ helicopter))","snt-type":"body subordinate","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20070716_0392.12","alignedExp":"1-2##(a:<id,<<e,t>,e>> !1 (lambda $0:e (transfer-01:<e,t> $0)))####3-4##(a:<id,<<e,t>,e>> !1 (lambda $0:e (helicopter:<e,t> $0)))","ptbtok":"No transfer of helicopters has occurred .","preferred":"","save-date":"Fri Jun 21, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(transfer-01:<e,t> $0)
+	(c_polarity:<e,<e,t>> $0 -:e)
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (helicopter:<e,t> $1)))))))
+// ISSUE: The negation ledas to "untransfer", the negation of the transfer event. It doesn't negate the happening as the sentences says. 
+No :- NP[x]/N[x] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> ($0 $1) (c_polarity:<e,<e,t>> $1 -:e)))))
+transfer :- N[sg] : transfer-01:<e,t>
+of :- N[x]\N[x]/NP : (lambda $0:e (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_ARG1:<e,<e,t>> $2 $0)))))
+helicopters :- N[pl] : helicopter:<e,t>
+has occurred :- A\NP : (lambda $0:e $0)
+. :- PUNCT
+

@@ -1,0 +1,31 @@
+China is North Korea's closest ally.
+JSON{"date":"2014-09-29T11:07:17.923","tok":"China is North Korea 's closest ally .","file":"PROXY_AFP_ENG_20030718_0132_8.txt","alignments":"6-7|0 5-6|0.2+0.2.0 0-1|0.1+0.1.0+0.1.0.0 2-4|0.0+0.0.0+0.0.0.0+0.0.0.1 3-4|0.0.0.1","amr":"(a \/ ally-01 :ARG1 (c \/ country :name (n \/ name :op1 \"North\" :op2 \"Korea\")) :ARG2 (c2 \/ country :name (n2 \/ name :op1 \"China\")) :manner (c3 \/ close :degree (m \/ most)))","snt-type":"body","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20030718_0132.8","alignedExp":"6-7##(a:<id,<<e,t>,e>> !1 (lambda $0:e (ally-01:<e,t> $0)))####5-6##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(close:<e,t> $0)\n\t(c_degree:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (most:<e,t> $1)))))))####0-1##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(country:<e,t> $0)\n\t(c_name:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(name:<e,t> $1)\n\t\t\t(c_op:<e,<txt,t>> $1 China:txt))))))))####2-4##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(country:<e,t> $0)\n\t(c_name:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(name:<e,t> $1)\n\t\t\t(c_op:<e,<txt,t>> $1 North++Korea:txt))))))))","ptbtok":"China is North Korea 's closest ally .","preferred":"","save-date":"Fri May 17, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(ally-01:<e,t> $0)
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(country:<e,t> $1)
+			(c_name:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(name:<e,t> $2)
+					(c_op:<e,<txt,t>> $2 North++Korea:txt)))))))))
+	(c_ARG2:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+			(country:<e,t> $3)
+			(c_name:<e,<e,t>> $3 
+				(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+					(name:<e,t> $4)
+					(c_op:<e,<txt,t>> $4 China:txt)))))))))
+	(c_manner:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+			(close:<e,t> $5)
+			(c_degree:<e,<e,t>> $5 
+				(a:<id,<<e,t>,e>> !7 (lambda $6:e (most:<e,t> $6)))))))))))
+China :- NP[sg] : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (country:<e,t> $0) (c_name:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (name:<e,t> $1) (c_op:<e,<txt,t>> $1 China:txt))))))))
+is :- S[dcl]\NP[sg]/N[sg] : (lambda $0:<e,t> (lambda $1:e (lambda $2:e (and:<t*,t> ($0 $2) (c_ARG2:<e,<e,t>> $2 $1)))))
+North Korea :- NP[sg] : (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (country:<e,t> $1) (c_name:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $2:e (and:<t*,t> (name:<e,t> $2) (c_op:<e,<txt,t>> $2 North++Korea:txt))))))))
+'s :- N[x]/N[x]\NP[sg] : (lambda $0:e (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_ARG1:<e,<e,t>> $2 $0)))))
+closest :- N[x]/N[x] : (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_manner:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $5:e (and:<t*,t> (close:<e,t> $5) (c_degree:<e,<e,t>> $5 (a:<id,<<e,t>,e>> na:id most:<e,t>)))))))))
+ally :- N[sg] : ally-01:<e,t>
+. :- PUNCT
+

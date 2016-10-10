@@ -1,0 +1,45 @@
+The violence that has occurred since the earthquake has been attributed to an umbrella group of separatists called the United Jihad Council.
+JSON{"date":"2014-09-29T11:07:21.841","tok":"The violence that has occurred since the earthquake has been attributed to an umbrella group of separatists called the United Jihad Council .","file":"PROXY_AFP_ENG_20051018_0064_12.txt","alignments":"10-11|0 14-15|0.1 16-17|0.1.2 13-14|0.1.1 19-22|0.1.0+0.1.0.0+0.1.0.1+0.1.0.2 20-21|0.1.0.1 21-22|0.1.0.2 1-2|0.0 5-6|0.0.0 7-8|0.0.0.0","amr":"(a2 \/ attribute-01 :ARG1 (v \/ violence :time (s \/ since :op1 (e \/ earthquake))) :ARG2 (g \/ group :name (n \/ name :op1 \"United\" :op2 \"Jihad\" :op3 \"Council\") :mod (u \/ umbrella) :consist-of (s2 \/ separatist)))","snt-type":"body","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20051018_0064.12","alignedExp":"10-11##(a:<id,<<e,t>,e>> !1 (lambda $0:e (attribute-01:<e,t> $0)))####14-15##(a:<id,<<e,t>,e>> !1 (lambda $0:e (group:<e,t> $0)))####16-17##(a:<id,<<e,t>,e>> !1 (lambda $0:e (separatist:<e,t> $0)))####13-14##(a:<id,<<e,t>,e>> !1 (lambda $0:e (umbrella:<e,t> $0)))####1-2##(a:<id,<<e,t>,e>> !1 (lambda $0:e (violence:<e,t> $0)))####5-6##(a:<id,<<e,t>,e>> !1 (lambda $0:e (since:<e,t> $0)))####7-8##(a:<id,<<e,t>,e>> !1 (lambda $0:e (earthquake:<e,t> $0)))####19-22##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(name:<e,t> $0)\n\t(c_op:<e,<txt,t>> $0 United++Jihad++Council:txt))))","ptbtok":"The violence that has occurred since the earthquake has been attributed to an umbrella group of separatists called the United Jihad Council .","preferred":"","save-date":"Wed Jun 5, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(attribute-01:<e,t> $0)
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(violence:<e,t> $1)
+			(c_time:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(since:<e,t> $2)
+					(c_op1:<e,<e,t>> $2 
+						(a:<id,<<e,t>,e>> !4 (lambda $3:e (earthquake:<e,t> $3))))))))))))
+	(c_ARG2:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+			(group:<e,t> $4)
+			(c_name:<e,<e,t>> $4 
+				(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+					(name:<e,t> $5)
+					(c_op:<e,<txt,t>> $5 United++Jihad++Council:txt)))))
+			(c_mod:<e,<e,t>> $4 
+				(a:<id,<<e,t>,e>> !7 (lambda $6:e (umbrella:<e,t> $6))))
+			(c_consist-of:<e,<e,t>> $4 
+				(a:<id,<<e,t>,e>> !8 (lambda $7:e (separatist:<e,t> $7)))))))))))
+The :- NP[sg]/N[nb] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+violence :- N[nb] : (lambda $0:e (violence:<e,t> $0))
+that :- N[x]\N[x]/S[dcl] : (lambda $0:<e,t> (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) ($0 $2)))))
+has :- S[dcl]/S[pt] : (lambda $0:<e,t> $0)
+occurred :- S[pt] : (lambda $0:e true:t)
+since :- S[x]\S[x]/NP : (lambda $0:e (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_time:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id (lambda $3:e (and:<t*,t> (since:<e,t> $3) (c_op1:<e,<e,t>> $3 $0)))))))))
+the :- NP[x]/N[x] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+earthquake :- N[sg] : (lambda $0:e (earthquake:<e,t> $0))
+has :- S[dcl]\NP[sg]/(S[pt]\NP[sg]) : (lambda $0:<e,<e,t>> $0)
+been :- S[pt]\NP[x]/(S[pss]\NP[x]) : (lambda $0:<e,<e,t>> $0)
+attributed :- S[pss]\NP : (lambda $0:e (lambda $1:e (and:<t*,t> (attribute-01:<e,t> $1) (c_ARG1:<e,<e,t>> $1 $0))))
+to :- S[x]\S[x]/NP : (lambda $0:e (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_ARG2:<e,<e,t>> $1 $0)))))
+an :- NP[sg]/N[sg] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+umbrella :- N[sg] : (lambda $0:e (umbrella:<e,t> $0))
+group :- N[sg] : (lambda $0:e (group:<e,t> $0))
+of :- N[x]\N[x]/NP : (lambda $0:e (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_consist-of:<e,<e,t>> $1 $0)))))
+separatists :- N[pl] : separatist:<e,t>
+called :- N[x]\N[x]/NP[sg] : (lambda $0:e (lambda $2:<e,t> (lambda $1:e (and:<t*,t> ($2 $1) (c_name:<e,<e,t>> $1 $0)))))
+the :- NP[x]/N[x] : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+United Jihad Council :- N[sg] : (lambda $1:e (and:<t*,t> (name:<e,t> $1) (c_op:<e,<txt,t>> $1 United++Jihad++Council:txt)))
+. :- PUNCT
+

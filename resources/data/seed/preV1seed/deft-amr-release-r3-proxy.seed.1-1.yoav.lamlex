@@ -1,0 +1,114 @@
+The Riyadh based Naif Arab Academy for Security Sciences said in a statement that it was running a two week workshop for 50 anti terrorism experts 
+file=PROXY_AFP_ENG_20020105_0162_4.txt	save-date=Sat Jul 6, 2013	annotator=LDC-AMR-03	snt-type=summary	date=2013-05-08T11:16:43	id=PROXY_AFP_ENG_20020105_0162.4
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(say-01:<e,t> $0)
+	(c_ARG0:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(university:<e,t> $1)
+			(c_name:<e,<txt,t>> $1 Naif++Arab++Academy++for++Security++Sciences:txt)
+			(c_ARG1-of:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(base-01:<e,t> $2)
+					(c_location:<e,<e,t>> $2 
+						(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+							(city:<e,t> $3)
+							(c_name:<e,<txt,t>> $3 Riyadh:txt)))))))))))))
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+			(run-01:<e,t> $4)
+			(c_ARG0:<e,<e,t>> $4 
+				(ref:<id,e> !2))
+			(c_ARG1:<e,<e,t>> $4 
+				(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+					(workshop:<e,t> $5)
+					(c_beneficiary:<e,<e,t>> $5 
+						(a:<id,<<e,t>,e>> !7 (lambda $6:e (and:<t*,t>
+							(person:<e,t> $6)
+							(c_quant:<e,<i,t>> $6 50:i)
+							(c_ARG1-of:<e,<e,t>> $6 
+								(a:<id,<<e,t>,e>> !8 (lambda $7:e (and:<t*,t>
+									(expert-41:<e,t> $7)
+									(c_ARG2:<e,<e,t>> $7 
+										(a:<id,<<e,t>,e>> !9 (lambda $8:e (and:<t*,t>
+											(oppose-01:<e,t> $8)
+											(c_ARG1:<e,<e,t>> $8 
+												(a:<id,<<e,t>,e>> !10 (lambda $9:e (terrorism:<e,t> $9))))))))))))))))
+					(c_duration:<e,<e,t>> $5 
+						(a:<id,<<e,t>,e>> !11 (lambda $10:e (and:<t*,t>
+							(week:<e,t> $10)
+							(c_quant:<e,<i,t>> $10 2:i)))))))))))))
+	(c_manner:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !12 (lambda $11:e (and:<t*,t>
+			(thing:<e,t> $11)
+			(c_ARG1-of:<e,<e,t>> $11 
+				(a:<id,<<e,t>,e>> !13 (lambda $12:e (and:<t*,t>
+					(state-01:<e,t> $12)
+					(c_ARG0:<e,<e,t>> $12 
+						(ref:<id,e> !2)))))))))))))
+The :- NP/N : (lambda $1:<e,t> (a:<id,<<e,t>,e>> na:id $1))
+Riyadh :- NP : (a:<id,<<e,t>,e>> na:id (lambda $3:e (and:<t*,t> (city:<e,t> $3) (c_name:<e,<txt,t>> $3 Riyadh:txt))))
+based :- S : (lambda $2:e (base-01:<e,t> $2))
+Naif Arab Academy for Security Sciences :- N : (lambda $1:e (and:<t*,t> (university:<e,t> $1) (c_name:<e,<txt,t>> $1 Naif++Arab++Academy++for++Security++Sciences:txt)))
+said :- S\NP/NP : (lambda $6:e (lambda $5:e (lambda $0:e (and:<t*,t> (say-01:<e,t> $0) (c_ARG0:<e,<e,t>> $0 $5) (c_ARG1:<e,<e,t>> $0 $6)))))
+in :- AP/NP : (lambda $1:e (lambda $0:e (c_manner:<e,<e,t>> $0 $1)))
+a :- NP/N : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+statement :- N : (lambda $11:e (and:<t*,t> (thing:<e,t> $11) (c_ARG1-of:<e,<e,t>> $11 (a:<id,<<e,t>,e>> na:id (lambda $12:e (and:<t*,t> (state-01:<e,t> $12) (c_ARG0:<e,<e,t>> $12 (ref:<id,e> na:id))))))))
+that :- NP/S : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+it :- NP : (ref:<id,e> na:id)
+was :- S\NP/(S\NP) : (lambda $0:<e,<e,t>> $0)
+running :- S\NP/NP : (lambda $5:e (lambda $0:e (lambda $4:e (and:<t*,t> (run-01:<e,t> $4) (c_ARG0:<e,<e,t>> $4 $0) (c_ARG1:<e,<e,t>> $4 $5)))))
+a :- NP/N : (lambda $0:<e,t> (a:<id,<<e,t>,e>> na:id $0))
+two :- I : 2:i
+week :- N : (lambda $0:e (week:<e,t> $0))
+workshop :- N : (lambda $0:e (workshop:<e,t> $0))
+for :- PP/NP : (lambda $0:e (lambda $1:e (c_beneficiary:<e,<e,t>> $1 $0)))
+// 50 :- I : 50:i
+anti :- ADJ/N : (lambda $0:<e,t> (lambda $1:e (c_ARG2:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $8:e (and:<t*,t> (oppose-01:<e,t> $8) (c_ARG1:<e,<e,t>> $8 (a:<id,<<e,t>,e>> na:id $0))))))))
+terrorism :- N : (lambda $0:e (terrorism:<e,t> $0))
+experts :- N\ADJ : (lambda $0:<e,t> (lambda $6:e (and:<t*,t> (person:<e,t> $6) (c_ARG1-of:<e,<e,t>> $6 (a:<id,<<e,t>,e>> na:id (lambda $7:e (and:<t*,t> (expert-41:<e,t> $7) ($0 $7))))))))
+
+The Riyadh based Naif Arab Academy for Security Sciences said in a statement that it was running a two week workshop for 50 anti terrorism experts 
+file=PROXY_AFP_ENG_20020105_0162_4.txt	save-date=Sun Jul 28, 2013	annotator=LDC-AMR-13	preferred=true	snt-type=summary	date=2013-05-02T11:36:07	id=PROXY_AFP_ENG_20020105_0162.4
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(say-01:<e,t> $0)
+	(c_ARG0:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(university:<e,t> $1)
+			(c_name:<e,<txt,t>> $1 Naif++Arab++Academy++for++Security++Sciences:txt)
+			(c_ARG1-of:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(base-01:<e,t> $2)
+					(c_location:<e,<e,t>> $2 
+						(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+							(city:<e,t> $3)
+							(c_name:<e,<txt,t>> $3 Riyadh:txt)))))))))))))
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+			(run-01:<e,t> $4)
+			(c_ARG0:<e,<e,t>> $4 
+				(ref:<id,e> !2))
+			(c_ARG1:<e,<e,t>> $4 
+				(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+					(workshop:<e,t> $5)
+					(c_beneficiary:<e,<e,t>> $5 
+						(a:<id,<<e,t>,e>> !7 (lambda $6:e (and:<t*,t>
+							(person:<e,t> $6)
+							(c_quant:<e,<i,t>> $6 50:i)
+							(c_ARG1-of:<e,<e,t>> $6 
+								(a:<id,<<e,t>,e>> !8 (lambda $7:e (and:<t*,t>
+									(expert-41:<e,t> $7)
+									(c_ARG2:<e,<e,t>> $7 
+										(a:<id,<<e,t>,e>> !9 (lambda $8:e (and:<t*,t>
+											(counter-01:<e,t> $8)
+											(c_ARG1:<e,<e,t>> $8 
+												(a:<id,<<e,t>,e>> !10 (lambda $9:e (terrorism:<e,t> $9))))))))))))))))))))
+			(c_duration:<e,<e,t>> $4 
+				(a:<id,<<e,t>,e>> !11 (lambda $10:e (and:<t*,t>
+					(temporal-quantity:<e,t> $10)
+					(c_quant:<e,<i,t>> $10 2:i)
+					(c_unit:<e,<e,t>> $10 
+						(a:<id,<<e,t>,e>> !12 (lambda $11:e (week:<e,t> $11))))))))))))
+	(c_medium:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !13 (lambda $12:e (statement:<e,t> $12)))))))
+// FAIL: 'two week' modifies the 'running' event and not the 'workshop'. 
+

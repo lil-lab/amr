@@ -1,0 +1,10 @@
+outputDir=logs
+globalLog=logs/global.log
+include=../params.inc
+
+# Resources
+include=dev.proxy.noref.test.inc
+
+# Jobs
+type=log id=log.model model=model logger=modelLogger
+type=test id=test stats=exact exec=exec tester=tester data=test stats=statsExact,statsSmatch

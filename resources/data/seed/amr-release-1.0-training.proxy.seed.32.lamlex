@@ -1,0 +1,31 @@
+Raghad Hussein is Saddam Hussein's eldest daughter.
+JSON{"date":"2014-09-29T11:07:27.040","tok":"Raghad Hussein is Saddam Hussein 's eldest daughter .","file":"PROXY_AFP_ENG_20070818_0297_10.txt","alignments":"7-8|0 0-2|0.2+0.2.0+0.2.0.0+0.2.0.1 1-2|0.2.0.1 3-4|0.1.0.0 1-2|0.1.0.1","amr":"(d \/ daughter :mod (o \/ old :degree (m \/ most)) :poss (p3 \/ person :name (n2 \/ name :op1 \"Saddam\" :op2 \"Hussein\")) :domain (p4 \/ person :name (n \/ name :op1 \"Raghad\" :op2 \"Hussein\")))","snt-type":"body","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20070818_0297.10","alignedExp":"7-8##(a:<id,<<e,t>,e>> !1 (lambda $0:e (daughter:<e,t> $0)))####0-2##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(person:<e,t> $0)\n\t(c_name:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(name:<e,t> $1)\n\t\t\t(c_op:<e,<txt,t>> $1 Raghad++Hussein:txt))))))))","ptbtok":"Raghad Hussein is Saddam Hussein 's eldest daughter .","preferred":"","save-date":"Mon Jun 17, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(daughter:<e,t> $0)
+	(c_mod:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(old:<e,t> $1)
+			(c_degree:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (most:<e,t> $2))))))))
+	(c_poss:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+			(person:<e,t> $3)
+			(c_name:<e,<e,t>> $3 
+				(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+					(name:<e,t> $4)
+					(c_op:<e,<txt,t>> $4 Saddam++Hussein:txt)))))))))
+	(c_domain:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+			(person:<e,t> $5)
+			(c_name:<e,<e,t>> $5 
+				(a:<id,<<e,t>,e>> !7 (lambda $6:e (and:<t*,t>
+					(name:<e,t> $6)
+					(c_op:<e,<txt,t>> $6 Raghad++Hussein:txt))))))))))))
+Raghad Hussein :- NP[sg] : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (person:<e,t> $0) (c_name:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (name:<e,t> $1) (c_op:<e,<txt,t>> $1 Raghad++Hussein:txt))))))))
+is :- A\NP[sg]/N[sg] : (lambda $0:<e,t> (lambda $1:e (a:<id,<<e,t>,e>> na:id (lambda $2:e (and:<t*,t> ($0 $2) (c_domain:<e,<e,t>> $2 $1))))))
+Saddam Hussein :- NP[sg] : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (person:<e,t> $0) (c_name:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (name:<e,t> $1) (c_op:<e,<txt,t>> $1 Saddam++Hussein:txt))))))))
+'s :- N[x]/N[x]\NP[sg] : (lambda $0:e (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_poss:<e,<e,t>> $2 $0)))))
+eldest :- N[x]/N[x] : (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_mod:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (old:<e,t> $0) (c_degree:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id most:<e,t>)))))))))
+daughter :- N[sg] : daughter:<e,t>
+. :- PUNCT
+

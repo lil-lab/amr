@@ -1,0 +1,12 @@
+consists of 16 nations
+JSON{"date":"2014-09-29T11:07:09.505","tok":"consists of 16 nations","file":"PROXY_AFP_ENG_20020128_0449_21.txt","alignments":"0-1|0 3-4|0.0 2-3|0.0.0","amr":"(c \/ consist-01 :ARG2 (n \/ nation :quant 16))","snt-type":"body subordinate","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20020128_0449.21","alignedExp":"0-1##(a:<id,<<e,t>,e>> !1 (lambda $0:e (consist-01:<e,t> $0)))####3-4##(a:<id,<<e,t>,e>> !1 (lambda $0:e (nation:<e,t> $0)))####2-3##16:i","ptbtok":"consists of 16 nations","preferred":"","save-date":"Thu May 16, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(consist-01:<e,t> $0)
+	(c_ARG2:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(nation:<e,t> $1)
+			(c_quant:<e,<i,t>> $1 16:i))))))))
+consists :- S[dcl] : consist-01:<e,t>
+of :- S[x]\S[x]/NP : (lambda $0:e (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_ARG2:<e,<e,t>> $2 $0)))))
+nations :- N[pl] : nation:<e,t>
+

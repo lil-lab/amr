@@ -1,0 +1,30 @@
+Drug-burning ceremonies are regular events in Myanmar.
+JSON{"date":"2014-09-29T11:07:11.989","tok":"Drug - burning ceremonies are regular events in Myanmar .","file":"PROXY_AFP_ENG_20020610_0336_11.txt","alignments":"4-5|0 6-7|0.2+0.2.0+0.2.0.0 1-2|0.1 3-4|0.0","amr":"(e \/ event :frequency (r \/ regular) :domain (c2 \/ ceremony :purpose (b \/ burn-01 :ARG1 (d \/ drug))) :location (c3 \/ country :name (n2 \/ name :op1 \"Myanmar\")))","snt-type":"body","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20020610_0336.11","alignedExp":"4-5##(a:<id,<<e,t>,e>> !1 (lambda $0:e (event:<e,t> $0)))####6-7##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(country:<e,t> $0)\n\t(c_name:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(name:<e,t> $1)\n\t\t\t(c_op:<e,<txt,t>> $1 Myanmar:txt))))))))####1-2##(a:<id,<<e,t>,e>> !1 (lambda $0:e (ceremony:<e,t> $0)))####3-4##(a:<id,<<e,t>,e>> !1 (lambda $0:e (regular:<e,t> $0)))","ptbtok":"Drug-burning ceremonies are regular events in Myanmar .","preferred":"","save-date":"Thu Jul 11, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(event:<e,t> $0)
+	(c_frequency:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (regular:<e,t> $1))))
+	(c_domain:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+			(ceremony:<e,t> $2)
+			(c_purpose:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+					(burn-01:<e,t> $3)
+					(c_ARG1:<e,<e,t>> $3 
+						(a:<id,<<e,t>,e>> !5 (lambda $4:e (drug:<e,t> $4))))))))))))
+	(c_location:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+			(country:<e,t> $5)
+			(c_name:<e,<e,t>> $5 
+				(a:<id,<<e,t>,e>> !7 (lambda $6:e (and:<t*,t>
+					(name:<e,t> $6)
+					(c_op:<e,<txt,t>> $6 Myanmar:txt))))))))))))
+Drug-burning :- N[x]/N[x] : (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_purpose:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $2:e (and:<t*,t> (burn-01:<e,t> $2) (c_ARG1:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id drug:<e,t>)))))))))
+ceremonies :- N[pl] : ceremony:<e,t>
+are :- S[dcl]\NP[pl]/N[pl] : (lambda $0:<e,t> (lambda $1:e (lambda $2:e (and:<t*,t> ($0 $2) (c_domain:<e,<e,t>> $2 $1)))))
+regular :- N[x]/N[x] : (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_frequency:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id regular:<e,t>)))))
+events :- N[pl] : event:<e,t>
+in :- S[x]\S[x]/NP : (lambda $0:e (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_location:<e,<e,t>> $2 $0)))))
+Myanmar :- NP[sg] : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (country:<e,t> $0) (c_name:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (name:<e,t> $1) (c_op:<e,<txt,t>> $1 Myanmar:txt))))))))
+. :- PUNCT
+

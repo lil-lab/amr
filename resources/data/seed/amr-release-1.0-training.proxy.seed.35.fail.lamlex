@@ -1,0 +1,25 @@
+Heroin is the most used illegal drug in Vietnam
+JSON{"date":"2014-09-29T11:07:29.965","tok":"Heroin is the most used illegal drug in Vietnam","file":"PROXY_AFP_ENG_20071228_0415_7.txt","alignments":"6-7|0 5-6|0.2+0.2.0 8-9|0.1+0.1.0+0.1.0.0 0-1|0.0 4-5|0.0.0 3-4|0.0.0.0","amr":"(d \/ drug :domain (h2 \/ heroin :ARG1-of (u2 \/ use-01 :degree (m \/ most))) :location (c2 \/ country :name (n2 \/ name :op1 \"Vietnam\")) :mod (l \/ law :polarity -))","snt-type":"body","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20071228_0415.7","alignedExp":"6-7##(a:<id,<<e,t>,e>> !1 (lambda $0:e (drug:<e,t> $0)))####5-6##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(law:<e,t> $0)\n\t(c_polarity:<e,<e,t>> $0 -:e))))####8-9##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(country:<e,t> $0)\n\t(c_name:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(name:<e,t> $1)\n\t\t\t(c_op:<e,<txt,t>> $1 Vietnam:txt))))))))####0-1##(a:<id,<<e,t>,e>> !1 (lambda $0:e (heroin:<e,t> $0)))####4-5##(a:<id,<<e,t>,e>> !1 (lambda $0:e (use-01:<e,t> $0)))####3-4##(a:<id,<<e,t>,e>> !1 (lambda $0:e (most:<e,t> $0)))","ptbtok":"Heroin is the most used illegal drug in Vietnam","preferred":"","save-date":"Tue Jul 2, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(drug:<e,t> $0)
+	(c_domain:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(heroin:<e,t> $1)
+			(c_ARG1-of:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(use-01:<e,t> $2)
+					(c_degree:<e,<e,t>> $2 
+						(a:<id,<<e,t>,e>> !4 (lambda $3:e (most:<e,t> $3))))))))))))
+	(c_location:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+			(country:<e,t> $4)
+			(c_name:<e,<e,t>> $4 
+				(a:<id,<<e,t>,e>> !6 (lambda $5:e (and:<t*,t>
+					(name:<e,t> $5)
+					(c_op:<e,<txt,t>> $5 Vietnam:txt)))))))))
+	(c_mod:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !7 (lambda $6:e (and:<t*,t>
+			(law:<e,t> $6)
+			(c_polarity:<e,<e,t>> $6 -:e))))))))
+// FAIL: 'most used' modifies 'Heroin'
+

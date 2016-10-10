@@ -1,0 +1,27 @@
+Most of Bank of America s 13000 ATMs were inoperable
+id=PROXY_AFP_ENG_20030126_0212.15	snt-type=body	file=PROXY_AFP_ENG_20030126_0212_15.txt	annotator=UCO-AMR-03	date=2013-06-27T13:47:15	save-date=Thu Jun 27, 2013	preferred=true
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(possible:<e,t> $0)
+	(c_polarity:<e,<e,t>> $0 -:e)
+	(c_domain:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(operate-01:<e,t> $1)
+			(c_ARG1:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(atm:<e,t> $2)
+					(c_quant:<e,<i,t>> $2 13000:i)
+					(c_mod:<e,<e,t>> $2 
+						(a:<id,<<e,t>,e>> !4 (lambda $3:e (most:<e,t> $3))))
+					(c_poss:<e,<e,t>> $2 
+						(a:<id,<<e,t>,e>> !5 (lambda $4:e (and:<t*,t>
+							(bank:<e,t> $4)
+							(c_name:<e,<txt,t>> $4 Bank++of++America:txt))))))))))))))))
+Most :- ADJ : (lambda $0:e (c_mod:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id most:<e,t>)))
+of :- ADJ\ADJ : (lambda $0:<e,t> $0)
+Bank of America :- NP : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (bank:<e,t> $0) (c_name:<e,<txt,t>> $0 Bank++of++America:txt))))
+s :- ADJ\NP : (lambda $0:e (lambda $1:e (c_poss:<e,<e,t>> $1 $0)))
+// 13000 :- I : 13000:i
+ATMs :- N : atm:<e,t>
+were :- S\NP/(S\NP) : (lambda $0:<e,<e,t>> $0)
+inoperable :- S\NP : (lambda $0:e (lambda $1:e (and:<t*,t> (possible:<e,t> $1) (c_polarity:<e,<e,t>> $1 -:e) (c_domain:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id (lambda $2:e (and:<t*,t> (operate-01:<e,t> $2) (c_ARG1:<e,<e,t>> $2 $0))))))))
+

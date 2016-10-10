@@ -1,0 +1,24 @@
+They were less than 350 dollars each.
+JSON{"date":"2014-09-29T11:07:11.452","tok":"They were less than 350 dollars each .","file":"PROXY_AFP_ENG_20020423_0133_17.txt","alignments":"0-1|0.0 4-5|0.1.0.0 5-6|0.1.0+0.1.0.1 6-7|0.2 2-3|0.1","amr":"(c \/ cost-01 :ARG1 (t \/ they) :ARG2 (l \/ less-than :op1 (m \/ monetary-quantity :quant 350 :unit (d \/ dollar))) :mod (e \/ each))","snt-type":"body","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20020423_0133.17","alignedExp":"0-1##(a:<id,<<e,t>,e>> !1 (lambda $0:e (they:<e,t> $0)))####4-5##350:i####5-6##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(monetary-quantity:<e,t> $0)\n\t(c_unit:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (dollar:<e,t> $1)))))))####6-7##(a:<id,<<e,t>,e>> !1 (lambda $0:e (each:<e,t> $0)))####2-3##(a:<id,<<e,t>,e>> !1 (lambda $0:e (less-than:<e,t> $0)))","ptbtok":"They were less than 350 dollars each .","preferred":"","save-date":"Sat Jun 29, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(cost-01:<e,t> $0)
+	(c_ARG1:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (they:<e,t> $1))))
+	(c_ARG2:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+			(less-than:<e,t> $2)
+			(c_op1:<e,<e,t>> $2 
+				(a:<id,<<e,t>,e>> !4 (lambda $3:e (and:<t*,t>
+					(monetary-quantity:<e,t> $3)
+					(c_quant:<e,<i,t>> $3 350:i)
+					(c_unit:<e,<e,t>> $3 
+						(a:<id,<<e,t>,e>> !5 (lambda $4:e (dollar:<e,t> $4))))))))))))
+	(c_mod:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !6 (lambda $5:e (each:<e,t> $5)))))))
+They :- NP[pl] : (a:<id,<<e,t>,e>> na:id they:<e,t>)
+were :- S[dcl]\NP[pl]/S[adj] : (lambda $0:<e,t> (lambda $1:e (lambda $2:e (and:<t*,t> (cost-01:<e,t> $2) (c_ARG1:<e,<e,t>> $2 $1) (c_ARG2:<e,<e,t>> $2 (a:<id,<<e,t>,e>> na:id $0))))))
+less than :- S[adj]/NP : (lambda $1:e (lambda $2:e (and:<t*,t> (less-than:<e,t> $2) (c_op1:<e,<e,t>> $2 $1))))
+dollars :- N[pl] : (lambda $0:e (and:<t*,t> (monetary-quantity:<e,t> $0) (c_unit:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id dollar:<e,t>))))
+each :- S[x]\S[x] : (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_mod:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id each:<e,t>)))))
+. :- PUNCT
+

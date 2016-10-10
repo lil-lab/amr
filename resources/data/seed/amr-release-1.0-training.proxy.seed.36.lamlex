@@ -1,0 +1,22 @@
+There will be no meaningful talks with Iran.
+JSON{"date":"2014-09-29T11:07:32.750","tok":"There will be no meaningful talks with Iran .","file":"PROXY_AFP_ENG_20080527_0222_51.txt","alignments":"3-4|0.0 5-6|0 4-5|0.2 7-8|0.1+0.1.0+0.1.0.0","amr":"(t \/ talk-01 :polarity - :ARG2 (c \/ country :name (n \/ name :op1 \"Iran\")) :mod (m \/ meaningful))","snt-type":"body subordinate","annotator":"Aligner v.02","id":"PROXY_AFP_ENG_20080527_0222.51","alignedExp":"3-4##-:e####5-6##(a:<id,<<e,t>,e>> !1 (lambda $0:e (talk-01:<e,t> $0)))####4-5##(a:<id,<<e,t>,e>> !1 (lambda $0:e (meaningful:<e,t> $0)))####7-8##(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>\n\t(country:<e,t> $0)\n\t(c_name:<e,<e,t>> $0 \n\t\t(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>\n\t\t\t(name:<e,t> $1)\n\t\t\t(c_op:<e,<txt,t>> $1 Iran:txt))))))))","ptbtok":"There will be no meaningful talks with Iran .","preferred":"","save-date":"Sun Jul 7, 2013"}
+(a:<id,<<e,t>,e>> !1 (lambda $0:e (and:<t*,t>
+	(talk-01:<e,t> $0)
+	(c_polarity:<e,<e,t>> $0 -:e)
+	(c_ARG2:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !2 (lambda $1:e (and:<t*,t>
+			(country:<e,t> $1)
+			(c_name:<e,<e,t>> $1 
+				(a:<id,<<e,t>,e>> !3 (lambda $2:e (and:<t*,t>
+					(name:<e,t> $2)
+					(c_op:<e,<txt,t>> $2 Iran:txt)))))))))
+	(c_mod:<e,<e,t>> $0 
+		(a:<id,<<e,t>,e>> !4 (lambda $3:e (meaningful:<e,t> $3)))))))
+There will be :- A/NP : (lambda $0:e $0)
+no :- N[x]/N[x] : (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_polarity:<e,<e,t>> $1 -:e))))
+meaningful :- N[x]/N[x] : (lambda $0:<e,t> (lambda $1:e (and:<t*,t> ($0 $1) (c_mod:<e,<e,t>> $1 (a:<id,<<e,t>,e>> na:id meaningful:<e,t>)))))
+talks :- N[pl] : talk-01:<e,t>
+with :- N[x]\N[x]/NP : (lambda $0:e (lambda $1:<e,t> (lambda $2:e (and:<t*,t> ($1 $2) (c_ARG2:<e,<e,t>> $2 $0)))))
+Iran :- NP[sg] : (a:<id,<<e,t>,e>> na:id (lambda $0:e (and:<t*,t> (country:<e,t> $0) (c_name:<e,<e,t>> $0 (a:<id,<<e,t>,e>> na:id (lambda $1:e (and:<t*,t> (name:<e,t> $1) (c_op:<e,<txt,t>> $1 Iran:txt))))))))
+. :- PUNCT
+
