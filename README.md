@@ -1,9 +1,5 @@
 # Cornell AMR Semantic Parser
 
-## Quick Start
-
-You can get started and parse a few simple sentences in under five minutes using our AMI image (`ami-bdc8d8d7`). Launch an EC2 instance (recommended `r3.2xlarge` at least) with our AMI image. The code in the image is fully complied and ready to run. The `~/amr/do.sh` command will quickly parse a few example sentences. The AMI is based on Ubuntu and the user name is `ubuntu`. The code repository is available [here](http://yoavartzi.com/amr).
-
 ## Requirements
 
 Java 8.
